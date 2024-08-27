@@ -1,0 +1,4548 @@
+1
+00:00:00,133 --> 00:00:01,166
+Next
+
+2
+00:00:01,166 --> 00:00:03,266
+Let's start from here
+
+3
+00:00:06,400 --> 00:00:08,233
+In this chapter we
+
+4
+00:00:09,800 --> 00:00:12,300
+I talked about it in this chapter.
+
+5
+00:00:12,300 --> 00:00:14,900
+The most important thing is to talk about the optimization of Datapath
+
+6
+00:00:14,900 --> 00:00:19,166
+Then we can roughly divide it into two parts.
+
+7
+00:00:19,166 --> 00:00:23,100
+Today we must at least finish talking about resource optimization
+
+8
+00:00:23,100 --> 00:00:26,700
+That means I want to optimize today
+
+9
+00:00:26,700 --> 00:00:28,966
+Datapath optimization
+
+10
+00:00:28,966 --> 00:00:31,900
+Then let’s review what your design needs to be like
+
+11
+00:00:31,966 --> 00:00:34,266
+Control path and datapath
+
+12
+00:00:34,400 --> 00:00:36,800
+That is, Controller and datapath
+
+13
+00:00:37,133 --> 00:00:38,333
+Then your Controller
+
+14
+00:00:38,333 --> 00:00:41,500
+Because he has a standard way of writing it, which is 2C1S
+
+15
+00:00:41,533 --> 00:00:43,900
+You just need to base it on your actual topic
+
+16
+00:00:44,000 --> 00:00:46,233
+Draw what you call a state diagram
+
+17
+00:00:47,000 --> 00:00:48,166
+You can follow
+
+18
+00:00:48,333 --> 00:00:52,000
+follow the two combination circuits
+
+19
+00:00:52,000 --> 00:00:55,500
+Register and finish writing your Controller
+
+20
+00:00:55,500 --> 00:00:58,400
+That's because he has a standard way of writing
+
+21
+00:00:58,400 --> 00:01:00,266
+The datapath is different
+
+22
+00:01:00,266 --> 00:01:02,200
+Datapath we already talked about last time
+
+23
+00:01:02,200 --> 00:01:05,100
+He has no standard way of writing
+
+24
+00:01:05,100 --> 00:01:08,000
+What if your datapath needs to be optimized?
+
+25
+00:01:08,000 --> 00:01:10,333
+You can look at it from two directions
+
+26
+00:01:10,333 --> 00:01:12,066
+Of course we know the first one
+
+27
+00:01:12,600 --> 00:01:15,200
+What are probably the two most important things about all hardware?
+
+28
+00:01:15,200 --> 00:01:17,100
+The first is cost optimization
+
+29
+00:01:17,100 --> 00:01:18,766
+The lower the cost, the better
+
+30
+00:01:18,766 --> 00:01:21,800
+The second one is that the faster the speed, the faster
+
+31
+00:01:21,800 --> 00:01:23,933
+So the first resource optimization
+
+32
+00:01:23,933 --> 00:01:27,966
+It’s about cost optimization
+
+33
+00:01:28,166 --> 00:01:30,300
+The resources here are about hardware.
+
+34
+00:01:30,300 --> 00:01:31,933
+haadware's resource
+
+35
+00:01:31,933 --> 00:01:34,333
+It’s about your hardware components
+
+36
+00:01:34,333 --> 00:01:37,966
+Then we have four ways to do it
+
+37
+00:01:37,966 --> 00:01:39,766
+Hardware cost optimization
+
+38
+00:01:39,766 --> 00:01:42,866
+The second one is the optimization of timing.
+
+39
+00:01:42,900 --> 00:01:44,200
+I wish I ran
+
+40
+00:01:44,200 --> 00:01:46,600
+The faster my circuit runs, the faster it becomes
+
+41
+00:01:46,600 --> 00:01:49,866
+At that time, we also have four people here to optimize the time.
+
+42
+00:01:50,466 --> 00:01:51,866
+That
+
+43
+00:01:51,966 --> 00:01:54,100
+Last time we actually came to a slightly different conclusion
+
+44
+00:01:54,100 --> 00:01:55,466
+Reminder
+
+45
+00:01:55,533 --> 00:01:58,300
+This optimization is basically timing optimizaton
+
+46
+00:01:58,466 --> 00:02:00,466
+Maybe you don't do much
+
+47
+00:02:00,500 --> 00:02:02,333
+Because sometimes you want to let
+
+48
+00:02:02,333 --> 00:02:04,400
+Your circuit is fast enough
+
+49
+00:02:04,400 --> 00:02:07,000
+You must do timing
+
+50
+00:02:07,000 --> 00:02:09,266
+Optimization of timing
+
+51
+00:02:09,500 --> 00:02:13,200
+But resource optimizaton is usually not very good at doing it.
+
+52
+00:02:13,600 --> 00:02:16,633
+Because once Resource optimizaton is done,
+
+53
+00:02:16,666 --> 00:02:20,100
+Your circuit must be designed at the gate level.
+
+54
+00:02:20,100 --> 00:02:22,333
+You can't go too point-to-point
+
+55
+00:02:22,333 --> 00:02:23,433
+Write it as your circuit
+
+56
+00:02:23,600 --> 00:02:25,233
+We'll give an example in a moment
+
+57
+00:02:25,466 --> 00:02:27,166
+You will know by giving an example
+
+58
+00:02:27,166 --> 00:02:30,200
+This seems not very convenient
+
+59
+00:02:30,200 --> 00:02:32,700
+Because as long as you use resources
+
+60
+00:02:32,700 --> 00:02:35,266
+optimizaton Once these methods are used,
+
+61
+00:02:35,266 --> 00:02:37,466
+Your circuit must be at the gate level
+
+62
+00:02:38,300 --> 00:02:39,533
+But
+
+63
+00:02:39,533 --> 00:02:40,966
+In fact, these resource optimization
+
+64
+00:02:40,966 --> 00:02:43,100
+There is another place
+
+65
+00:02:43,133 --> 00:02:45,666
+Because it saves some hardware costs
+
+66
+00:02:45,866 --> 00:02:47,400
+So academically
+
+67
+00:02:47,400 --> 00:02:50,866
+I can only say that he is quite interesting academically.
+
+68
+00:02:50,866 --> 00:02:53,300
+Contribute to academics
+
+69
+00:02:53,300 --> 00:02:54,766
+All academic contributions
+
+70
+00:02:54,766 --> 00:02:57,066
+That is to say, you designed a circuit
+
+71
+00:02:57,133 --> 00:02:58,066
+Do something
+
+72
+00:02:58,066 --> 00:03:00,533
+Then I can do the same thing as you today
+
+73
+00:03:00,533 --> 00:03:03,000
+But my hardware cost is a little less
+
+74
+00:03:03,066 --> 00:03:05,000
+I'm missing you by two additions
+
+75
+00:03:05,000 --> 00:03:06,966
+I'm missing a few of your temporary registers
+
+76
+00:03:06,966 --> 00:03:08,533
+This is a very good paper
+
+77
+00:03:08,533 --> 00:03:10,566
+Because my cost is indeed lower than yours
+
+78
+00:03:11,100 --> 00:03:14,533
+So he will contribute academically
+
+79
+00:03:14,533 --> 00:03:17,166
+Academically, they won't care if you use gate level.
+
+80
+00:03:17,200 --> 00:03:19,333
+Or you want to use other methods
+
+81
+00:03:19,333 --> 00:03:22,900
+But in actual operations, you are in the company
+
+82
+00:03:22,900 --> 00:03:25,733
+In order to save these two temporary registers,
+
+83
+00:03:25,733 --> 00:03:28,366
+Then you put your circuit on the gate level
+
+84
+00:03:28,566 --> 00:03:29,766
+Whether it is debugging
+
+85
+00:03:29,766 --> 00:03:31,266
+Or that you are writing
+
+86
+00:03:31,266 --> 00:03:33,400
+It will take a very long time
+
+87
+00:03:33,466 --> 00:03:35,200
+Maybe it's not necessary
+
+88
+00:03:35,733 --> 00:03:37,300
+But we will still talk about him
+
+89
+00:03:37,300 --> 00:03:38,933
+We are going to talk about resource optimization
+
+90
+00:03:38,933 --> 00:03:41,433
+Personally I don’t think it’s that important
+
+91
+00:03:41,500 --> 00:03:43,266
+But it allows you to get started
+
+92
+00:03:43,766 --> 00:03:45,600
+It is important to get started
+
+93
+00:03:45,600 --> 00:03:47,433
+but you actually
+
+94
+00:03:47,600 --> 00:03:50,533
+It may not be that important for you to go to the company
+
+95
+00:03:50,533 --> 00:03:53,300
+That is timing optimization.
+
+96
+00:03:53,300 --> 00:03:54,766
+This is something you must consider
+
+97
+00:03:54,766 --> 00:03:57,166
+Because when you go to work in a company
+
+98
+00:03:57,166 --> 00:03:59,566
+You will have to do timing optimization
+
+99
+00:04:00,466 --> 00:04:03,166
+Because only timing optimization can
+
+100
+00:04:03,366 --> 00:04:05,900
+increase your speed
+
+101
+00:04:07,000 --> 00:04:09,433
+What's next?
+
+102
+00:04:09,533 --> 00:04:13,366
+The next thing I want to mention is what we talked about last time.
+
+103
+00:04:14,600 --> 00:04:18,300
+What are these 8 things and 8 optimizations?
+
+104
+00:04:18,300 --> 00:04:20,566
+We will use an example to string together
+
+105
+00:04:20,566 --> 00:04:22,866
+Then the example we use is
+
+106
+00:04:24,800 --> 00:04:26,466
+SRA optimization
+
+107
+00:04:26,466 --> 00:04:28,133
+so-called square root
+
+108
+00:04:28,133 --> 00:04:29,866
+optimization means
+
+109
+00:04:29,900 --> 00:04:33,400
+Suppose I want to calculate the square root today
+
+110
+00:04:33,400 --> 00:04:36,966
+That’s square root a squared plus b squared
+
+111
+00:04:37,100 --> 00:04:39,733
+The root of a square plus b square is
+
+112
+00:04:39,733 --> 00:04:41,833
+I want to calculate this
+
+113
+00:04:42,133 --> 00:04:45,066
+Follow him a square plus b square
+
+114
+00:04:45,133 --> 00:04:47,066
+So how do I calculate it?
+
+115
+00:04:47,066 --> 00:04:48,766
+I want to make a circuit
+
+116
+00:04:48,766 --> 00:04:51,366
+You are not writing a program now
+
+117
+00:04:51,366 --> 00:04:54,300
+Instead, you need to make a circuit to achieve this
+
+118
+00:04:54,366 --> 00:04:55,766
+This and this action
+
+119
+00:04:55,766 --> 00:04:58,533
+a square plus b square root
+
+120
+00:04:58,533 --> 00:05:01,400
+Then we mentioned last time that there is a mathematical addition
+
+121
+00:05:01,400 --> 00:05:03,366
+He wanted an approximate formula
+
+122
+00:05:03,366 --> 00:05:05,166
+So you can see he is close
+
+123
+00:05:05,766 --> 00:05:09,800
+Root a squared plus b squared
+
+124
+00:05:10,066 --> 00:05:13,533
+It can be approximated as this
+
+125
+00:05:13,533 --> 00:05:16,166
+You can use this formula to approximate
+
+126
+00:05:16,166 --> 00:05:19,600
+Then this formula is 0.875X
+
+127
+00:05:20,000 --> 00:05:22,266
+Add 0.5Y
+
+128
+00:05:22,266 --> 00:05:24,133
+The result of adding these two
+
+129
+00:05:24,133 --> 00:05:27,633
+This is 0.875X plus 0.5Y
+
+130
+00:05:27,733 --> 00:05:28,966
+Then there is another x
+
+131
+00:05:29,300 --> 00:05:33,400
+The greatest value among these two people
+
+132
+00:05:33,400 --> 00:05:35,733
+So what is x y
+
+133
+00:05:35,733 --> 00:05:37,333
+x y are respectively a
+
+134
+00:05:37,333 --> 00:05:39,333
+The absolute value is your input
+
+135
+00:05:39,333 --> 00:05:43,100
+The larger absolute value of a and b is x
+
+136
+00:05:43,500 --> 00:05:47,166
+The smaller of the absolute values ​​of a and b is y
+
+137
+00:05:47,166 --> 00:05:49,333
+Then you bring it into this formula
+
+138
+00:05:49,333 --> 00:05:50,966
+You can calculate
+
+139
+00:05:50,966 --> 00:05:52,600
+he got the result
+
+140
+00:05:52,700 --> 00:05:56,100
+The result is that it is close to the root
+
+141
+00:05:56,100 --> 00:05:59,300
+a squared plus b squared
+
+142
+00:05:59,500 --> 00:06:00,866
+Then this is us
+
+143
+00:06:02,500 --> 00:06:05,766
+What someone here brought up, what about us, what about us?
+
+144
+00:06:05,766 --> 00:06:07,900
+We have to calculate a squared plus b squared
+
+145
+00:06:07,900 --> 00:06:11,200
+It becomes to calculate the formula on the right side
+
+146
+00:06:11,200 --> 00:06:13,500
+So what we have to calculate now is 0.875x
+
+147
+00:06:13,500 --> 00:06:15,233
+Add 0.5y
+
+148
+00:06:15,566 --> 00:06:16,866
+Then we have to calculate x
+
+149
+00:06:17,100 --> 00:06:19,700
+Then what is the maximum value among the two people?
+
+150
+00:06:19,700 --> 00:06:22,166
+Please ask for one of the two more people.
+
+151
+00:06:22,200 --> 00:06:23,400
+Relatively large
+
+152
+00:06:28,300 --> 00:06:30,400
+Then we will start next
+
+153
+00:06:30,533 --> 00:06:32,733
+Then we have 8 actions to do
+
+154
+00:06:32,733 --> 00:06:36,166
+The first thing we need to do is storage Sharing
+
+155
+00:06:36,333 --> 00:06:38,533
+What is storage sharing?
+
+156
+00:06:38,533 --> 00:06:42,200
+Sharing of storage is the sharing of storage units
+
+157
+00:06:43,966 --> 00:06:45,500
+So what first?
+
+158
+00:06:47,100 --> 00:06:50,266
+Let’s look at the word Sharing
+
+159
+00:06:50,266 --> 00:06:52,100
+Sharing is shared
+
+160
+00:06:52,166 --> 00:06:53,333
+What about this sharing?
+
+161
+00:06:53,333 --> 00:06:54,866
+He is actually with that
+
+162
+00:06:55,400 --> 00:06:59,000
+Usually we are talking about you
+
+163
+00:06:59,000 --> 00:07:01,866
+If you are in the United States and you want to rent an apartment
+
+164
+00:07:04,366 --> 00:07:05,933
+I will share it with Dajia
+
+165
+00:07:05,933 --> 00:07:08,933
+Then there is a problem with this Sharing
+
+166
+00:07:08,933 --> 00:07:11,966
+His problem is that he is like us
+
+167
+00:07:11,966 --> 00:07:14,000
+Unlike if you were in Taiwan
+
+168
+00:07:14,000 --> 00:07:16,700
+When you rent a house in Tainan, there are roughly two categories:
+
+169
+00:07:16,700 --> 00:07:18,233
+The first is a single suite
+
+170
+00:07:18,700 --> 00:07:21,733
+Your suite has a room and a toilet
+
+171
+00:07:21,733 --> 00:07:24,166
+So you don’t have to share the toilet with others.
+
+172
+00:07:24,166 --> 00:07:25,566
+No Sharing
+
+173
+00:07:28,000 --> 00:07:31,100
+If you are going with a few classmates
+
+174
+00:07:31,100 --> 00:07:32,566
+Rented a floor outside
+
+175
+00:07:32,566 --> 00:07:34,600
+like an apartment
+
+176
+00:07:34,600 --> 00:07:36,466
+Just three or four rooms
+
+177
+00:07:36,466 --> 00:07:38,233
+Or it doesn’t matter if it’s Toten
+
+178
+00:07:38,266 --> 00:07:41,166
+There is only one or two toilets inside
+
+179
+00:07:41,200 --> 00:07:43,066
+The problem will come at this time
+
+180
+00:07:43,066 --> 00:07:43,766
+what problem
+
+181
+00:07:43,766 --> 00:07:44,566
+Sharing
+
+182
+00:07:44,900 --> 00:07:48,600
+That is to say, this toilet is shared by Dajia.
+
+183
+00:07:48,600 --> 00:07:51,500
+Maybe three classmates share a toilet
+
+184
+00:07:51,800 --> 00:07:53,866
+In other words, when classmate a goes to the toilet,
+
+185
+00:07:53,866 --> 00:07:55,300
+Classmate B can’t attend
+
+186
+00:07:55,333 --> 00:07:57,166
+Classmate C can’t attend either
+
+187
+00:07:57,166 --> 00:07:59,400
+Only one person can come in at a time
+
+188
+00:07:59,400 --> 00:08:01,100
+Same for your living room
+
+189
+00:08:01,366 --> 00:08:03,933
+Or maybe your kitchen is also shared?
+
+190
+00:08:03,933 --> 00:08:07,233
+It's basically shared by everyone.
+
+191
+00:08:07,266 --> 00:08:09,966
+Then the sharing of this storage unit
+
+192
+00:08:09,966 --> 00:08:12,166
+What is storage unit sharing?
+
+193
+00:08:12,400 --> 00:08:14,366
+Prioritizing one matter
+
+194
+00:08:14,366 --> 00:08:15,966
+This only needs to be shared
+
+195
+00:08:15,966 --> 00:08:17,800
+There will be a problem
+
+196
+00:08:17,800 --> 00:08:20,300
+I can't use it when you use it. You can't use it when you use it.
+
+197
+00:08:20,800 --> 00:08:22,800
+Because we share
+
+198
+00:08:22,800 --> 00:08:25,300
+Then basically you also know the toilet
+
+199
+00:08:25,500 --> 00:08:27,166
+If you do it, no one else can do it.
+
+200
+00:08:27,166 --> 00:08:29,000
+If I go, you can't go
+
+201
+00:08:29,000 --> 00:08:31,666
+So what we are talking about is the Sharing of storage.
+
+202
+00:08:31,666 --> 00:08:33,766
+The first concept is to be used by others
+
+203
+00:08:33,766 --> 00:08:35,500
+You can't use
+
+204
+00:08:35,500 --> 00:08:36,700
+That's the same reason
+
+205
+00:08:36,700 --> 00:08:40,066
+What does it mean that my storage unit is being used by others today?
+
+206
+00:08:40,066 --> 00:08:40,966
+It can't be used.
+
+207
+00:08:40,966 --> 00:08:43,700
+For example, I now have a storage unit
+
+208
+00:08:43,700 --> 00:08:45,266
+Then I have three classmates here
+
+209
+00:08:45,266 --> 00:08:47,233
+want to share this storage unit
+
+210
+00:08:47,466 --> 00:08:49,466
+Then if my storage unit is in addition to
+
+211
+00:08:49,500 --> 00:08:51,166
+I saved something belonging to classmate A
+
+212
+00:08:51,166 --> 00:08:53,766
+Then classmates B and C cannot use it.
+
+213
+00:08:54,466 --> 00:08:56,300
+Because if classmate B also wants to use it
+
+214
+00:08:56,300 --> 00:08:58,200
+Then store his things in again
+
+215
+00:08:58,200 --> 00:09:01,600
+Then classmate B will overshadow classmate A.
+
+216
+00:09:01,600 --> 00:09:03,166
+Because you are sharing storage
+
+217
+00:09:03,166 --> 00:09:04,500
+What does sharing mean?
+
+218
+00:09:04,500 --> 00:09:06,900
+I only have one space today
+
+219
+00:09:07,466 --> 00:09:08,766
+That was used by classmate a
+
+220
+00:09:08,766 --> 00:09:11,100
+Student B can’t use it. Student B uses it.
+
+221
+00:09:11,100 --> 00:09:13,900
+Classmate A’s information disappeared
+
+222
+00:09:13,900 --> 00:09:15,800
+So this storage unit is shared
+
+223
+00:09:15,800 --> 00:09:18,266
+only occurs in those data
+
+224
+00:09:18,666 --> 00:09:21,000
+A situation that can be covered up means that
+
+225
+00:09:21,000 --> 00:09:23,366
+Otherwise because it is shared
+
+226
+00:09:23,366 --> 00:09:25,100
+So let's take a look
+
+227
+00:09:25,133 --> 00:09:26,966
+What about Sharing of this storage?
+
+228
+00:09:26,966 --> 00:09:29,433
+For example, let's look at this mathematical formula
+
+229
+00:09:29,800 --> 00:09:32,066
+What if my...
+
+230
+00:09:32,066 --> 00:09:33,800
+Think of it like I have a software
+
+231
+00:09:33,800 --> 00:09:35,666
+The program needs to be calculated
+
+232
+00:09:35,666 --> 00:09:37,000
+x=a+1
+
+233
+00:09:37,000 --> 00:09:39,900
+I want to put the result of a+1 into x
+
+234
+00:09:41,900 --> 00:09:44,066
+So here's what I'm going to do up there.
+
+235
+00:09:44,066 --> 00:09:46,966
+Then wait, wait, wait, I'm going to keep doing this
+
+236
+00:09:46,966 --> 00:09:50,266
+After doing this, I have to calculate y=c+d
+
+237
+00:09:50,266 --> 00:09:51,700
+I want to c+d
+
+238
+00:09:51,700 --> 00:09:53,066
+The result is placed in y
+
+239
+00:09:55,100 --> 00:09:57,933
+Then this is what you need to do in these two states.
+
+240
+00:09:57,933 --> 00:10:00,200
+You can see this on the left
+
+241
+00:10:02,333 --> 00:10:05,066
+That's the normal situation
+
+242
+00:10:05,066 --> 00:10:07,533
+I need a scratchpad
+
+243
+00:10:07,533 --> 00:10:09,366
+I want to save x
+
+244
+00:10:09,366 --> 00:10:12,266
+Because the result of a+b needs to be stored in x
+
+245
+00:10:12,266 --> 00:10:15,000
+So I need a storage space
+
+246
+00:10:15,000 --> 00:10:17,066
+Then this storage space is what we talked about earlier.
+
+247
+00:10:17,066 --> 00:10:21,066
+register you may want to have a 32 bit register
+
+248
+00:10:21,133 --> 00:10:23,833
+Or a 64-bit register to store x
+
+249
+00:10:24,666 --> 00:10:27,033
+Then you also need a register
+
+250
+00:10:27,166 --> 00:10:28,566
+Come and save y
+
+251
+00:10:28,566 --> 00:10:31,200
+Because you want to put the result of a plus b into x
+
+252
+00:10:31,333 --> 00:10:35,166
+Put the result of c plus d into y
+
+253
+00:10:35,166 --> 00:10:38,000
+So you x need a scratchpad
+
+254
+00:10:38,000 --> 00:10:40,966
+Then you also need a temporary register
+
+255
+00:10:40,966 --> 00:10:43,900
+Then if you didn’t do any shrinking at all
+
+256
+00:10:43,900 --> 00:10:46,800
+Just like the picture in the middle means
+
+257
+00:10:46,800 --> 00:10:49,500
+Because there is an addition at the bottom
+
+258
+00:10:49,500 --> 00:10:53,100
+So this is where it starts
+
+259
+00:10:53,500 --> 00:10:55,900
+selector
+
+260
+00:10:55,900 --> 00:10:57,133
+Multiplexer
+
+261
+00:10:57,133 --> 00:10:58,900
+The selector goes here to select a
+
+262
+00:10:58,900 --> 00:11:01,533
+Then select b here
+
+263
+00:11:01,533 --> 00:11:02,866
+He has an adding machine here
+
+264
+00:11:02,866 --> 00:11:04,366
+He will help you do a plus b
+
+265
+00:11:05,066 --> 00:11:05,900
+result of addition
+
+266
+00:11:05,900 --> 00:11:08,966
+You save it to x
+
+267
+00:11:09,200 --> 00:11:10,900
+Then you can finish this thing
+
+268
+00:11:10,900 --> 00:11:13,166
+x=a+b
+
+269
+00:11:13,166 --> 00:11:15,600
+Wait until you pass a few states
+
+270
+00:11:15,600 --> 00:11:17,433
+Next you need to do c plus d
+
+271
+00:11:18,066 --> 00:11:21,400
+If you put it in y, you will select c on the selector side.
+
+272
+00:11:22,166 --> 00:11:24,233
+Select d here in the selector
+
+273
+00:11:24,400 --> 00:11:26,600
+Then after this addition is completed,
+
+274
+00:11:26,600 --> 00:11:28,700
+The result is saved to y
+
+275
+00:11:29,266 --> 00:11:31,800
+c+d is stored in y
+
+276
+00:11:31,800 --> 00:11:33,933
+So you actually used two
+
+277
+00:11:33,933 --> 00:11:37,200
+One storage unit stores x and the other stores y.
+
+278
+00:11:37,200 --> 00:11:38,233
+It can be seen
+
+279
+00:11:38,266 --> 00:11:39,766
+You have two storage units
+
+280
+00:11:39,766 --> 00:11:40,833
+A deposit x
+
+281
+00:11:41,000 --> 00:11:43,100
+A deposit
+
+282
+00:11:43,800 --> 00:11:45,700
+This is not shared
+
+283
+00:11:45,700 --> 00:11:46,400
+Then take a look
+
+284
+00:11:46,400 --> 00:11:48,466
+Let’s take another look at our topic:
+
+285
+00:11:48,466 --> 00:11:51,166
+Storage sharing is sharing
+
+286
+00:11:51,200 --> 00:11:53,333
+When can it be shared?
+
+287
+00:11:53,333 --> 00:11:54,566
+The point is right
+
+288
+00:11:54,566 --> 00:11:55,533
+This is also very important
+
+289
+00:11:55,533 --> 00:11:57,833
+Because I just mentioned the topic earlier
+
+290
+00:11:57,900 --> 00:12:00,366
+So sharing means that I can’t use it when you use it.
+
+291
+00:12:00,366 --> 00:12:02,100
+Can't you use it when I use it?
+
+292
+00:12:02,100 --> 00:12:04,200
+Right? Then what?
+
+293
+00:12:05,400 --> 00:12:06,766
+We x,y
+
+294
+00:12:06,766 --> 00:12:09,100
+Can I share a storage space?
+
+295
+00:12:10,366 --> 00:12:12,700
+I only have one storage space
+
+296
+00:12:12,700 --> 00:12:13,966
+You wanted two originally
+
+297
+00:12:15,000 --> 00:12:18,166
+Then we will use a storage space to store x
+
+298
+00:12:18,166 --> 00:12:19,166
+Save y again
+
+299
+00:12:19,866 --> 00:12:21,866
+When can I save x?
+
+300
+00:12:22,166 --> 00:12:24,400
+Can I save y?
+
+301
+00:12:24,600 --> 00:12:25,866
+Here is his premise
+
+302
+00:12:25,866 --> 00:12:27,266
+If you say you look at you you
+
+303
+00:12:27,266 --> 00:12:29,266
+Imagine I add a plus b
+
+304
+00:12:29,566 --> 00:12:31,666
+Then calculate x
+
+305
+00:12:32,133 --> 00:12:33,033
+Then this x
+
+306
+00:12:33,700 --> 00:12:34,966
+I need a storage space
+
+307
+00:12:34,966 --> 00:12:37,900
+Then I have a program
+
+308
+00:12:37,900 --> 00:12:38,933
+What if x
+
+309
+00:12:38,933 --> 00:12:40,200
+The value is used up
+
+310
+00:12:40,200 --> 00:12:42,600
+No one will use x again in the future
+
+311
+00:12:42,900 --> 00:12:44,866
+Is it right? I can put y
+
+312
+00:12:45,200 --> 00:12:48,266
+Also save to the space on x
+
+313
+00:12:48,266 --> 00:12:50,166
+But his premise is
+
+314
+00:12:50,500 --> 00:12:54,000
+Because if someone else uses yours, it will disappear.
+
+315
+00:12:54,000 --> 00:12:57,366
+So this concept of sharing means
+
+316
+00:12:57,366 --> 00:12:59,333
+If you use it, I can't use it anymore
+
+317
+00:12:59,333 --> 00:13:03,566
+Then my storage space assumes that I save my value
+
+318
+00:13:03,566 --> 00:13:06,266
+Then one day I will tell you
+
+319
+00:13:06,266 --> 00:13:07,300
+You can also exist here
+
+320
+00:13:07,300 --> 00:13:10,266
+As soon as you deposit it, my value will disappear.
+
+321
+00:13:10,266 --> 00:13:13,500
+So if you calculate x here
+
+322
+00:13:13,500 --> 00:13:15,966
+What about when you're in this state?
+
+323
+00:13:15,966 --> 00:13:18,433
+Several more states passed below
+
+324
+00:13:18,466 --> 00:13:20,300
+x will not be used again at this time
+
+325
+00:13:20,366 --> 00:13:23,266
+I can save the result of c+d in
+
+326
+00:13:23,600 --> 00:13:27,000
+I can use the same space for this y
+
+327
+00:13:27,733 --> 00:13:29,666
+This is called register sharing
+
+328
+00:13:29,900 --> 00:13:30,366
+so
+
+329
+00:13:30,366 --> 00:13:33,166
+When is the only time he can do this?
+
+330
+00:13:33,666 --> 00:13:36,500
+The life of x and y
+
+331
+00:13:36,500 --> 00:13:37,700
+What is life span
+
+332
+00:13:37,700 --> 00:13:40,600
+That means I have to figure it out x
+
+333
+00:13:40,600 --> 00:13:42,400
+I x want to always remember
+
+334
+00:13:42,933 --> 00:13:43,266
+right?
+
+335
+00:13:43,266 --> 00:13:45,566
+But I may always use x here
+
+336
+00:13:45,566 --> 00:13:48,133
+That's okay, I always remember x
+
+337
+00:13:48,133 --> 00:13:50,266
+I can use it when I think of it.
+
+338
+00:13:50,533 --> 00:13:52,966
+But when I want to produce y today
+
+339
+00:13:52,966 --> 00:13:54,300
+To save the past time
+
+340
+00:13:54,300 --> 00:13:57,000
+Assume that I will never use x again later
+
+341
+00:13:57,000 --> 00:13:59,366
+I can put x
+
+342
+00:13:59,366 --> 00:14:02,433
+Release this temporary storage space
+
+343
+00:14:02,500 --> 00:14:03,500
+Come and save y
+
+344
+00:14:03,500 --> 00:14:06,466
+Because the life spans of two people do not overlap
+
+345
+00:14:06,966 --> 00:14:08,400
+no overlap
+
+346
+00:14:08,400 --> 00:14:10,733
+So this is called temporary register sharing.
+
+347
+00:14:10,733 --> 00:14:14,133
+So what do we do?
+
+348
+00:14:14,133 --> 00:14:15,400
+In fact, take this example
+
+349
+00:14:15,400 --> 00:14:17,933
+It will come faster than the half-day meeting I just had.
+
+350
+00:14:17,933 --> 00:14:19,566
+Give you 30 seconds
+
+351
+00:14:19,566 --> 00:14:22,033
+You first need to convert the root number of the one just now
+
+352
+00:14:22,100 --> 00:14:23,866
+Let’s look at the example again, okay?
+
+353
+00:14:41,300 --> 00:14:44,066
+let's take a look
+
+354
+00:14:44,066 --> 00:14:47,700
+One is the root of a squared plus b squared
+
+355
+00:14:47,700 --> 00:14:49,400
+Then we have just
+
+356
+00:14:49,400 --> 00:14:52,200
+I'll help you review again. You just calculate 0.875x
+
+357
+00:14:52,466 --> 00:14:54,300
+Add 0.5Y
+
+358
+00:14:54,300 --> 00:14:54,900
+And x
+
+359
+00:14:54,900 --> 00:14:57,700
+Find the largest among two people
+
+360
+00:14:58,300 --> 00:15:00,100
+What about your XY?
+
+361
+00:15:00,400 --> 00:15:04,300
+If you calculate AB separately, the one with the larger absolute value is x.
+
+362
+00:15:04,400 --> 00:15:08,533
+If AB each finds the smaller absolute value, it is y.
+
+363
+00:15:08,533 --> 00:15:11,300
+This is our previous understanding
+
+364
+00:15:11,333 --> 00:15:13,233
+Then take a look at it again
+
+365
+00:15:13,466 --> 00:15:15,600
+When designing your circuit, you should separate controllers.
+
+366
+00:15:15,600 --> 00:15:16,466
+With datapath
+
+367
+00:15:16,466 --> 00:15:18,900
+We won’t talk about the controller anymore.
+
+368
+00:15:18,900 --> 00:15:21,533
+Because the controller is after you draw the set
+
+369
+00:15:21,533 --> 00:15:22,333
+2C1S
+
+370
+00:15:22,866 --> 00:15:25,433
+But you need to have experience to bring him datapath.
+
+371
+00:15:25,466 --> 00:15:27,000
+How do you want to design
+
+372
+00:15:27,000 --> 00:15:29,500
+will be a complete datapath
+
+373
+00:15:29,500 --> 00:15:32,400
+So what we are talking about now is the datapath part
+
+374
+00:15:32,466 --> 00:15:36,266
+Then if you want to consider Register Sharing
+
+375
+00:15:36,266 --> 00:15:40,333
+Then let's see if you want to do 1234
+
+376
+00:15:40,333 --> 00:15:43,466
+Then when checking these four steps
+
+377
+00:15:43,466 --> 00:15:47,366
+Let’s go through this process again first
+
+378
+00:15:47,600 --> 00:15:50,700
+At first you have to read it in and put it into a
+
+379
+00:15:50,700 --> 00:15:52,133
+The first input is read as a
+
+380
+00:15:52,133 --> 00:15:52,866
+The second one reads b
+
+381
+00:15:52,866 --> 00:15:55,733
+Because you have to calculate the square root of a square plus b square
+
+382
+00:15:55,733 --> 00:15:56,700
+right?
+
+383
+00:15:56,700 --> 00:15:59,766
+You need to calculate the square root of a square plus b square.
+
+384
+00:15:59,766 --> 00:16:02,100
+So why do you want to
+
+385
+00:16:03,166 --> 00:16:04,933
+Let's say you have two inputs
+
+386
+00:16:04,933 --> 00:16:07,133
+Then you read the first input and put it into a
+
+387
+00:16:07,133 --> 00:16:09,966
+The second input is read in and placed in b
+
+388
+00:16:10,066 --> 00:16:12,200
+Next I sent a start signal
+
+389
+00:16:12,200 --> 00:16:14,300
+It means I'm going to start doing it
+
+390
+00:16:14,300 --> 00:16:16,666
+Then what will I ask for first when I start doing it?
+
+391
+00:16:17,066 --> 00:16:19,266
+The absolute value of a and the absolute value of b
+
+392
+00:16:19,266 --> 00:16:22,733
+Suppose I perform an action in a state
+
+393
+00:16:22,733 --> 00:16:25,700
+So now I have read in all the values ​​of a and b.
+
+394
+00:16:25,700 --> 00:16:30,033
+So I put the absolute value of a into t1
+
+395
+00:16:30,133 --> 00:16:31,566
+The absolute value of b is placed in t2
+
+396
+00:16:31,566 --> 00:16:32,966
+Because I have to calculate this first
+
+397
+00:16:32,966 --> 00:16:35,766
+The absolute value of a The absolute value of b
+
+398
+00:16:36,400 --> 00:16:39,200
+Here we have to go with the front pocket
+
+399
+00:16:39,300 --> 00:16:41,800
+This matter is in your current state
+
+400
+00:16:42,100 --> 00:16:43,066
+you do two things
+
+401
+00:16:43,066 --> 00:16:45,900
+These two actions are done simultaneously
+
+402
+00:16:45,933 --> 00:16:46,966
+Then let me ask Dajia
+
+403
+00:16:46,966 --> 00:16:49,766
+Can you say I will do t1 first and then t2?
+
+404
+00:16:49,766 --> 00:16:52,933
+It can be divided into two states.
+
+405
+00:16:52,933 --> 00:16:55,700
+You want a state to count t1 at the same time
+
+406
+00:16:55,700 --> 00:16:58,066
+It can also count t2 at the same time.
+
+407
+00:16:58,066 --> 00:16:59,366
+This is what it means here
+
+408
+00:16:59,366 --> 00:17:01,500
+I calculate t1 at the same time in this state
+
+409
+00:17:01,500 --> 00:17:02,900
+Count t2 at the same time
+
+410
+00:17:03,666 --> 00:17:05,500
+Then what can I do?
+
+411
+00:17:05,500 --> 00:17:08,200
+I can also divide it into two states
+
+412
+00:17:08,200 --> 00:17:09,966
+The first state is counted as t1
+
+413
+00:17:12,400 --> 00:17:14,800
+The second state is counted as t2
+
+414
+00:17:14,800 --> 00:17:17,066
+So you need one state or two states here
+
+415
+00:17:17,500 --> 00:17:19,233
+It's your plan
+
+416
+00:17:19,366 --> 00:17:20,466
+What you planned is different
+
+417
+00:17:20,466 --> 00:17:23,133
+Your entire circuit will be different.
+
+418
+00:17:23,133 --> 00:17:24,700
+So what is his cost?
+
+419
+00:17:24,700 --> 00:17:27,100
+You want you to go and you have to think about this.
+
+420
+00:17:27,100 --> 00:17:28,900
+Because we have been teaching the whole time
+
+421
+00:17:28,900 --> 00:17:30,066
+This is what you want
+
+422
+00:17:30,066 --> 00:17:31,066
+For example, if you look at
+
+423
+00:17:31,100 --> 00:17:33,166
+When you write your status like this
+
+424
+00:17:33,266 --> 00:17:34,900
+Count t1 at the same time
+
+425
+00:17:34,900 --> 00:17:36,333
+Count t2 at the same time
+
+426
+00:17:36,333 --> 00:17:36,966
+right?
+
+427
+00:17:36,966 --> 00:17:40,400
+That means you want some hardware that is absolutely worth it.
+
+428
+00:17:40,600 --> 00:17:42,633
+You have to have two at the same time
+
+429
+00:17:42,700 --> 00:17:45,300
+Because when you do the absolute value of a
+
+430
+00:17:45,300 --> 00:17:47,666
+You are also doing the absolute value of b
+
+431
+00:17:47,800 --> 00:17:51,266
+Right, so you have to have at least two hardware bodies?
+
+432
+00:17:51,366 --> 00:17:54,100
+When two absolute value hardwares are used to do a
+
+433
+00:17:54,100 --> 00:17:55,500
+You are doing b at the same time
+
+434
+00:17:55,500 --> 00:17:57,666
+Because these two are at the same time
+
+435
+00:17:58,133 --> 00:18:00,400
+Then if you are divided into two states
+
+436
+00:18:00,400 --> 00:18:04,733
+For example, if you are in the first state, calculate t1 first.
+
+437
+00:18:04,733 --> 00:18:06,066
+The second state is calculated as t2
+
+438
+00:18:06,066 --> 00:18:08,266
+Then at this time you only need an absolute value hardware
+
+439
+00:18:09,500 --> 00:18:11,800
+You can use the same absolute value hardware
+
+440
+00:18:11,933 --> 00:18:13,866
+to find the absolute value of a
+
+441
+00:18:13,866 --> 00:18:17,166
+Then do the absolute value of b in the next state
+
+442
+00:18:17,166 --> 00:18:18,000
+so
+
+443
+00:18:18,133 --> 00:18:20,900
+Do you want to put them in the same state?
+
+444
+00:18:20,900 --> 00:18:22,466
+It depends on your plan
+
+445
+00:18:22,500 --> 00:18:23,700
+What you planned is different
+
+446
+00:18:23,700 --> 00:18:25,900
+The status of your entire circuit design is
+
+447
+00:18:25,900 --> 00:18:27,633
+Everything will be different
+
+448
+00:18:28,166 --> 00:18:30,266
+I'll go here first
+
+449
+00:18:30,600 --> 00:18:32,166
+emphasize this
+
+450
+00:18:32,166 --> 00:18:34,200
+So what is right?
+
+451
+00:18:34,200 --> 00:18:35,700
+There is no standard answer for you
+
+452
+00:18:35,700 --> 00:18:37,300
+You have to evaluate it yourself
+
+453
+00:18:37,300 --> 00:18:39,800
+You have to evaluate it yourself. That's right.
+
+454
+00:18:39,800 --> 00:18:41,800
+Because you can really divide it into one state
+
+455
+00:18:41,800 --> 00:18:42,866
+It can be viewed in two states
+
+456
+00:18:42,866 --> 00:18:45,266
+Do you want low cost or fast speed?
+
+457
+00:18:45,266 --> 00:18:46,133
+That's it
+
+458
+00:18:47,133 --> 00:18:49,766
+Then what do you do after you calculate t1 and t2?
+
+459
+00:18:50,066 --> 00:18:52,400
+You ask for x and y
+
+460
+00:18:52,400 --> 00:18:53,266
+So you see
+
+461
+00:18:53,400 --> 00:18:56,666
+The maximum value of t1 and t2 is x
+
+462
+00:18:57,933 --> 00:18:59,766
+Because t1 and t2 are actually already a
+
+463
+00:18:59,766 --> 00:19:01,066
+Is b definitely worth it?
+
+464
+00:19:01,066 --> 00:19:03,133
+Is it correct that the absolute value of a is the same as the absolute value of b?
+
+465
+00:19:03,133 --> 00:19:05,533
+Therefore, the smaller values ​​in t1 and t2
+
+466
+00:19:05,533 --> 00:19:07,166
+Put it in y
+
+467
+00:19:07,166 --> 00:19:08,566
+No problem here
+
+468
+00:19:08,566 --> 00:19:12,466
+You can find x and y here
+
+469
+00:19:12,466 --> 00:19:13,866
+Then the next state
+
+470
+00:19:14,066 --> 00:19:16,900
+You shift x right by 3 bits.
+
+471
+00:19:17,466 --> 00:19:20,133
+Shift y right one position and put it in t
+
+472
+00:19:20,133 --> 00:19:21,733
+y is shifted right by one position and placed at t4
+
+473
+00:19:21,733 --> 00:19:23,033
+what does that mean
+
+474
+00:19:23,266 --> 00:19:25,400
+What does T4 equal to 0.5 y?
+
+475
+00:19:25,400 --> 00:19:27,666
+Because you shifted y one position to the right
+
+476
+00:19:28,866 --> 00:19:32,533
+Then you shift x right three places and put it in T3
+
+477
+00:19:32,533 --> 00:19:33,766
+what does that mean
+
+478
+00:19:33,766 --> 00:19:39,600
+T3 is 0.125x because shifting one position to the right becomes 0.5
+
+479
+00:19:39,600 --> 00:19:41,466
+Shift right two places to 0.25
+
+480
+00:19:41,466 --> 00:19:44,366
+Shift three places to the right and it becomes 0.125
+
+481
+00:19:44,500 --> 00:19:47,800
+So T3 here is actually 0.125x
+
+482
+00:19:47,966 --> 00:19:50,266
+Then T4 is actually 0.5Y
+
+483
+00:19:50,900 --> 00:19:53,800
+So you have calculated this 0.5Y
+
+484
+00:19:54,600 --> 00:19:56,066
+So what are you going to do next?
+
+485
+00:19:56,066 --> 00:19:58,533
+Why do you want to subtract T3 from x?
+
+486
+00:19:58,533 --> 00:20:02,300
+Because T3 is 0.125X
+
+487
+00:20:02,400 --> 00:20:06,800
+Subtract 0.125X from x to get 0.875X
+
+488
+00:20:07,133 --> 00:20:10,900
+So this action is calculated as 0.875X
+
+489
+00:20:12,933 --> 00:20:14,166
+What's next?
+
+490
+00:20:14,200 --> 00:20:15,900
+You have to add these two
+
+491
+00:20:15,900 --> 00:20:20,300
+So your T4 is actually 0.5Y
+
+492
+00:20:20,366 --> 00:20:25,766
+Is that right? Your T5 T5 is 0.875x
+
+493
+00:20:25,766 --> 00:20:28,800
+0.5Y plus 0.875x
+
+494
+00:20:28,800 --> 00:20:30,266
+The result is placed in T6
+
+495
+00:20:30,266 --> 00:20:32,966
+Then this T6 will get the previous one.
+
+496
+00:20:32,966 --> 00:20:35,333
+The sum of these two
+
+497
+00:20:35,333 --> 00:20:36,200
+That t6
+
+498
+00:20:36,200 --> 00:20:39,000
+Then find the maximum value of x.
+
+499
+00:20:39,000 --> 00:20:40,566
+Put it on t7
+
+500
+00:20:40,566 --> 00:20:42,300
+Then it's done
+
+501
+00:20:42,466 --> 00:20:44,900
+Then let me talk about it again here
+
+502
+00:20:44,900 --> 00:20:46,500
+Re -emphasis primary
+
+503
+00:20:47,533 --> 00:20:48,466
+You
+
+504
+00:20:48,533 --> 00:20:50,566
+These two actions must be performed in the same state
+
+505
+00:20:50,566 --> 00:20:52,733
+Still divided into two states
+
+506
+00:20:52,733 --> 00:20:54,233
+This is your plan
+
+507
+00:20:54,766 --> 00:20:56,133
+So you can also
+
+508
+00:20:56,133 --> 00:20:59,200
+For example, I can also combine T4 and T5
+
+509
+00:20:59,466 --> 00:21:00,966
+Put it in the same state
+
+510
+00:21:00,966 --> 00:21:02,366
+I don’t want to be divided into two states
+
+511
+00:21:02,366 --> 00:21:03,766
+My name is T4
+
+512
+00:21:03,800 --> 00:21:06,233
+Then I will do subtraction with T4 at the same time.
+
+513
+00:21:06,400 --> 00:21:07,966
+Also do addition at the same time
+
+514
+00:21:08,400 --> 00:21:09,600
+Oh, that's okay too
+
+515
+00:21:09,600 --> 00:21:11,766
+No one said no
+
+516
+00:21:11,766 --> 00:21:14,000
+But your costs will be higher
+
+517
+00:21:14,000 --> 00:21:14,800
+so
+
+518
+00:21:14,866 --> 00:21:19,700
+You have to divide it into eight states from S0 to S7.
+
+519
+00:21:19,700 --> 00:21:21,666
+Still have to divide into 9 pieces, still have to divide into 5 pieces
+
+520
+00:21:21,666 --> 00:21:23,166
+You can plan this
+
+521
+00:21:23,166 --> 00:21:24,566
+But your plan is different
+
+522
+00:21:24,566 --> 00:21:26,100
+Your circuit is different
+
+523
+00:21:26,266 --> 00:21:28,000
+Just telling you this
+
+524
+00:21:28,000 --> 00:21:28,933
+So this
+
+525
+00:21:28,933 --> 00:21:30,933
+Which of your actions should be in the same state?
+
+526
+00:21:30,933 --> 00:21:33,166
+You can divide this
+
+527
+00:21:33,166 --> 00:21:34,933
+Then suppose that
+
+528
+00:21:34,933 --> 00:21:36,400
+So our premise is
+
+529
+00:21:36,400 --> 00:21:38,866
+Suppose you use the left side like this
+
+530
+00:21:39,066 --> 00:21:42,000
+This 8-state method assumes
+
+531
+00:21:42,100 --> 00:21:43,800
+I think this method is the simplest
+
+532
+00:21:43,800 --> 00:21:45,733
+Then we will use this method
+
+533
+00:21:45,733 --> 00:21:46,800
+no problem
+
+534
+00:21:46,900 --> 00:21:49,366
+In the case of this method
+
+535
+00:21:49,366 --> 00:21:51,600
+How do I register sharing
+
+536
+00:21:51,966 --> 00:21:55,500
+Because we are now going to do storage sharing
+
+537
+00:21:55,500 --> 00:21:56,733
+Storage sharing
+
+538
+00:21:56,733 --> 00:21:57,733
+In fact, here we
+
+539
+00:21:57,733 --> 00:22:00,666
+What we are talking about is mainly the sharing of temporary registers.
+
+540
+00:22:00,666 --> 00:22:02,166
+because of storage space
+
+541
+00:22:02,166 --> 00:22:03,266
+that storage space
+
+542
+00:22:03,266 --> 00:22:06,333
+In fact, what we discuss most here is the temporary register.
+
+543
+00:22:06,333 --> 00:22:07,266
+So storage sharing
+
+544
+00:22:07,566 --> 00:22:10,700
+In fact, it is the sharing of register
+
+545
+00:22:10,700 --> 00:22:13,066
+So how do we do register sharing?
+
+546
+00:22:13,066 --> 00:22:13,966
+That's it
+
+547
+00:22:14,266 --> 00:22:17,100
+Suppose I already know that I am divided into these 8 states
+
+548
+00:22:17,100 --> 00:22:20,466
+The 8 states from S0 to S7
+
+549
+00:22:20,466 --> 00:22:22,766
+Then we need to register for sharing. What do I want to do?
+
+550
+00:22:23,166 --> 00:22:27,100
+I first need to decide how many states there are
+
+551
+00:22:29,466 --> 00:22:31,133
+I just told you this
+
+552
+00:22:31,133 --> 00:22:32,266
+This depends on you
+
+553
+00:22:32,300 --> 00:22:36,400
+You can divide it from S0 to S7 or S0 to S9
+
+554
+00:22:36,400 --> 00:22:39,933
+You can also divide it into S0 to S4
+
+555
+00:22:39,933 --> 00:22:42,333
+You have to complete step 4, step 5, and step 6.
+
+556
+00:22:42,333 --> 00:22:44,166
+You can complete all 12 steps.
+
+557
+00:22:44,166 --> 00:22:46,500
+Then the circuit may be different.
+
+558
+00:22:46,500 --> 00:22:48,133
+So the first thing you have to decide is
+
+559
+00:22:48,133 --> 00:22:49,766
+How many states do you want to divide into?
+
+560
+00:22:50,200 --> 00:22:51,400
+After that, there is a state
+
+561
+00:22:51,400 --> 00:22:55,466
+You have to decide the lifetime of each variable
+
+562
+00:22:55,466 --> 00:22:57,266
+Because we just talked about
+
+563
+00:22:57,266 --> 00:22:58,600
+You can share
+
+564
+00:22:58,600 --> 00:23:00,866
+only in our lifetime
+
+565
+00:23:01,266 --> 00:23:02,200
+no overlap
+
+566
+00:23:02,200 --> 00:23:03,233
+in other words
+
+567
+00:23:03,266 --> 00:23:04,800
+I won't use it when you use it.
+
+568
+00:23:04,800 --> 00:23:06,100
+You won't use it when I use it
+
+569
+00:23:06,100 --> 00:23:08,400
+This way the two of us can share
+
+570
+00:23:08,400 --> 00:23:11,000
+We can share this storage space
+
+571
+00:23:11,000 --> 00:23:13,266
+The premise is that you won’t use it when I use it.
+
+572
+00:23:13,266 --> 00:23:15,166
+When you use it, I won’t use it.
+
+573
+00:23:15,166 --> 00:23:17,700
+Then the two of us can share it
+
+574
+00:23:17,700 --> 00:23:22,033
+So our life spans cannot overlap
+
+575
+00:23:22,166 --> 00:23:25,266
+So I have to determine the lifetime of each variable
+
+576
+00:23:25,466 --> 00:23:27,666
+Then the lifetime of each variable is determined.
+
+577
+00:23:27,666 --> 00:23:28,600
+I will know
+
+578
+00:23:28,600 --> 00:23:31,300
+I need at least a few temporary registers
+
+579
+00:23:31,300 --> 00:23:33,700
+Then I can design this circuit
+
+580
+00:23:33,766 --> 00:23:35,466
+Then let's take a look
+
+581
+00:23:35,466 --> 00:23:36,966
+Let's string this together
+
+582
+00:23:36,966 --> 00:23:38,533
+So you can see
+
+583
+00:23:38,533 --> 00:23:41,300
+From this state diagram on the left
+
+584
+00:23:41,300 --> 00:23:44,600
+I will draw the life cycle on the right
+
+585
+00:23:44,600 --> 00:23:46,600
+The lifetime of each variable
+
+586
+00:23:46,900 --> 00:23:48,366
+Schematic diagram
+
+587
+00:23:48,366 --> 00:23:50,066
+How to draw this schematic diagram?
+
+588
+00:23:50,066 --> 00:23:51,300
+It's actually very simple
+
+589
+00:23:51,300 --> 00:23:52,566
+You pay attention
+
+590
+00:23:53,700 --> 00:23:58,366
+In my S0 state, I read in a and b.
+
+591
+00:23:58,366 --> 00:24:00,266
+I read in the first variable
+
+592
+00:24:00,266 --> 00:24:02,066
+The first input is read in and placed into a
+
+593
+00:24:02,066 --> 00:24:04,000
+The second input is read in and placed in b
+
+594
+00:24:04,000 --> 00:24:06,700
+Right? Then let me ask you how long a will live.
+
+595
+00:24:06,700 --> 00:24:09,866
+Which variable's lifetime are we now asking for?
+
+596
+00:24:09,866 --> 00:24:11,433
+A and B are variables
+
+597
+00:24:11,966 --> 00:24:13,300
+How long will he live?
+
+598
+00:24:13,300 --> 00:24:15,733
+The life span means
+
+599
+00:24:15,733 --> 00:24:17,066
+How long will I live?
+
+600
+00:24:17,300 --> 00:24:18,266
+You pay attention
+
+601
+00:24:18,266 --> 00:24:20,200
+After A and B are calculated
+
+602
+00:24:20,500 --> 00:24:23,433
+A and B are used here, right?
+
+603
+00:24:24,000 --> 00:24:26,233
+Will anyone use my a and b later?
+
+604
+00:24:26,533 --> 00:24:27,466
+No
+
+605
+00:24:27,733 --> 00:24:31,266
+So I only need to live in one state a and b
+
+606
+00:24:31,266 --> 00:24:32,633
+So you see him like this
+
+607
+00:24:32,733 --> 00:24:35,366
+As long as a b is alive in the state of s1
+
+608
+00:24:35,366 --> 00:24:36,866
+Because you s
+
+609
+00:24:36,866 --> 00:24:38,100
+you were figured out
+
+610
+00:24:38,100 --> 00:24:39,500
+I'm alive here
+
+611
+00:24:40,100 --> 00:24:42,533
+You can calculate the absolute value
+
+612
+00:24:42,533 --> 00:24:44,566
+After the calculation, I can throw away AB.
+
+613
+00:24:44,566 --> 00:24:47,300
+Because he doesn't have to live anymore
+
+614
+00:24:47,300 --> 00:24:50,666
+So this is called his life span
+
+615
+00:24:51,166 --> 00:24:53,000
+What about after calculating t1 and t2?
+
+616
+00:24:53,000 --> 00:24:54,800
+Because after t1 and t2 are calculated,
+
+617
+00:24:54,800 --> 00:24:56,266
+There's no use for it here.
+
+618
+00:24:56,266 --> 00:24:59,400
+Therefore, the life cycle of t1 and t2 is also a state.
+
+619
+00:24:59,966 --> 00:25:02,533
+You should pay attention to the special one
+
+620
+00:25:02,533 --> 00:25:05,300
+For example, XY has been calculated, right?
+
+621
+00:25:05,766 --> 00:25:08,266
+Is it correct that x is used here?
+
+622
+00:25:08,400 --> 00:25:09,800
+You figure out x here
+
+623
+00:25:09,800 --> 00:25:12,000
+Here you need to use x to shift three places to the right
+
+624
+00:25:12,000 --> 00:25:12,666
+you are here
+
+625
+00:25:12,666 --> 00:25:13,633
+Also use x
+
+626
+00:25:13,866 --> 00:25:15,500
+You also need to use x here
+
+627
+00:25:15,933 --> 00:25:20,333
+So x wants me 1234 4 states
+
+628
+00:25:20,333 --> 00:25:21,300
+because you see
+
+629
+00:25:21,366 --> 00:25:24,366
+I calculated x here and will use it here
+
+630
+00:25:24,800 --> 00:25:26,233
+It will also be used here
+
+631
+00:25:26,666 --> 00:25:29,366
+To live, x must always be remembered
+
+632
+00:25:29,700 --> 00:25:32,366
+This should be remembered because x will be used later.
+
+633
+00:25:32,500 --> 00:25:36,166
+So I have to remember 4 states for this reason
+
+634
+00:25:36,166 --> 00:25:38,366
+Because someone behind me will use x
+
+635
+00:25:38,900 --> 00:25:39,533
+right?
+
+636
+00:25:39,533 --> 00:25:42,533
+So I want to live after x is calculated
+
+637
+00:25:42,533 --> 00:25:46,066
+Stay alive until you are used up here
+
+638
+00:25:46,066 --> 00:25:48,933
+Because the result of the operation on the right is placed on the left
+
+639
+00:25:48,933 --> 00:25:51,366
+So if this variable will be used
+
+640
+00:25:51,366 --> 00:25:52,466
+Then you have to live forever
+
+641
+00:25:53,066 --> 00:25:53,966
+What about y
+
+642
+00:25:53,966 --> 00:25:56,266
+y is not necessary. Look at y after calculating it.
+
+643
+00:25:56,266 --> 00:25:57,566
+Only this person will use y
+
+644
+00:25:57,566 --> 00:25:59,933
+Is there any y that needs to be used on the right side of the equal sign?
+
+645
+00:25:59,933 --> 00:26:03,400
+No, so y only needs one state
+
+646
+00:26:03,400 --> 00:26:04,333
+What about T3?
+
+647
+00:26:04,333 --> 00:26:06,100
+After t3 is calculated
+
+648
+00:26:06,566 --> 00:26:08,133
+Just live here
+
+649
+00:26:08,133 --> 00:26:09,066
+That's no problem
+
+650
+00:26:09,066 --> 00:26:10,433
+He is also in a state
+
+651
+00:26:10,566 --> 00:26:12,266
+But what about T4?
+
+652
+00:26:12,333 --> 00:26:13,500
+T4 counts here
+
+653
+00:26:13,500 --> 00:26:15,500
+T4 will be used here only after the calculation is done.
+
+654
+00:26:15,500 --> 00:26:18,966
+So after T4 is calculated, here must be alive.
+
+655
+00:26:18,966 --> 00:26:20,866
+There are two states to live in
+
+656
+00:26:21,300 --> 00:26:23,966
+So this is called his life span, that’s what it means
+
+657
+00:26:23,966 --> 00:26:25,100
+because you want
+
+658
+00:26:26,566 --> 00:26:28,700
+After I figured it out I used
+
+659
+00:26:28,700 --> 00:26:31,033
+A storage space to temporarily store it
+
+660
+00:26:31,166 --> 00:26:31,966
+right?
+
+661
+00:26:32,000 --> 00:26:35,066
+Then this storage space will be occupied all the time.
+
+662
+00:26:35,066 --> 00:26:37,266
+Because it is assumed that this value will be used later
+
+663
+00:26:37,266 --> 00:26:38,900
+This is called its life span
+
+664
+00:26:38,933 --> 00:26:39,933
+If this storage space
+
+665
+00:26:39,933 --> 00:26:41,333
+I release it for others to use today
+
+666
+00:26:41,333 --> 00:26:45,500
+The value I just calculated is gone.
+
+667
+00:26:46,200 --> 00:26:48,500
+So his premise is that
+
+668
+00:26:48,533 --> 00:26:51,600
+a b is calculated as long as it maintains a state T1
+
+669
+00:26:51,600 --> 00:26:55,500
+But x must be alive after it is calculated
+
+670
+00:26:55,500 --> 00:26:58,200
+You will be used up only if you stay alive until here.
+
+671
+00:26:58,333 --> 00:27:00,900
+So x has to change 4 states
+
+672
+00:27:00,900 --> 00:27:02,133
+So you can know
+
+673
+00:27:02,133 --> 00:27:03,666
+This is how we write it:
+
+674
+00:27:03,666 --> 00:27:05,233
+This is the status
+
+675
+00:27:05,866 --> 00:27:07,966
+Here are the variables
+
+676
+00:27:08,133 --> 00:27:11,000
+That horizontal axis is state
+
+677
+00:27:11,733 --> 00:27:14,000
+The vertical axis is the variable
+
+678
+00:27:14,000 --> 00:27:16,900
+You can make a cross out of it this way
+
+679
+00:27:16,900 --> 00:27:19,900
+It’s that variable that needs to stay alive.
+
+680
+00:27:19,900 --> 00:27:21,466
+Then make a mark
+
+681
+00:27:21,566 --> 00:27:24,166
+So we can figure out how
+
+682
+00:27:24,600 --> 00:27:28,333
+How many variables must be alive in each state?
+
+683
+00:27:28,333 --> 00:27:30,300
+The first state must have two variables
+
+684
+00:27:30,300 --> 00:27:33,033
+The second state must have two variables
+
+685
+00:27:33,066 --> 00:27:35,966
+The third state must have two variables
+
+686
+00:27:35,966 --> 00:27:39,033
+The fourth state must have 3 variables
+
+687
+00:27:39,300 --> 00:27:41,700
+The fifth state must have 3 variables
+
+688
+00:27:41,733 --> 00:27:43,933
+The sixth state must have two variables
+
+689
+00:27:43,933 --> 00:27:46,900
+The seventh state must have a variable
+
+690
+00:27:46,900 --> 00:27:48,233
+Then let me ask Dajia
+
+691
+00:27:48,300 --> 00:27:51,466
+How much storage space do you need at least?
+
+692
+00:27:51,466 --> 00:27:53,700
+This time will come, right here
+
+693
+00:27:54,333 --> 00:27:56,466
+Right? What does this mean?
+
+694
+00:27:57,100 --> 00:28:00,033
+There are two variables to remember in state one
+
+695
+00:28:00,066 --> 00:28:02,366
+There are two variables in state 2
+
+696
+00:28:02,366 --> 00:28:05,600
+In state 3, there are two temporary registers
+
+697
+00:28:05,666 --> 00:28:07,000
+Two scratchpads are needed
+
+698
+00:28:07,000 --> 00:28:08,133
+When in state 4
+
+699
+00:28:08,133 --> 00:28:09,900
+Because there are three that only need to be remembered
+
+700
+00:28:09,900 --> 00:28:11,766
+So in state 4
+
+701
+00:28:11,766 --> 00:28:13,800
+There must be at least three scratchpads
+
+702
+00:28:13,800 --> 00:28:15,266
+what does that mean
+
+703
+00:28:15,366 --> 00:28:17,700
+I ran through every state of the entire circuit
+
+704
+00:28:17,700 --> 00:28:21,200
+I need at least three registers
+
+705
+00:28:22,733 --> 00:28:26,400
+I want to take the most
+
+706
+00:28:26,400 --> 00:28:28,566
+To be alive in a certain state at the same time
+
+707
+00:28:28,566 --> 00:28:31,100
+The most variable
+
+708
+00:28:31,100 --> 00:28:32,233
+That is in
+
+709
+00:28:32,466 --> 00:28:36,233
+Both state 4 and state 5 require 3 temporary registers each.
+
+710
+00:28:36,400 --> 00:28:39,166
+So I need at least 3 scratchpads
+
+711
+00:28:39,166 --> 00:28:40,033
+Only then can
+
+712
+00:28:40,133 --> 00:28:43,033
+You can save all my information
+
+713
+00:28:43,500 --> 00:28:45,366
+That’s understandable here
+
+714
+00:28:45,366 --> 00:28:47,400
+This is called his life span
+
+715
+00:28:47,400 --> 00:28:49,766
+This variable has to live for so long
+
+716
+00:28:49,766 --> 00:28:51,466
+There is also this variable
+
+717
+00:28:51,466 --> 00:28:52,500
+Just live in one state
+
+718
+00:28:52,500 --> 00:28:54,500
+Then some variables need to live in two states
+
+719
+00:28:54,500 --> 00:28:56,366
+Then I'll know after we figure it out
+
+720
+00:28:56,366 --> 00:28:59,566
+I need at least 3 scratchpads
+
+721
+00:28:59,566 --> 00:29:01,500
+Then I need at least 3 temporary registers
+
+722
+00:29:01,500 --> 00:29:02,433
+I can
+
+723
+00:29:02,566 --> 00:29:05,533
+I just assume that my register number is called R1
+
+724
+00:29:05,533 --> 00:29:07,100
+R2,R3
+
+725
+00:29:07,100 --> 00:29:08,666
+I have three temporary registers
+
+726
+00:29:08,700 --> 00:29:11,566
+They are R1, R2, R3 respectively
+
+727
+00:29:11,566 --> 00:29:13,333
+Then I ask Dajia how do you save it?
+
+728
+00:29:13,333 --> 00:29:14,400
+It's actually very simple
+
+729
+00:29:14,400 --> 00:29:15,600
+He is like this here
+
+730
+00:29:16,700 --> 00:29:19,300
+You have to stay alive in this state a and b
+
+731
+00:29:19,300 --> 00:29:20,700
+So you see
+
+732
+00:29:20,700 --> 00:29:22,900
+I am in this state of s1
+
+733
+00:29:22,900 --> 00:29:24,600
+I also need at least two scratchpads
+
+734
+00:29:24,600 --> 00:29:26,400
+Then I will give my number
+
+735
+00:29:27,333 --> 00:29:28,600
+The value of a is placed in r1
+
+736
+00:29:28,600 --> 00:29:29,966
+The value of b is placed in r2
+
+737
+00:29:29,966 --> 00:29:30,966
+Right? Then what?
+
+738
+00:29:30,966 --> 00:29:32,433
+Reached next state
+
+739
+00:29:32,666 --> 00:29:36,333
+In the next state, I need to remember t1 and t2
+
+740
+00:29:36,333 --> 00:29:38,366
+That’s because you no longer need a and b.
+
+741
+00:29:38,366 --> 00:29:40,800
+So the storage space of a and b can be freed up
+
+742
+00:29:40,866 --> 00:29:43,066
+Then I put t1 on r1
+
+743
+00:29:43,066 --> 00:29:45,266
+T2 is put on R2 again
+
+744
+00:29:45,266 --> 00:29:47,800
+Well, as soon as you put t1 in, a will be covered.
+
+745
+00:29:47,800 --> 00:29:49,400
+That's because a won't be used later
+
+746
+00:29:49,400 --> 00:29:53,000
+It doesn't matter, we share the register
+
+747
+00:29:53,000 --> 00:29:55,166
+So I have the same scratchpad
+
+748
+00:29:55,166 --> 00:29:56,400
+Sometimes what is saved is a
+
+749
+00:29:56,400 --> 00:29:58,000
+Sometimes the deposit is t1
+
+750
+00:29:58,000 --> 00:29:59,500
+Sometimes I save x
+
+751
+00:29:59,566 --> 00:30:01,800
+Sometimes I save T7
+
+752
+00:30:01,800 --> 00:30:03,933
+I just use this concept
+
+753
+00:30:03,933 --> 00:30:06,900
+So you can see that my r1 and r2 are placed at a and b
+
+754
+00:30:06,900 --> 00:30:09,066
+Then what's next
+
+755
+00:30:09,066 --> 00:30:11,500
+r1, r2 are placed with t1, t2
+
+756
+00:30:11,733 --> 00:30:13,966
+Then what's next
+
+757
+00:30:14,000 --> 00:30:16,533
+Because you were later freed up
+
+758
+00:30:16,533 --> 00:30:18,033
+I’ll do another one next x
+
+759
+00:30:18,066 --> 00:30:20,000
+Then I put x in r1
+
+760
+00:30:20,533 --> 00:30:21,900
+Right because
+
+761
+00:30:22,066 --> 00:30:24,166
+R1 is used up here, and r2 is empty again
+
+762
+00:30:24,166 --> 00:30:27,466
+So I put x in r1, what about y?
+
+763
+00:30:27,466 --> 00:30:29,300
+y I assume I put it in r2
+
+764
+00:30:29,866 --> 00:30:32,600
+Oh, and then when we get here
+
+765
+00:30:32,600 --> 00:30:33,566
+Come in with your t4
+
+766
+00:30:33,566 --> 00:30:35,400
+You cannot place t4 on r1 at this time.
+
+767
+00:30:35,400 --> 00:30:37,566
+Because x wants to live forever
+
+768
+00:30:37,566 --> 00:30:39,333
+Then x is placed in r1
+
+769
+00:30:39,333 --> 00:30:42,500
+Just put your t4 in r2
+
+770
+00:30:42,500 --> 00:30:43,600
+Then you t3
+
+771
+00:30:43,600 --> 00:30:46,200
+Can be placed in another temporary register
+
+772
+00:30:46,200 --> 00:30:49,366
+r3 Then x will still be alive next
+
+773
+00:30:49,366 --> 00:30:51,200
+Then t4 is still alive
+
+774
+00:30:51,200 --> 00:30:54,500
+Then put your new t5 t5 into r3
+
+775
+00:30:54,500 --> 00:30:55,400
+That's it
+
+776
+00:30:55,466 --> 00:30:58,033
+Because you only have 3 scratchpads now
+
+777
+00:30:58,966 --> 00:31:02,300
+Then this is called temporary register sharing.
+
+778
+00:31:03,200 --> 00:31:05,266
+Then we have to see the results
+
+779
+00:31:05,266 --> 00:31:06,933
+You will know after seeing the results
+
+780
+00:31:06,933 --> 00:31:09,500
+Before looking at the results, let’s take a look at it again
+
+781
+00:31:09,700 --> 00:31:11,600
+If you don't share at all
+
+782
+00:31:11,600 --> 00:31:12,766
+Think about it
+
+783
+00:31:12,866 --> 00:31:15,000
+What you have to do is this
+
+784
+00:31:15,166 --> 00:31:17,500
+So what does it mean?
+
+785
+00:31:17,500 --> 00:31:20,166
+I need a temporary register to store it
+
+786
+00:31:20,700 --> 00:31:22,566
+b requires a scratchpad
+
+787
+00:31:22,900 --> 00:31:25,200
+T1 also needs one and t2 also needs one
+
+788
+00:31:25,200 --> 00:31:26,400
+x also wants one
+
+789
+00:31:26,400 --> 00:31:29,333
+I also need one for y. I also need one for T3. I also need one for T4.
+
+790
+00:31:29,333 --> 00:31:31,766
+All variables to the left of the equal sign
+
+791
+00:31:31,766 --> 00:31:33,700
+A temporary register must be used to store
+
+792
+00:31:33,933 --> 00:31:36,633
+So you can imagine me a
+
+793
+00:31:36,800 --> 00:31:39,166
+b t1 T2 x y
+
+794
+00:31:39,266 --> 00:31:41,900
+T3 T4 T5 T6 T7
+
+795
+00:31:41,900 --> 00:31:44,600
+Each of these uses a scratchpad
+
+796
+00:31:44,600 --> 00:31:47,566
+So I need a dozen temporary registers here
+
+797
+00:31:47,566 --> 00:31:49,833
+I want a dozen temporary registers
+
+798
+00:31:49,900 --> 00:31:52,200
+Only in this way can we save these dozen variables.
+
+799
+00:31:52,533 --> 00:31:54,366
+Then we just
+
+800
+00:31:54,366 --> 00:31:56,200
+We will know after sharing
+
+801
+00:31:56,200 --> 00:31:59,566
+Each state only requires up to 3 scratchpads
+
+802
+00:32:01,566 --> 00:32:04,666
+Because there is no overlapping relationship between life spans
+
+803
+00:32:04,666 --> 00:32:06,766
+So I just need 3 scratchpads
+
+804
+00:32:06,766 --> 00:32:07,866
+It can be covered
+
+805
+00:32:07,866 --> 00:32:10,766
+So my circuit will be designed like this
+
+806
+00:32:11,333 --> 00:32:14,000
+You see he only has 3 temporary registers
+
+807
+00:32:15,533 --> 00:32:17,066
+3 scratchpads
+
+808
+00:32:17,066 --> 00:32:18,266
+Then what did he put?
+
+809
+00:32:18,266 --> 00:32:20,633
+R1 we want to put a t1 x t7
+
+810
+00:32:23,400 --> 00:32:25,500
+R2 puts these 5
+
+811
+00:32:25,533 --> 00:32:28,500
+R3 contains these two
+
+812
+00:32:28,600 --> 00:32:30,833
+If you use this
+
+813
+00:32:31,366 --> 00:32:32,900
+Look
+
+814
+00:32:32,966 --> 00:32:34,900
+You put 4 variables here
+
+815
+00:32:34,900 --> 00:32:36,333
+Put 5 variables here
+
+816
+00:32:36,333 --> 00:32:37,766
+Put two variables here
+
+817
+00:32:37,866 --> 00:32:40,800
+So you now use 3 temporary registers to share
+
+818
+00:32:41,133 --> 00:32:42,300
+Watch it again
+
+819
+00:32:42,466 --> 00:32:43,900
+If you don't handle it specially
+
+820
+00:32:43,900 --> 00:32:46,500
+Each variable requires a temporary register
+
+821
+00:32:46,500 --> 00:32:49,100
+So you need a dozen scratchpads
+
+822
+00:32:49,966 --> 00:32:52,900
+What I am doing now is register sharing
+
+823
+00:32:52,900 --> 00:32:54,566
+After register sharing
+
+824
+00:32:54,566 --> 00:32:56,300
+I only need three scratchpads
+
+825
+00:32:56,300 --> 00:32:58,133
+But my circuit will be a lot more complicated.
+
+826
+00:32:58,133 --> 00:32:59,300
+You pay attention
+
+827
+00:32:59,300 --> 00:33:02,100
+What do you mean my circuit is very complicated?
+
+828
+00:33:02,100 --> 00:33:02,966
+Take a look
+
+829
+00:33:02,966 --> 00:33:04,300
+What is the first action
+
+830
+00:33:04,300 --> 00:33:07,600
+The first action is that I want to make a
+
+831
+00:33:07,900 --> 00:33:09,666
+Put the first input into a
+
+832
+00:33:09,666 --> 00:33:10,866
+Put the second input into b
+
+833
+00:33:10,866 --> 00:33:12,400
+So you can see my r1
+
+834
+00:33:12,400 --> 00:33:13,600
+This register
+
+835
+00:33:13,666 --> 00:33:16,966
+The first input of a should be connected to r1 here
+
+836
+00:33:16,966 --> 00:33:17,966
+because
+
+837
+00:33:18,733 --> 00:33:19,933
+After the first input comes in
+
+838
+00:33:19,933 --> 00:33:21,600
+This is what is called a
+
+839
+00:33:22,133 --> 00:33:23,666
+What about R2?
+
+840
+00:33:23,700 --> 00:33:24,966
+What to put in r2
+
+841
+00:33:24,966 --> 00:33:27,533
+Is it right to put the second input in r2?
+
+842
+00:33:27,533 --> 00:33:30,400
+So there will be a line here to put r2
+
+843
+00:33:30,400 --> 00:33:31,300
+Next
+
+844
+00:33:31,366 --> 00:33:34,566
+The absolute result of a must be connected to t1
+
+845
+00:33:34,600 --> 00:33:36,166
+So you can see you a
+
+846
+00:33:36,166 --> 00:33:37,900
+Was it placed in r1 just now?
+
+847
+00:33:38,100 --> 00:33:39,266
+Right, so you want a
+
+848
+00:33:39,900 --> 00:33:43,233
+You need to have an absolute value hardware when you come here.
+
+849
+00:33:43,333 --> 00:33:44,866
+Can help you calculate the absolute value
+
+850
+00:33:44,866 --> 00:33:47,400
+Then help him t1 after the absolute value of a
+
+851
+00:33:47,400 --> 00:33:48,666
+t1 is r1 again
+
+852
+00:33:48,666 --> 00:33:50,200
+So you would have a line
+
+853
+00:33:51,100 --> 00:33:52,433
+Take it back r1
+
+854
+00:33:52,533 --> 00:33:55,000
+Is that right? Take it back r1?
+
+855
+00:33:55,000 --> 00:33:56,833
+What about your second one?
+
+856
+00:33:56,966 --> 00:33:58,666
+You want b
+
+857
+00:33:58,733 --> 00:34:01,066
+The absolute value of b is placed in t2
+
+858
+00:34:01,066 --> 00:34:03,800
+Then you put b in r2
+
+859
+00:34:03,800 --> 00:34:05,133
+So the absolute value of your b
+
+860
+00:34:05,133 --> 00:34:06,866
+There is another issue of absolute value here
+
+861
+00:34:06,866 --> 00:34:09,500
+When you're done, you have to pull another thread back.
+
+862
+00:34:09,500 --> 00:34:13,600
+Why? Because your t2 is placed on r2
+
+863
+00:34:13,600 --> 00:34:17,133
+So there will be another one in your r2
+
+864
+00:34:17,133 --> 00:34:18,466
+that
+
+865
+00:34:18,466 --> 00:34:21,066
+So every line of this
+
+866
+00:34:21,066 --> 00:34:23,100
+There is a meaning behind it
+
+867
+00:34:23,100 --> 00:34:28,033
+For example, if you want to generate r1
+
+868
+00:34:28,300 --> 00:34:31,133
+a t1 X T7 is placed on r1
+
+869
+00:34:31,133 --> 00:34:33,966
+So you see that what will be placed in r1 is a
+
+870
+00:34:34,766 --> 00:34:36,800
+Then the absolute value of a
+
+871
+00:34:36,800 --> 00:34:39,166
+The absolute value of a is the so-called t1
+
+872
+00:34:39,333 --> 00:34:40,666
+That x
+
+873
+00:34:40,666 --> 00:34:44,000
+So these options can be selected into r1
+
+874
+00:34:44,000 --> 00:34:46,000
+It is to satisfy these four things
+
+875
+00:34:46,000 --> 00:34:46,866
+To be placed in r1
+
+876
+00:34:46,866 --> 00:34:49,000
+So every line has meaning behind it
+
+877
+00:34:49,100 --> 00:34:54,300
+You have 12345 five variables here that will be placed in r2
+
+878
+00:34:54,300 --> 00:34:55,000
+So you can see
+
+879
+00:34:55,000 --> 00:34:56,866
+Look, I have a selection line here
+
+880
+00:34:56,866 --> 00:34:58,066
+There are 5 inputs
+
+881
+00:34:58,900 --> 00:35:02,733
+These 5 inputs will be placed in r2
+
+882
+00:35:02,733 --> 00:35:03,600
+What about R3?
+
+883
+00:35:03,600 --> 00:35:05,733
+There are only two r3
+
+884
+00:35:05,733 --> 00:35:07,900
+So you see there will be two lines here on r3
+
+885
+00:35:07,900 --> 00:35:09,266
+Then it will be placed in r3
+
+886
+00:35:09,266 --> 00:35:12,800
+So you have to draw each line specially
+
+887
+00:35:12,800 --> 00:35:15,000
+In order to do this thing
+
+888
+00:35:15,000 --> 00:35:17,666
+You want to design
+
+889
+00:35:17,766 --> 00:35:19,366
+The result of which operation
+
+890
+00:35:19,366 --> 00:35:21,400
+To connect to r1 or r2
+
+891
+00:35:21,400 --> 00:35:23,466
+Or connect to r3
+
+892
+00:35:23,466 --> 00:35:25,733
+There is a meaning behind every line
+
+893
+00:35:25,733 --> 00:35:27,500
+It’s no longer random calls.
+
+894
+00:35:29,766 --> 00:35:32,033
+So now the question comes
+
+895
+00:35:33,133 --> 00:35:33,900
+we tell you
+
+896
+00:35:33,900 --> 00:35:34,533
+Why
+
+897
+00:35:34,533 --> 00:35:38,000
+We told you that you are not very good at register sharing.
+
+898
+00:35:38,366 --> 00:35:40,766
+You actually do academically
+
+899
+00:35:40,766 --> 00:35:43,166
+Why do you do it academically?
+
+900
+00:35:43,400 --> 00:35:45,166
+If you don't have special treatment
+
+901
+00:35:45,166 --> 00:35:47,766
+You need a dozen temporary registers, right?
+
+902
+00:35:47,766 --> 00:35:49,466
+If you want a dozen temporary registers
+
+903
+00:35:49,466 --> 00:35:50,900
+Do you want to make this circuit?
+
+904
+00:35:51,133 --> 00:35:54,233
+After I sorted it out like this, I found
+
+905
+00:35:54,666 --> 00:35:56,566
+At least 3 are enough
+
+906
+00:35:56,566 --> 00:35:58,733
+Because our state is
+
+907
+00:35:58,733 --> 00:35:59,866
+Three variables need to be saved
+
+908
+00:36:00,100 --> 00:36:02,300
+So I used three pausers
+
+909
+00:36:02,600 --> 00:36:05,266
+Then I will lay out the three temporary registers first.
+
+910
+00:36:05,266 --> 00:36:06,900
+Then each of these connections
+
+911
+00:36:06,900 --> 00:36:08,966
+I'll take a look at how my circuit looks like
+
+912
+00:36:08,966 --> 00:36:11,766
+My wiring will connect it one by one.
+
+913
+00:36:12,400 --> 00:36:13,266
+I ask you
+
+914
+00:36:13,266 --> 00:36:14,933
+Why is it academically meaningful?
+
+915
+00:36:14,933 --> 00:36:18,566
+When it comes to academics, take the time to do it
+
+916
+00:36:18,566 --> 00:36:21,466
+Then you earned seven or eight temporary registers
+
+917
+00:36:21,466 --> 00:36:22,700
+Because you only used 3
+
+918
+00:36:22,700 --> 00:36:24,200
+Less than ten times more than before
+
+919
+00:36:24,200 --> 00:36:25,800
+So you can earn 8 scratchpads
+
+920
+00:36:25,800 --> 00:36:27,066
+9 scratchpads
+
+921
+00:36:28,600 --> 00:36:30,200
+But what did you spend?
+
+922
+00:36:30,200 --> 00:36:31,933
+What you spent was labor
+
+923
+00:36:31,933 --> 00:36:32,966
+Because every line of your
+
+924
+00:36:32,966 --> 00:36:34,466
+You have to make a special trip to pick it up
+
+925
+00:36:35,266 --> 00:36:36,466
+this is the first thing
+
+926
+00:36:36,466 --> 00:36:39,100
+So you have to manually connect it yourself
+
+927
+00:36:39,100 --> 00:36:40,300
+What about the second one?
+
+928
+00:36:40,400 --> 00:36:43,833
+All your verilog code must be written down to the gate level.
+
+929
+00:36:43,966 --> 00:36:46,066
+See if you want to select a selector here
+
+930
+00:36:46,066 --> 00:36:47,866
+I need a website generator here
+
+931
+00:36:47,866 --> 00:36:50,166
+Then you have to pick up these modules one by one.
+
+932
+00:36:50,166 --> 00:36:52,866
+You can't do it at a very high level
+
+933
+00:36:52,866 --> 00:36:54,400
+Very behavioral to write
+
+934
+00:36:54,400 --> 00:36:56,266
+no way
+
+935
+00:36:56,266 --> 00:36:59,066
+So what you have to do is share
+
+936
+00:37:00,266 --> 00:37:03,766
+Once you decide to do something today, you have to do it manually
+
+937
+00:37:03,766 --> 00:37:06,933
+Then you need to down your circuit to gate level
+
+938
+00:37:06,933 --> 00:37:09,300
+That's why I say it is academically meaningful
+
+939
+00:37:09,300 --> 00:37:12,800
+But you don’t want this in the company
+
+940
+00:37:12,800 --> 00:37:14,700
+Because you want to earn these temporary registers
+
+941
+00:37:14,700 --> 00:37:17,033
+Your entire design time will be very long
+
+942
+00:37:17,133 --> 00:37:19,866
+And it may take a long time for you to debug.
+
+943
+00:37:20,200 --> 00:37:21,766
+So he
+
+944
+00:37:21,766 --> 00:37:24,600
+It may not be necessary. It may not be necessary.
+
+945
+00:37:24,600 --> 00:37:27,966
+But you can know how he did it
+
+946
+00:37:27,966 --> 00:37:29,366
+Register sharing is like this
+
+947
+00:37:30,000 --> 00:37:31,166
+When can it be shared?
+
+948
+00:37:31,166 --> 00:37:32,933
+I won't use it when you use it.
+
+949
+00:37:32,933 --> 00:37:33,733
+wait until
+
+950
+00:37:33,866 --> 00:37:36,533
+After I deposited your value, mine was overwritten.
+
+951
+00:37:36,533 --> 00:37:38,566
+So I might save it first.
+
+952
+00:37:39,000 --> 00:37:40,933
+Then my life is over
+
+953
+00:37:40,933 --> 00:37:43,166
+Anyone who wants to use my storage space
+
+954
+00:37:43,166 --> 00:37:43,900
+I don't care.
+
+955
+00:37:43,900 --> 00:37:45,766
+Because I won't be used again
+
+956
+00:37:45,766 --> 00:37:47,400
+This is what he meant
+
+957
+00:37:47,533 --> 00:37:49,666
+My AB is used here
+
+958
+00:37:49,666 --> 00:37:51,066
+AB is not used later.
+
+959
+00:37:51,066 --> 00:37:53,800
+I can give up my AB space.
+
+960
+00:37:53,800 --> 00:37:55,566
+Then I saved x here
+
+961
+00:37:55,566 --> 00:37:58,066
+But because someone will use x later
+
+962
+00:37:58,300 --> 00:38:00,500
+So I x will live longer
+
+963
+00:38:01,133 --> 00:38:03,466
+Then this one is used
+
+964
+00:38:03,466 --> 00:38:05,400
+So Register sharing is like this
+
+965
+00:38:05,400 --> 00:38:07,166
+But I have just stressed again and again
+
+966
+00:38:07,166 --> 00:38:09,666
+He may not use it
+
+967
+00:38:09,666 --> 00:38:12,400
+Because the cost to you is very high if he continues to use it.
+
+968
+00:38:12,400 --> 00:38:14,400
+What I mean by cost is yours
+
+969
+00:38:14,766 --> 00:38:16,666
+Design costs will become higher
+
+970
+00:38:16,666 --> 00:38:18,666
+Although your hardware costs are reduced
+
+971
+00:38:18,666 --> 00:38:21,666
+But your design costs are getting higher.
+
+972
+00:38:23,666 --> 00:38:26,366
+After talking about the first resource sharing
+
+973
+00:38:26,366 --> 00:38:29,333
+The second thing we want to look at is called functional
+
+974
+00:38:29,333 --> 00:38:30,766
+unit sharing
+
+975
+00:38:30,766 --> 00:38:32,266
+that is
+
+976
+00:38:32,266 --> 00:38:35,566
+Compute this and this is the storage unit
+
+977
+00:38:35,566 --> 00:38:38,600
+The storage unit here is the temporary register.
+
+978
+00:38:38,800 --> 00:38:40,466
+Sharing of temporary registers
+
+979
+00:38:40,466 --> 00:38:43,333
+The second share is functional unit
+
+980
+00:38:43,333 --> 00:38:46,966
+The functional unit is these additions, subtractions, multiplications and divisions
+
+981
+00:38:47,000 --> 00:38:48,333
+These absolute values
+
+982
+00:38:48,333 --> 00:38:50,600
+The commonality of these operations
+
+983
+00:38:51,900 --> 00:38:54,700
+So what is functional unit sharing?
+
+984
+00:38:54,966 --> 00:38:58,666
+Let’s take the example just now and you can see
+
+985
+00:38:59,133 --> 00:39:01,666
+I'm going to add
+
+986
+00:39:01,933 --> 00:39:04,333
+Suppose I want to add
+
+987
+00:39:04,333 --> 00:39:07,300
+I'm going to do subtraction below
+
+988
+00:39:07,300 --> 00:39:08,400
+Add above
+
+989
+00:39:08,400 --> 00:39:10,266
+Next, add
+
+990
+00:39:10,266 --> 00:39:12,400
+Then of course I can use the same adder
+
+991
+00:39:12,400 --> 00:39:13,666
+do this twice
+
+992
+00:39:13,700 --> 00:39:16,000
+But if I want to add
+
+993
+00:39:16,133 --> 00:39:17,766
+You need to reduce the following
+
+994
+00:39:17,766 --> 00:39:19,566
+Then if you don’t have a special design
+
+995
+00:39:19,566 --> 00:39:21,800
+Then you need to use an adder
+
+996
+00:39:21,933 --> 00:39:23,366
+use a subtractor
+
+997
+00:39:23,966 --> 00:39:27,366
+The function of the so-called functional unit is like this
+
+998
+00:39:27,366 --> 00:39:27,966
+I can
+
+999
+00:39:27,966 --> 00:39:29,900
+Can I design a hardware
+
+1000
+00:39:29,900 --> 00:39:32,766
+Both addition and subtraction can be done
+
+1001
+00:39:32,800 --> 00:39:34,700
+This is called an adder and subtractor
+
+1002
+00:39:35,300 --> 00:39:36,700
+Then I'll choose
+
+1003
+00:39:36,700 --> 00:39:38,000
+Let me choose
+
+1004
+00:39:38,000 --> 00:39:39,833
+What I want to do this time is add
+
+1005
+00:39:39,966 --> 00:39:42,866
+What we need to do next time is reduce
+
+1006
+00:39:42,866 --> 00:39:44,766
+So if you could design one like this
+
+1007
+00:39:44,766 --> 00:39:47,700
+This is called functional unit sharing
+
+1008
+00:39:47,700 --> 00:39:49,266
+So he is like this
+
+1009
+00:39:49,366 --> 00:39:51,166
+You do the same calculation
+
+1010
+00:39:51,166 --> 00:39:52,500
+we can do sharing
+
+1011
+00:39:52,500 --> 00:39:54,400
+For example, this plus this plus this
+
+1012
+00:39:54,400 --> 00:39:58,000
+I can do it twice with the same adder
+
+1013
+00:39:58,000 --> 00:40:00,200
+Because he was fucked at different times
+
+1014
+00:40:00,200 --> 00:40:01,866
+This is called functional unit sharing
+
+1015
+00:40:01,866 --> 00:40:05,200
+This is a sharing of the same operation
+
+1016
+00:40:05,200 --> 00:40:06,033
+I today
+
+1017
+00:40:06,066 --> 00:40:08,866
+This plus uses the same hardware as this plus
+
+1018
+00:40:09,300 --> 00:40:11,266
+Because if you don’t have a special design
+
+1019
+00:40:11,266 --> 00:40:12,366
+In Verilog
+
+1020
+00:40:12,366 --> 00:40:14,466
+We can use two different hardware
+
+1021
+00:40:14,466 --> 00:40:16,400
+Do it in parallel
+
+1022
+00:40:16,400 --> 00:40:18,466
+Then I can use a hardware now
+
+1023
+00:40:18,666 --> 00:40:19,700
+Add this first
+
+1024
+00:40:19,700 --> 00:40:20,933
+Then add this
+
+1025
+00:40:20,933 --> 00:40:22,966
+Because he was at different times
+
+1026
+00:40:22,966 --> 00:40:25,400
+Then I can also design an adder and subtractor
+
+1027
+00:40:25,400 --> 00:40:27,566
+Both addition and subtraction can be done
+
+1028
+00:40:27,566 --> 00:40:29,866
+So this functional unit sharing
+
+1029
+00:40:30,200 --> 00:40:33,500
+Contains me sharing the same operation
+
+1030
+00:40:34,200 --> 00:40:36,366
+What is the second thing I share?
+
+1031
+00:40:36,366 --> 00:40:37,666
+different operations
+
+1032
+00:40:37,666 --> 00:40:39,566
+but similar
+
+1033
+00:40:40,200 --> 00:40:42,500
+Then this
+
+1034
+00:40:43,366 --> 00:40:46,100
+functional unit sharing and Register sharing just now
+
+1035
+00:40:46,100 --> 00:40:46,800
+Same
+
+1036
+00:40:46,800 --> 00:40:49,600
+Let’s take a look at what the concept of sharing is
+
+1037
+00:40:50,666 --> 00:40:53,200
+This thing of mine exists here today
+
+1038
+00:40:53,200 --> 00:40:55,766
+Then I save things that remember me.
+
+1039
+00:40:55,766 --> 00:40:57,500
+When can I save you?
+
+1040
+00:40:58,100 --> 00:41:00,200
+My life ends today
+
+1041
+00:41:00,200 --> 00:41:03,400
+The value I calculated will no longer be used by others.
+
+1042
+00:41:03,400 --> 00:41:05,600
+I can give you my space
+
+1043
+00:41:05,600 --> 00:41:08,066
+you can come here
+
+1044
+00:41:08,066 --> 00:41:10,766
+The same goes for the sharing of this operation.
+
+1045
+00:41:11,333 --> 00:41:12,733
+I am today
+
+1046
+00:41:12,733 --> 00:41:17,133
+If this addition and this addition are at different times,
+
+1047
+00:41:17,133 --> 00:41:19,733
+Then I can use an additive hardware
+
+1048
+00:41:19,733 --> 00:41:21,366
+Then let him do it twice
+
+1049
+00:41:21,400 --> 00:41:22,100
+But
+
+1050
+00:41:22,100 --> 00:41:25,100
+When not to use the same piece of hardware twice?
+
+1051
+00:41:25,100 --> 00:41:27,666
+If you add it, I will add it too
+
+1052
+00:41:27,666 --> 00:41:28,866
+Then he also wants to add
+
+1053
+00:41:28,866 --> 00:41:31,200
+Then we need three hardware bodies
+
+1054
+00:41:31,200 --> 00:41:33,100
+Because when you add, I will add too
+
+1055
+00:41:33,100 --> 00:41:33,933
+Then he also wants to add
+
+1056
+00:41:33,933 --> 00:41:35,066
+Let's make it impossible
+
+1057
+00:41:35,300 --> 00:41:37,700
+Then I will need 3 hardware bodies at this time
+
+1058
+00:41:37,700 --> 00:41:40,600
+So which one should be shared?
+
+1059
+00:41:41,000 --> 00:41:43,966
+The lifetime of that addition is different.
+
+1060
+00:41:44,166 --> 00:41:46,100
+I won’t add it when you add it.
+
+1061
+00:41:46,100 --> 00:41:48,000
+Then I won’t add him when he does.
+
+1062
+00:41:48,000 --> 00:41:49,566
+We all have different times
+
+1063
+00:41:49,566 --> 00:41:51,800
+You can do it three times with one addition
+
+1064
+00:41:51,933 --> 00:41:53,766
+But if you add
+
+1065
+00:41:53,766 --> 00:41:56,666
+Your added life span
+
+1066
+00:41:57,166 --> 00:42:00,300
+The life span of this addition overlaps with mine.
+
+1067
+00:42:00,300 --> 00:42:01,266
+That won't work either.
+
+1068
+00:42:01,266 --> 00:42:02,700
+Because you said so, I will add it too
+
+1069
+00:42:02,700 --> 00:42:04,566
+That requires two different hardware
+
+1070
+00:42:04,566 --> 00:42:05,800
+Then if there is another person
+
+1071
+00:42:05,800 --> 00:42:06,700
+The same is true for life span
+
+1072
+00:42:06,700 --> 00:42:09,400
+Then I need three different hardware bodies
+
+1073
+00:42:09,400 --> 00:42:10,266
+so
+
+1074
+00:42:10,900 --> 00:42:12,700
+As long as it talks about Sharing
+
+1075
+00:42:13,066 --> 00:42:14,466
+You have to pay attention to this
+
+1076
+00:42:14,466 --> 00:42:16,533
+It's a matter of life span
+
+1077
+00:42:16,533 --> 00:42:19,233
+Is there any overlap? Is there any overlap?
+
+1078
+00:42:20,533 --> 00:42:23,966
+So this is called functional unit sharing
+
+1079
+00:42:23,966 --> 00:42:25,900
+Then this functional unit sharing
+
+1080
+00:42:26,266 --> 00:42:28,900
+What does it mean?
+
+1081
+00:42:28,900 --> 00:42:30,900
+For example, I can use a hardware
+
+1082
+00:42:30,966 --> 00:42:33,266
+It can do the minimum
+
+1083
+00:42:34,200 --> 00:42:37,133
+Then I can also use one piece of hardware to do the maximum value.
+
+1084
+00:42:37,133 --> 00:42:38,333
+Then I have a hardware
+
+1085
+00:42:38,333 --> 00:42:40,000
+Can be a maximum or minimum value
+
+1086
+00:42:40,000 --> 00:42:41,166
+Then you pay attention
+
+1087
+00:42:41,466 --> 00:42:43,500
+Whether you are the minimum or maximum
+
+1088
+00:42:43,500 --> 00:42:45,500
+This hardware is used
+
+1089
+00:42:45,500 --> 00:42:46,766
+a subtractor
+
+1090
+00:42:46,766 --> 00:42:48,133
+Then add some circuits
+
+1091
+00:42:48,133 --> 00:42:50,666
+can become a minimum value
+
+1092
+00:42:50,766 --> 00:42:53,600
+In other words, this circuit should be able to do subtraction
+
+1093
+00:42:53,600 --> 00:42:55,700
+That can also be the minimum value
+
+1094
+00:42:55,700 --> 00:42:57,766
+Because he is a
+
+1095
+00:42:57,766 --> 00:42:58,566
+substractor
+
+1096
+00:42:58,566 --> 00:43:00,766
+He is a subtraction
+
+1097
+00:43:00,766 --> 00:43:03,000
+Then you can also deform it a little bit
+
+1098
+00:43:03,000 --> 00:43:04,933
+He can do the maximum
+
+1099
+00:43:04,933 --> 00:43:06,800
+You can also transform it again
+
+1100
+00:43:06,800 --> 00:43:08,700
+It can be either a maximum or a minimum value.
+
+1101
+00:43:08,700 --> 00:43:10,900
+It depends on how you choose
+
+1102
+00:43:10,900 --> 00:43:13,333
+Then this is called hardware sharing.
+
+1103
+00:43:13,333 --> 00:43:14,400
+functional unit sharing
+
+1104
+00:43:14,500 --> 00:43:16,966
+In the same way, you move left
+
+1105
+00:43:16,966 --> 00:43:18,966
+You move right one position and right three positions
+
+1106
+00:43:18,966 --> 00:43:21,400
+You can also put it together
+
+1107
+00:43:21,400 --> 00:43:21,700
+but
+
+1108
+00:43:21,700 --> 00:43:24,333
+Because the cost of the shifter is actually relatively low
+
+1109
+00:43:24,333 --> 00:43:27,100
+This comparison doesn't make much sense
+
+1110
+00:43:27,100 --> 00:43:29,000
+So let’s look down
+
+1111
+00:43:29,000 --> 00:43:31,366
+You see, he has designed a hardware here now
+
+1112
+00:43:31,366 --> 00:43:32,766
+What can this hardware do?
+
+1113
+00:43:32,766 --> 00:43:33,900
+absolute value
+
+1114
+00:43:33,933 --> 00:43:36,400
+It can also be a minimum value or a maximum value.
+
+1115
+00:43:36,400 --> 00:43:38,800
+In other words, this hardware
+
+1116
+00:43:38,800 --> 00:43:40,400
+Because he used an adding machine
+
+1117
+00:43:40,400 --> 00:43:41,600
+with two selectors
+
+1118
+00:43:41,600 --> 00:43:43,433
+There is also an XOR
+
+1119
+00:43:43,466 --> 00:43:46,166
+This hardware can do both absolute value
+
+1120
+00:43:46,166 --> 00:43:49,300
+Then you can also do the minimum value or the maximum value
+
+1121
+00:43:50,000 --> 00:43:51,666
+What about this hardware?
+
+1122
+00:43:51,666 --> 00:43:54,266
+This hardware can be added
+
+1123
+00:43:55,000 --> 00:43:57,466
+You can also do absolute values ​​or subtractions.
+
+1124
+00:43:57,466 --> 00:43:58,966
+He basically uses an adding machine
+
+1125
+00:43:58,966 --> 00:44:00,733
+Plus some other logic gates
+
+1126
+00:44:00,733 --> 00:44:03,766
+He can do these three functions at the same time
+
+1127
+00:44:03,766 --> 00:44:05,300
+So this is called
+
+1128
+00:44:05,300 --> 00:44:05,966
+functional unit sharing
+
+1129
+00:44:05,966 --> 00:44:07,200
+My hardware
+
+1130
+00:44:07,200 --> 00:44:09,066
+Can do different things at the same time
+
+1131
+00:44:09,066 --> 00:44:10,866
+Just different
+
+1132
+00:44:11,966 --> 00:44:14,933
+but
+
+1133
+00:44:14,933 --> 00:44:16,566
+Similar operations
+
+1134
+00:44:17,500 --> 00:44:20,866
+So this is our understanding here.
+
+1135
+00:44:20,866 --> 00:44:22,700
+Then let's take a break
+
+1136
+00:44:22,700 --> 00:44:24,200
+Then continue from here
+
+1137
+00:44:24,200 --> 00:44:25,600
+Just rest for 10 minutes
+

@@ -1,0 +1,3696 @@
+1
+00:00:00,466 --> 00:00:03,066
+Hello, classmates
+
+2
+00:00:03,466 --> 00:00:06,233
+Then the third quarter is up to me.
+
+3
+00:00:06,266 --> 00:00:08,700
+Let’s talk about the sample code for the midterm exam.
+
+4
+00:00:08,733 --> 00:00:11,033
+And our homework 4
+
+5
+00:00:11,166 --> 00:00:14,166
+That's because our final exam will use
+
+6
+00:00:14,333 --> 00:00:16,433
+There is still a midterm exam
+
+7
+00:00:16,666 --> 00:00:20,166
+Make some modifications to the content of Assignment 3
+
+8
+00:00:20,166 --> 00:00:22,500
+Then use it as our final exam question
+
+9
+00:00:22,600 --> 00:00:23,733
+So that is
+
+10
+00:00:23,733 --> 00:00:26,566
+Wait a minute, if you take the midterm exam
+
+11
+00:00:26,566 --> 00:00:28,300
+Because many students take mid-term exams
+
+12
+00:00:28,300 --> 00:00:29,600
+Question 2 is not written down
+
+13
+00:00:29,600 --> 00:00:30,066
+so
+
+14
+00:00:30,066 --> 00:00:31,866
+If your question 2 has not been written before
+
+15
+00:00:31,866 --> 00:00:35,000
+Students must listen carefully to understand that
+
+16
+00:00:35,166 --> 00:00:38,233
+How to answer question 2 of the midterm exam correctly
+
+17
+00:00:39,066 --> 00:00:42,266
+Okay, then I will start with the midterm exam.
+
+18
+00:00:42,266 --> 00:00:45,000
+So the next slide is what we have put on
+
+19
+00:00:45,000 --> 00:00:46,800
+The one on Moodle
+
+20
+00:00:47,000 --> 00:00:49,866
+Slide the slide and my answer will always be based on this one
+
+21
+00:00:50,166 --> 00:00:52,766
+The sample code of the topic will be used to explain.
+
+22
+00:00:52,766 --> 00:00:55,100
+Then you don’t have to worry about saying that.
+
+23
+00:00:55,100 --> 00:00:57,366
+Is it because our midterm exam has different topics?
+
+24
+00:00:57,366 --> 00:01:01,066
+Then we will all agree to use this one as the basis.
+
+25
+00:01:01,133 --> 00:01:02,366
+That question
+
+26
+00:01:02,366 --> 00:01:04,200
+So don't worry if you
+
+27
+00:01:04,466 --> 00:01:05,400
+Previously taken
+
+28
+00:01:05,400 --> 00:01:07,466
+What should I do if that topic is different from this one?
+
+29
+00:01:07,466 --> 00:01:09,033
+You just need this one
+
+30
+00:01:09,066 --> 00:01:11,166
+Just understand the content
+
+31
+00:01:12,300 --> 00:01:14,333
+Then I will briefly review our
+
+32
+00:01:14,333 --> 00:01:15,166
+Midterm exam question 2
+
+33
+00:01:15,166 --> 00:01:16,833
+What are you taking the exam for?
+
+34
+00:01:16,900 --> 00:01:19,066
+Then the second question is mainly to ask
+
+35
+00:01:19,066 --> 00:01:23,200
+Let’s find out what’s inside the data we entered.
+
+36
+00:01:23,333 --> 00:01:24,566
+The maximum value of
+
+37
+00:01:24,566 --> 00:01:26,366
+And his sum
+
+38
+00:01:26,566 --> 00:01:31,666
+Then there is another way to sort the output from small to large.
+
+39
+00:01:32,100 --> 00:01:33,866
+Mainly these three functions
+
+40
+00:01:34,066 --> 00:01:37,100
+Then our IO has Clock
+
+41
+00:01:37,333 --> 00:01:39,566
+Then reset,data in
+
+42
+00:01:40,333 --> 00:01:41,200
+Then data num
+
+43
+00:01:41,200 --> 00:01:43,633
+data num is used to tell you about us
+
+44
+00:01:43,700 --> 00:01:46,566
+How many transactions does the data sequence have?
+
+45
+00:01:46,566 --> 00:01:49,600
+Then you are going to receive these pieces of information
+
+46
+00:01:49,600 --> 00:01:51,900
+Then he placed 2-6 strokes
+
+47
+00:01:52,133 --> 00:01:54,166
+Then this is the result you output
+
+48
+00:01:55,700 --> 00:01:58,233
+Well, let’s just take a look at the timing diagram:
+
+49
+00:01:58,466 --> 00:02:00,533
+At the first positive moment after reset
+
+50
+00:02:00,533 --> 00:02:01,300
+Our data num
+
+51
+00:02:01,300 --> 00:02:05,366
+There will be a value output
+
+52
+00:02:05,366 --> 00:02:07,366
+It means we will have several pieces of information next
+
+53
+00:02:07,366 --> 00:02:10,300
+To receive it, it is in the same cycle
+
+54
+00:02:10,300 --> 00:02:12,833
+data in will also send the first piece of information
+
+55
+00:02:12,933 --> 00:02:15,566
+That's because our data num is 2-6
+
+56
+00:02:15,566 --> 00:02:17,700
+So it’s impossible for you to receive only one payment
+
+57
+00:02:17,800 --> 00:02:19,333
+The next transaction will begin to be output.
+
+58
+00:02:19,333 --> 00:02:20,733
+This won't happen
+
+59
+00:02:20,733 --> 00:02:22,766
+So everyone here just needs to rest assured
+
+60
+00:02:22,766 --> 00:02:24,533
+Write down your data num
+
+61
+00:02:24,533 --> 00:02:26,433
+Then connect the first piece of information
+
+62
+00:02:26,466 --> 00:02:28,233
+Then according to the data num
+
+63
+00:02:28,566 --> 00:02:30,533
+to receive your information
+
+64
+00:02:30,533 --> 00:02:32,133
+It's like there are 3 here
+
+65
+00:02:32,133 --> 00:02:33,266
+Represents next
+
+66
+00:02:33,366 --> 00:02:35,700
+You have to receive information during the three cycles.
+
+67
+00:02:35,700 --> 00:02:37,933
+So you receive the first 247 first
+
+68
+00:02:37,933 --> 00:02:41,100
+The second stroke is 3, the third stroke is 92
+
+69
+00:02:42,133 --> 00:02:43,300
+Then what's next
+
+70
+00:02:43,533 --> 00:02:46,566
+The next fourth cycle is here at t3
+
+71
+00:02:46,566 --> 00:02:48,766
+Then start doing your output
+
+72
+00:02:48,766 --> 00:02:49,866
+That's what I just said
+
+73
+00:02:49,866 --> 00:02:50,300
+us
+
+74
+00:02:50,300 --> 00:02:52,900
+The first output is to output our maximum value
+
+75
+00:02:53,166 --> 00:02:55,266
+So we have to output 247
+
+76
+00:02:55,566 --> 00:02:58,433
+Then in the next cycle we will output our sum
+
+77
+00:02:58,466 --> 00:03:01,400
+That is, the three add up to 342
+
+78
+00:03:01,866 --> 00:03:04,266
+Then next cycle T5 is here
+
+79
+00:03:04,266 --> 00:03:05,200
+To start we want
+
+80
+00:03:05,200 --> 00:03:08,633
+Output our data sequence from small to large
+
+81
+00:03:08,800 --> 00:03:10,600
+So you have to output three first
+
+82
+00:03:10,700 --> 00:03:12,900
+Then output 92 in the next cycle
+
+83
+00:03:12,900 --> 00:03:15,200
+The next cycle outputs 247
+
+84
+00:03:15,266 --> 00:03:16,666
+Then the next cycle
+
+85
+00:03:16,666 --> 00:03:18,100
+There will be a new piece of data
+
+86
+00:03:18,100 --> 00:03:19,166
+Sequence comes in
+
+87
+00:03:19,166 --> 00:03:20,966
+So you have to receive your data again
+
+88
+00:03:20,966 --> 00:03:22,400
+That's the same as data in
+
+89
+00:03:22,533 --> 00:03:24,800
+Then keep repeating this until the simulation ends
+
+90
+00:03:24,800 --> 00:03:26,633
+You can complete the second question
+
+91
+00:03:27,666 --> 00:03:29,433
+Then below is his state machine
+
+92
+00:03:29,500 --> 00:03:31,500
+As you can see, it is at the beginning
+
+93
+00:03:31,700 --> 00:03:35,066
+Accept the data here and cycle around the data num
+
+94
+00:03:35,066 --> 00:03:38,566
+Then go to output max and output sum
+
+95
+00:03:38,733 --> 00:03:41,266
+Then these two states are a cycle
+
+96
+00:03:41,366 --> 00:03:43,300
+Then you have to go from small to large
+
+97
+00:03:43,300 --> 00:03:44,666
+output so it takes
+
+98
+00:03:44,766 --> 00:03:46,466
+data num's cycle
+
+99
+00:03:46,466 --> 00:03:48,600
+Then go back to your receive data state later
+
+100
+00:03:51,366 --> 00:03:54,366
+Okay, let me talk about the program part next.
+
+101
+00:04:21,500 --> 00:04:25,166
+Sorry, only the word pad can be opened
+
+102
+00:04:25,533 --> 00:04:28,466
+Just make do with it
+
+103
+00:04:32,166 --> 00:04:34,466
+Is there anything at this size that my classmates can’t see?
+
+104
+00:04:35,366 --> 00:04:37,966
+I can’t see my classmates raising their hands to let me know
+
+105
+00:04:38,766 --> 00:04:41,500
+Okay? Let’s start explaining this program.
+
+106
+00:04:42,566 --> 00:04:43,366
+That
+
+107
+00:04:43,533 --> 00:04:47,600
+The first thing is to let our IO have clock, reset, data num
+
+108
+00:04:47,600 --> 00:04:49,300
+data in and result
+
+109
+00:04:50,133 --> 00:04:50,800
+Then what's next
+
+110
+00:04:50,800 --> 00:04:51,066
+first
+
+111
+00:04:51,066 --> 00:04:53,633
+We will need to declare our state
+
+112
+00:04:53,766 --> 00:04:55,133
+That's because you have 4 states
+
+113
+00:04:55,133 --> 00:04:57,833
+That’s what we use 2bit to declare.
+
+114
+00:04:58,300 --> 00:04:59,066
+That
+
+115
+00:04:59,066 --> 00:05:01,733
+And again, because we need to save the data
+
+116
+00:05:01,733 --> 00:05:05,366
+Do the output in that sorted state?
+
+117
+00:05:05,366 --> 00:05:07,266
+We have declared an array here
+
+118
+00:05:08,300 --> 00:05:10,600
+This is the value_array variable
+
+119
+00:05:10,966 --> 00:05:11,966
+This register
+
+120
+00:05:11,966 --> 00:05:13,566
+That’s because we have at most 6 transactions
+
+121
+00:05:13,566 --> 00:05:16,300
+So here we open 0 colon 5
+
+122
+00:05:16,466 --> 00:05:17,333
+That's it for sure
+
+123
+00:05:17,333 --> 00:05:19,900
+We can save all the data we entered.
+
+124
+00:05:19,900 --> 00:05:21,200
+will not exceed
+
+125
+00:05:21,700 --> 00:05:24,400
+And then in addition we because we have to remember to say that I total
+
+126
+00:05:24,400 --> 00:05:25,600
+How many data are there?
+
+127
+00:05:25,966 --> 00:05:27,666
+when i sort
+
+128
+00:05:27,666 --> 00:05:29,400
+And when I was receiving information,
+
+129
+00:05:29,400 --> 00:05:31,800
+Only then do we know how many cycles it will take in that state.
+
+130
+00:05:31,800 --> 00:05:34,866
+So we have a data num register here
+
+131
+00:05:34,966 --> 00:05:38,166
+It is used to record the amount of input data
+
+132
+00:05:38,466 --> 00:05:41,266
+And then I went to get that
+
+133
+00:05:41,566 --> 00:05:44,400
+Control the writing of my array
+
+134
+00:05:44,400 --> 00:05:45,700
+Then there are things like reading
+
+135
+00:05:45,700 --> 00:05:48,100
+I have declared an array_pointer here
+
+136
+00:05:48,200 --> 00:05:49,000
+used to record
+
+137
+00:05:49,000 --> 00:05:51,600
+Tell me which array I want to operate now
+
+138
+00:05:51,666 --> 00:05:52,800
+Location
+
+139
+00:05:53,266 --> 00:05:55,133
+Then come again because we want to record max
+
+140
+00:05:55,133 --> 00:05:57,266
+So we also use a register here
+
+141
+00:05:57,300 --> 00:06:00,233
+To record the maximum value of the current input data
+
+142
+00:06:00,533 --> 00:06:03,833
+Then sum is used to add up and say that we are now
+
+143
+00:06:03,900 --> 00:06:05,833
+The sum of input data
+
+144
+00:06:06,366 --> 00:06:07,266
+Then the result
+
+145
+00:06:07,266 --> 00:06:09,866
+It’s because we operate in the always block
+
+146
+00:06:09,866 --> 00:06:12,466
+So we declare reg here
+
+147
+00:06:13,466 --> 00:06:16,866
+The state part is all 4 states, read data
+
+148
+00:06:16,866 --> 00:06:18,300
+Then output Max
+
+149
+00:06:18,400 --> 00:06:21,233
+Output sum and output sorting results
+
+150
+00:06:21,266 --> 00:06:22,433
+4 states
+
+151
+00:06:22,800 --> 00:06:24,366
+Then here we use that teacher
+
+152
+00:06:24,366 --> 00:06:25,666
+The one who taught
+
+153
+00:06:26,300 --> 00:06:29,100
+How to write combination and sequence separately
+
+154
+00:06:29,100 --> 00:06:30,500
+so see us
+
+155
+00:06:30,800 --> 00:06:31,733
+sequentia here
+
+156
+00:06:31,733 --> 00:06:34,000
+Our state machine is to convert the current state
+
+157
+00:06:34,533 --> 00:06:36,300
+Less than or equal to Read data
+
+158
+00:06:36,333 --> 00:06:37,633
+During reset
+
+159
+00:06:37,766 --> 00:06:39,333
+If the reset is not over, then
+
+160
+00:06:39,333 --> 00:06:41,966
+We are curence date less than or equal to next state
+
+161
+00:06:42,000 --> 00:06:42,766
+Then this next state
+
+162
+00:06:42,766 --> 00:06:45,400
+It will be determined by our combination circuit
+
+163
+00:06:46,400 --> 00:06:47,233
+That in
+
+164
+00:06:47,533 --> 00:06:50,200
+When reading the state of data, our next state
+
+165
+00:06:50,533 --> 00:06:52,333
+It depends on your array pointer
+
+166
+00:06:52,333 --> 00:06:53,700
+Have you already counted?
+
+167
+00:06:53,733 --> 00:06:56,300
+data num reg record number
+
+168
+00:06:56,366 --> 00:06:58,133
+For example, in our example just now
+
+169
+00:06:58,133 --> 00:06:59,900
+Our data num is 3
+
+170
+00:06:59,900 --> 00:07:02,900
+Then we will store the number 3 in data num
+
+171
+00:07:03,000 --> 00:07:03,800
+register
+
+172
+00:07:03,966 --> 00:07:07,466
+Then our array pointer will count from 123
+
+173
+00:07:07,466 --> 00:07:09,400
+When counting to the same amount
+
+174
+00:07:09,733 --> 00:07:11,533
+We can just jump to the next state
+
+175
+00:07:11,533 --> 00:07:12,866
+output_max
+
+176
+00:07:13,066 --> 00:07:13,900
+If you haven't counted yet
+
+177
+00:07:13,900 --> 00:07:15,933
+At that time we will just stay in Read data
+
+178
+00:07:15,933 --> 00:07:18,200
+Continue to read data
+
+179
+00:07:19,333 --> 00:07:22,066
+Okay, then go to output Max and it will be a cycle.
+
+180
+00:07:22,266 --> 00:07:24,766
+So our next state directly gives the output sum
+
+181
+00:07:25,333 --> 00:07:28,833
+Then the output sum is also a cycle
+
+182
+00:07:29,000 --> 00:07:31,100
+So our next state is for the next one
+
+183
+00:07:31,200 --> 00:07:32,233
+output sort
+
+184
+00:07:32,966 --> 00:07:34,500
+Then in the end it’s the same as output sort
+
+185
+00:07:34,500 --> 00:07:38,600
+We need to count until the cycle of data num reg
+
+186
+00:07:38,600 --> 00:07:41,966
+We will jump back to read data state
+
+187
+00:07:41,966 --> 00:07:45,166
+Otherwise, we will all stay in the output sort state.
+
+188
+00:07:45,900 --> 00:07:48,466
+Then the above is our state machine
+
+189
+00:07:48,466 --> 00:07:49,966
+Some students are interested in this part
+
+190
+00:07:50,200 --> 00:07:52,166
+Don’t you understand? Do you need to explain it again?
+
+191
+00:07:54,866 --> 00:07:56,900
+Okay? Then I'll move on.
+
+192
+00:07:57,066 --> 00:07:58,166
+Then it’s us
+
+193
+00:07:58,166 --> 00:08:01,666
+The main part of data operation processing
+
+194
+00:08:01,666 --> 00:08:04,166
+Then here we use sequential to write
+
+195
+00:08:04,300 --> 00:08:06,166
+Then when you first see reset
+
+196
+00:08:06,166 --> 00:08:08,900
+We'll put ours first
+
+197
+00:08:09,100 --> 00:08:12,166
+The value array is initialized to 255
+
+198
+00:08:12,300 --> 00:08:15,100
+The reason why it should be initialized to 255 is because
+
+199
+00:08:15,366 --> 00:08:19,033
+We want those that have no values ​​filled in
+
+200
+00:08:19,300 --> 00:08:20,666
+array
+
+201
+00:08:21,000 --> 00:08:23,500
+Later, when I queued up, I was placed at the end of the queue.
+
+202
+00:08:23,666 --> 00:08:24,866
+Then we will only output
+
+203
+00:08:24,866 --> 00:08:26,200
+Suppose our data num is 3
+
+204
+00:08:26,200 --> 00:08:27,833
+We will only output three transactions
+
+205
+00:08:28,000 --> 00:08:33,166
+The values ​​of the three arrays of 456 will not be output.
+
+206
+00:08:33,400 --> 00:08:35,500
+That's because we grew up from small to large
+
+207
+00:08:35,500 --> 00:08:37,366
+You said you initialized it to 255 at first
+
+208
+00:08:37,366 --> 00:08:39,300
+The array of values ​​that have not been updated
+
+209
+00:08:39,300 --> 00:08:42,266
+Rui will automatically be ranked on the side of 456
+
+210
+00:08:43,733 --> 00:08:44,966
+OK, then data num
+
+211
+00:08:44,966 --> 00:08:46,933
+Here we initialize it to 7
+
+212
+00:08:46,933 --> 00:08:48,866
+In fact, how much is this initialized to?
+
+213
+00:08:48,866 --> 00:08:50,066
+It shouldn't affect anything
+
+214
+00:08:50,333 --> 00:08:53,200
+Then the arraay pointer is initialized to 0
+
+215
+00:08:53,333 --> 00:08:56,166
+sum, max, result are all initialized to 0
+
+216
+00:08:57,500 --> 00:09:01,566
+Then go to our state machine
+
+217
+00:09:01,733 --> 00:09:02,533
+Part
+
+218
+00:09:02,533 --> 00:09:06,033
+It is our data num reg when reading data
+
+219
+00:09:06,366 --> 00:09:08,066
+I have to give value
+
+220
+00:09:08,166 --> 00:09:10,766
+Then this judgment is because of our TB
+
+221
+00:09:11,166 --> 00:09:15,666
+After reading your information,
+
+222
+00:09:18,700 --> 00:09:20,766
+It is our data num after t1
+
+223
+00:09:20,766 --> 00:09:22,200
+Yes will become 0
+
+224
+00:09:22,533 --> 00:09:25,800
+So if your data num is 0
+
+225
+00:09:25,800 --> 00:09:28,400
+It means it has passed t1 now.
+
+226
+00:09:28,400 --> 00:09:30,300
+So you only have it at t1
+
+227
+00:09:30,300 --> 00:09:31,733
+You can change your
+
+228
+00:09:31,733 --> 00:09:33,066
+data num reg value
+
+229
+00:09:33,066 --> 00:09:34,700
+Otherwise, you will receive the wrong value
+
+230
+00:09:35,166 --> 00:09:37,500
+So unless you are currently in t1
+
+231
+00:09:37,500 --> 00:09:40,366
+That is, when data num is not equal to 0
+
+232
+00:09:40,366 --> 00:09:43,466
+You need to set the value of your data num reg
+
+233
+00:09:43,500 --> 00:09:45,700
+Then why is it not set to data num here?
+
+234
+00:09:45,700 --> 00:09:48,366
+But data num - 1 is because
+
+235
+00:09:48,366 --> 00:09:49,600
+Although I just said our
+
+236
+00:09:49,600 --> 00:09:50,766
+pointer may be 123
+
+237
+00:09:50,766 --> 00:09:51,900
+Count to 3
+
+238
+00:09:52,066 --> 00:09:53,466
+data num is the same
+
+239
+00:09:53,500 --> 00:09:56,266
+But because our actual circuit operation will
+
+240
+00:09:56,366 --> 00:09:57,966
+Slightly more
+
+241
+00:09:58,100 --> 00:10:00,466
+Our index of 0 is not used.
+
+242
+00:10:00,466 --> 00:10:01,800
+So here we are actually
+
+243
+00:10:01,800 --> 00:10:03,666
+Put data num - 1 to let him
+
+244
+00:10:03,733 --> 00:10:06,266
+When I count, I count like 012
+
+245
+00:10:06,266 --> 00:10:08,500
+Then our data pointer is also 012
+
+246
+00:10:08,500 --> 00:10:09,800
+This saves resources
+
+247
+00:10:10,933 --> 00:10:13,600
+Okay, what if the value cannot be changed?
+
+248
+00:10:13,600 --> 00:10:14,800
+That is, when it is not t1
+
+249
+00:10:14,800 --> 00:10:16,700
+My Data num Reg
+
+250
+00:10:16,800 --> 00:10:19,766
+The value is just to maintain its original value.
+
+251
+00:10:20,200 --> 00:10:22,433
+Then this is the part of Data num Reg
+
+252
+00:10:22,500 --> 00:10:24,033
+Then there is the array pointer
+
+253
+00:10:24,333 --> 00:10:28,000
+He is if he hasn’t counted Data num Reg yet
+
+254
+00:10:28,266 --> 00:10:29,900
+I'll go add one
+
+255
+00:10:31,000 --> 00:10:32,866
+Then if he seems to be equal to
+
+256
+00:10:32,866 --> 00:10:33,866
+Data num Reg
+
+257
+00:10:33,866 --> 00:10:36,933
+The representative said that I have to jump to the next state.
+
+258
+00:10:36,933 --> 00:10:38,200
+Then we have him here at this time
+
+259
+00:10:38,200 --> 00:10:39,900
+Make a zeroing movement
+
+260
+00:10:39,933 --> 00:10:41,266
+Because behind us
+
+261
+00:10:41,466 --> 00:10:44,100
+When we sort the output, I must start from
+
+262
+00:10:44,133 --> 00:10:47,566
+array0 array1 array2 starts output
+
+263
+00:10:47,566 --> 00:10:48,766
+So here I am
+
+264
+00:10:48,766 --> 00:10:50,466
+Here we are going to do zeroing now
+
+265
+00:10:50,500 --> 00:10:52,333
+But actually you are in that output max
+
+266
+00:10:52,333 --> 00:10:54,000
+Or when output sum
+
+267
+00:10:54,066 --> 00:10:56,000
+You can also do a zero reset
+
+268
+00:10:57,866 --> 00:10:58,066
+oh
+
+269
+00:10:58,066 --> 00:11:00,800
+Then the next part is where we have to calculate the sum.
+
+270
+00:11:00,800 --> 00:11:01,933
+Then everything is very simple here
+
+271
+00:11:01,933 --> 00:11:05,766
+As long as we all have sum = sum + data_in
+
+272
+00:11:06,066 --> 00:11:07,300
+That's just a classmate
+
+273
+00:11:07,300 --> 00:11:09,366
+Remember that you have finished outputting later
+
+274
+00:11:09,366 --> 00:11:12,866
+Before you go back to read data, you need to reset the sum to zero.
+
+275
+00:11:12,866 --> 00:11:15,066
+When it was executed for the first time, because we
+
+276
+00:11:15,133 --> 00:11:16,500
+I already gave him 0 when I reset.
+
+277
+00:11:16,500 --> 00:11:17,800
+So there will be no problem
+
+278
+00:11:17,800 --> 00:11:21,500
+But after you read a round of data,
+
+279
+00:11:21,866 --> 00:11:23,666
+Well, you need to go back to read data.
+
+280
+00:11:23,666 --> 00:11:26,066
+Remember to do the zeroing action on him
+
+281
+00:11:27,166 --> 00:11:29,066
+Okay, then this is the max part
+
+282
+00:11:29,100 --> 00:11:30,333
+So here we are
+
+283
+00:11:30,333 --> 00:11:32,600
+Because it has been initialized to 0 before
+
+284
+00:11:32,866 --> 00:11:34,966
+So any data you enter
+
+285
+00:11:35,000 --> 00:11:37,466
+It must be greater than or equal to them
+
+286
+00:11:37,466 --> 00:11:38,466
+So as long as you show up
+
+287
+00:11:38,466 --> 00:11:40,200
+After inputting data in greater than Max
+
+288
+00:11:40,500 --> 00:11:42,000
+Let’s take Max’s register
+
+289
+00:11:42,000 --> 00:11:43,966
+The value becomes the data you enter now in
+
+290
+00:11:45,166 --> 00:11:46,166
+behind that
+
+291
+00:11:46,166 --> 00:11:49,600
+The second piece of data you want to enter must be larger than this Max
+
+292
+00:11:49,900 --> 00:11:52,433
+He has to be older before he updates his value.
+
+293
+00:11:52,533 --> 00:11:53,400
+Then use this method
+
+294
+00:11:53,400 --> 00:11:54,333
+we can put
+
+295
+00:11:54,333 --> 00:11:57,600
+You enter the maximum value in the data and record it.
+
+296
+00:11:59,600 --> 00:12:02,233
+The last part is the sorting part
+
+297
+00:12:02,333 --> 00:12:04,866
+Then I just talked about our value array
+
+298
+00:12:04,866 --> 00:12:08,166
+We started by defaulting it to 255
+
+299
+00:12:08,166 --> 00:12:10,966
+It’s the maximum value of our 8 bits
+
+300
+00:12:11,166 --> 00:12:12,866
+So you now enter data
+
+301
+00:12:12,900 --> 00:12:16,033
+We just have to go find him and tell him that he wants to put it in
+
+302
+00:12:16,166 --> 00:12:17,433
+which position
+
+303
+00:12:18,533 --> 00:12:19,900
+Suppose you now have data in
+
+304
+00:12:19,900 --> 00:12:24,833
+It’s smaller than our value array0
+
+305
+00:12:24,933 --> 00:12:26,500
+Let's come in one at a time
+
+306
+00:12:26,500 --> 00:12:28,000
+So under such conditions
+
+307
+00:12:28,000 --> 00:12:28,966
+We are going to find
+
+308
+00:12:28,966 --> 00:12:29,700
+Now this data
+
+309
+00:12:29,700 --> 00:12:31,700
+Just wherever he wants to insert it
+
+310
+00:12:31,733 --> 00:12:32,066
+That
+
+311
+00:12:32,066 --> 00:12:34,000
+Our original array is already sorted
+
+312
+00:12:34,000 --> 00:12:34,800
+OK
+
+313
+00:12:35,133 --> 00:12:37,566
+Then you have to say it now in the first cycle
+
+314
+00:12:37,800 --> 00:12:40,033
+For example, my
+
+315
+00:12:41,000 --> 00:12:42,700
+247 input comes in
+
+316
+00:12:42,700 --> 00:12:45,800
+At this time, all my value arrays are 255
+
+317
+00:12:45,800 --> 00:12:48,800
+So I'll go here first 255
+
+318
+00:12:48,800 --> 00:12:50,166
+Among these six arrays
+
+319
+00:12:50,166 --> 00:12:52,400
+Find a place where 247 can be inserted
+
+320
+00:12:52,700 --> 00:12:54,800
+Then if I find that it is larger than value array
+
+321
+00:12:54,800 --> 00:12:55,966
+0 is even smaller
+
+322
+00:12:55,966 --> 00:12:57,566
+Then I entered this data first
+
+323
+00:12:57,566 --> 00:12:59,533
+He is the youngest.
+
+324
+00:12:59,533 --> 00:13:01,266
+Then he should be penetrated
+
+325
+00:13:01,533 --> 00:13:03,800
+The position of value array 0
+
+326
+00:13:03,800 --> 00:13:07,600
+So I update value array 0 to data in
+
+327
+00:13:08,000 --> 00:13:09,700
+Then my value array 1
+
+328
+00:13:10,000 --> 00:13:13,266
+It needs to be updated to 0 because it needs to be pushed back one space.
+
+329
+00:13:16,566 --> 00:13:18,766
+Then I want to store the value of 0
+
+330
+00:13:18,900 --> 00:13:20,666
+2 to store the value of 1
+
+331
+00:13:20,700 --> 00:13:21,866
+3 is stored as the value of 2
+
+332
+00:13:21,866 --> 00:13:23,500
+4 is stored as the value of 3
+
+333
+00:13:23,533 --> 00:13:24,800
+and so on
+
+334
+00:13:25,933 --> 00:13:28,800
+Oh, let’s assume that my current data in is
+
+335
+00:13:29,000 --> 00:13:30,966
+Your array0 is even bigger
+
+336
+00:13:30,966 --> 00:13:33,400
+Does that mean his position is not 0?
+
+337
+00:13:33,400 --> 00:13:34,933
+I'll look for his position further back
+
+338
+00:13:34,933 --> 00:13:36,466
+So I went to see if he was better than
+
+339
+00:13:36,533 --> 00:13:38,400
+value array1 is even bigger
+
+340
+00:13:38,700 --> 00:13:42,133
+If it is smaller than value array 1
+
+341
+00:13:42,133 --> 00:13:45,100
+That means I want to move the position of 1 back
+
+342
+00:13:45,100 --> 00:13:49,166
+Then put my data in into value array1
+
+343
+00:13:49,166 --> 00:13:51,700
+Because it is bigger than 0 and smaller than 1
+
+344
+00:13:51,700 --> 00:13:54,666
+Then he should put it in 1 in the new position
+
+345
+00:13:55,200 --> 00:13:58,433
+So I update value array 1 to data in
+
+346
+00:13:58,600 --> 00:14:01,000
+Then all other values ​​are pushed back one space.
+
+347
+00:14:01,000 --> 00:14:04,466
+I store the value of value array1 into value array 2
+
+348
+00:14:04,666 --> 00:14:07,200
+The value of value array 2 is stored in value array3
+
+349
+00:14:07,300 --> 00:14:09,166
+Then and so on
+
+350
+00:14:10,400 --> 00:14:12,200
+Then if he, I have data in now
+
+351
+00:14:12,200 --> 00:14:15,000
+It’s bigger than both 0 and 1
+
+352
+00:14:15,100 --> 00:14:17,166
+Then I will compare with 2
+
+353
+00:14:17,166 --> 00:14:19,800
+The same thing if he is smaller than 2
+
+354
+00:14:19,866 --> 00:14:22,466
+His position will become in value array 2
+
+355
+00:14:22,466 --> 00:14:23,400
+So I put value array2
+
+356
+00:14:23,400 --> 00:14:25,500
+The value of data in is updated
+
+357
+00:14:25,700 --> 00:14:29,800
+Then the original value of 2 is pushed to 3 and the value of 3 is pushed to 4.
+
+358
+00:14:30,100 --> 00:14:31,600
+Then do the same operation later
+
+359
+00:14:31,600 --> 00:14:34,433
+Keep judging till the end like this
+
+360
+00:14:35,500 --> 00:14:38,166
+Are there any students here who don’t understand?
+
+361
+00:14:40,600 --> 00:14:44,566
+Oh, if not, then the last step is to sort here.
+
+362
+00:14:45,100 --> 00:14:47,666
+What I just said is still in the Read data
+
+363
+00:14:47,666 --> 00:14:48,800
+That is, every time we enter something
+
+364
+00:14:48,800 --> 00:14:50,233
+We have to make a judgment
+
+365
+00:14:50,366 --> 00:14:53,000
+So we are still in the Read data state
+
+366
+00:14:53,100 --> 00:14:55,333
+Then wait until you enter the information
+
+367
+00:14:55,333 --> 00:14:57,666
+After the number of pens is equal to your data num
+
+368
+00:14:57,666 --> 00:15:00,833
+You just jump directly to the next output Max
+
+369
+00:15:02,000 --> 00:15:03,800
+That's because I use one
+
+370
+00:15:03,933 --> 00:15:06,466
+That Max register records his value
+
+371
+00:15:06,500 --> 00:15:07,666
+So just put
+
+372
+00:15:07,966 --> 00:15:10,500
+As long as the result is less than Max
+
+373
+00:15:11,566 --> 00:15:14,200
+Then we will jump to output sum in the next cycle
+
+374
+00:15:14,200 --> 00:15:16,100
+That's the same thing I've already done here
+
+375
+00:15:16,100 --> 00:15:18,400
+I used register to remember his total.
+
+376
+00:15:18,400 --> 00:15:20,466
+It means that result is less than or equal to sum
+
+377
+00:15:21,133 --> 00:15:23,966
+Then the next step is output sort.
+
+378
+00:15:24,166 --> 00:15:26,200
+At this time, I always have the same result
+
+379
+00:15:26,766 --> 00:15:29,700
+<= vaule_array[array_pointer] because my
+
+380
+00:15:29,900 --> 00:15:33,066
+The Value array register is sorted.
+
+381
+00:15:33,133 --> 00:15:35,366
+So I started from his index 0
+
+382
+00:15:35,366 --> 00:15:36,300
+Output to data num
+
+383
+00:15:36,300 --> 00:15:37,300
+Just fine
+
+384
+00:15:38,500 --> 00:15:39,400
+Then this way
+
+385
+00:15:39,533 --> 00:15:42,733
+In this way, after the data num cycle is output,
+
+386
+00:15:42,733 --> 00:15:45,666
+This completes our sorted output.
+
+387
+00:15:46,100 --> 00:15:48,866
+Then finally here you can see how many there are
+
+388
+00:15:48,966 --> 00:15:50,066
+Judgmental
+
+389
+00:15:50,066 --> 00:15:52,833
+Determining whether array pointer is equal to Data num reg
+
+390
+00:15:52,933 --> 00:15:53,666
+if yes
+
+391
+00:15:53,666 --> 00:15:57,000
+I will initialize my value array to 255
+
+392
+00:15:57,100 --> 00:15:58,300
+let me next time
+
+393
+00:15:58,366 --> 00:16:00,633
+You can continue to sort after reading the data.
+
+394
+00:16:01,066 --> 00:16:02,900
+So here is a judgment made:
+
+395
+00:16:03,066 --> 00:16:05,966
+If your array pointer is equal to data num reg
+
+396
+00:16:05,966 --> 00:16:08,666
+Just set vulue array 0 to 255
+
+397
+00:16:08,666 --> 00:16:10,500
+Otherwise, keep its original value
+
+398
+00:16:10,700 --> 00:16:13,666
+The same is true for value array1 if it has been
+
+399
+00:16:13,933 --> 00:16:15,800
+After the output is finished, I will set it to 255
+
+400
+00:16:15,800 --> 00:16:17,266
+Otherwise, keep the original value
+
+401
+00:16:17,800 --> 00:16:20,166
+That sum and max are the same
+
+402
+00:16:20,166 --> 00:16:22,800
+You have to reset it to zero before going back to read data.
+
+403
+00:16:22,966 --> 00:16:24,900
+Otherwise, if your max here is not reset to zero,
+
+404
+00:16:24,900 --> 00:16:27,866
+Your next data in will be affected
+
+405
+00:16:28,200 --> 00:16:30,466
+Because it stands to reason that your next set of information will be
+
+406
+00:16:30,500 --> 00:16:31,833
+The first one will definitely be
+
+407
+00:16:32,066 --> 00:16:33,333
+Do you want to write it down first?
+
+408
+00:16:33,333 --> 00:16:35,366
+Only then can you compare it with subsequent values.
+
+409
+00:16:35,400 --> 00:16:38,400
+Then if your max hasn’t reset him to zero
+
+410
+00:16:38,600 --> 00:16:41,700
+You will keep the Max from the previous group
+
+411
+00:16:42,100 --> 00:16:43,500
+Then if the data you entered today
+
+412
+00:16:43,500 --> 00:16:45,600
+It happens to be smaller than him
+
+413
+00:16:45,600 --> 00:16:47,766
+Then you can't cover it up
+
+414
+00:16:47,866 --> 00:16:49,100
+will go wrong
+
+415
+00:16:49,166 --> 00:16:50,633
+The same goes for sum
+
+416
+00:16:51,666 --> 00:16:53,166
+If your sum is not reset to zero
+
+417
+00:16:53,166 --> 00:16:54,566
+Then you keep adding later
+
+418
+00:16:54,566 --> 00:16:56,100
+The first value you add will be wrong
+
+419
+00:16:56,100 --> 00:16:58,133
+Then overflow may occur
+
+420
+00:16:58,133 --> 00:17:00,566
+Because our number of bits is fixed
+
+421
+00:17:00,566 --> 00:17:02,800
+So remember, this is where you need to remember
+
+422
+00:17:02,800 --> 00:17:05,166
+To do an initialization action
+
+423
+00:17:05,466 --> 00:17:07,700
+That's probably the formula for the midterm exam.
+
+424
+00:17:07,700 --> 00:17:08,766
+That's probably it
+
+425
+00:17:09,133 --> 00:17:10,800
+Does any classmate have any questions?
+
+426
+00:17:13,533 --> 00:17:14,166
+if
+
+427
+00:17:14,166 --> 00:17:16,800
+There are students who can’t understand this code, but it’s the same
+
+428
+00:17:16,800 --> 00:17:18,366
+You can continue to ask
+
+429
+00:17:18,366 --> 00:17:19,433
+Then you are
+
+430
+00:17:19,533 --> 00:17:22,466
+You can send it to any teaching assistant you want.
+
+431
+00:17:22,500 --> 00:17:22,966
+Anyway
+
+432
+00:17:22,966 --> 00:17:25,600
+That is, we will forward it to that person depending on the situation.
+
+433
+00:17:25,600 --> 00:17:26,866
+Midterm Exam Teaching Assistant
+
+434
+00:17:27,466 --> 00:17:30,766
+Then I will continue with homework 4
+
+435
+00:17:44,666 --> 00:17:47,300
+Okay, then what we need to do in homework 4
+
+436
+00:17:47,300 --> 00:17:48,633
+The topic is that
+
+437
+00:17:48,700 --> 00:17:51,866
+Edge-based line average interpolation
+
+438
+00:17:52,300 --> 00:17:54,866
+It is a program for interpolation
+
+439
+00:17:55,800 --> 00:17:57,600
+Then you can give me a brief introduction first.
+
+440
+00:17:57,600 --> 00:17:59,800
+It's because when we store some image data
+
+441
+00:17:59,800 --> 00:18:02,966
+Maybe to save that cost
+
+442
+00:18:02,966 --> 00:18:04,800
+We might just keep his
+
+443
+00:18:05,200 --> 00:18:06,766
+Even numbered rows or odd numbered rows
+
+444
+00:18:06,766 --> 00:18:10,600
+For example, the picture on the left is called odd-numbered rows.
+
+445
+00:18:10,700 --> 00:18:13,000
+If it's an even-numbered line, it's called black.
+
+446
+00:18:13,000 --> 00:18:14,366
+It means he is worthless
+
+447
+00:18:15,000 --> 00:18:16,900
+But we need to make the image
+
+448
+00:18:17,100 --> 00:18:17,733
+when displayed
+
+449
+00:18:17,733 --> 00:18:19,366
+We need to perform a restoration action on him
+
+450
+00:18:19,366 --> 00:18:21,766
+Let him have both even-numbered rows and odd-numbered rows
+
+451
+00:18:21,766 --> 00:18:24,866
+Otherwise, if you look at it this way, the visual effect will be very poor.
+
+452
+00:18:24,866 --> 00:18:27,066
+So we have to do it through some algorithms
+
+453
+00:18:27,166 --> 00:18:29,766
+Interpolation lets him get the value of his odd rows
+
+454
+00:18:29,766 --> 00:18:32,666
+You can compile the complete image on the right
+
+455
+00:18:34,166 --> 00:18:35,466
+Then this time we
+
+456
+00:18:35,666 --> 00:18:37,166
+This is the algorithm used
+
+457
+00:18:37,166 --> 00:18:40,633
+The edge-based line average interpolation method
+
+458
+00:18:40,666 --> 00:18:42,500
+That is, he will do something based on the edges.
+
+459
+00:18:42,500 --> 00:18:43,666
+Judgment of conditions
+
+460
+00:18:43,666 --> 00:18:46,033
+to make the interpolation results better
+
+461
+00:18:47,400 --> 00:18:50,900
+So this block overview is like this
+
+462
+00:18:50,900 --> 00:18:52,266
+We have two memories
+
+463
+00:18:52,366 --> 00:18:53,966
+That first one is
+
+464
+00:18:53,966 --> 00:18:57,800
+Grayscale image memory that stores original grayscale data
+
+465
+00:18:57,900 --> 00:19:00,733
+Then this memory can only be read.
+
+466
+00:19:00,733 --> 00:19:02,466
+And he can only read it once
+
+467
+00:19:02,466 --> 00:19:03,400
+So everyone in
+
+468
+00:19:03,500 --> 00:19:04,666
+Pay special attention when designing
+
+469
+00:19:04,666 --> 00:19:07,800
+That is, you must save the value you read out.
+
+470
+00:19:07,933 --> 00:19:11,200
+Otherwise, I won’t be able to read him anymore.
+
+471
+00:19:11,733 --> 00:19:14,366
+The second one is result image memory
+
+472
+00:19:14,366 --> 00:19:18,100
+That means you have to write down the information you completed.
+
+473
+00:19:18,100 --> 00:19:20,600
+What should be paid special attention to here is that
+
+474
+00:19:20,666 --> 00:19:25,566
+The values ​​of our odd-numbered rows also need to be written back.
+
+475
+00:19:25,566 --> 00:19:27,333
+It’s just that you can’t just write about you.
+
+476
+00:19:27,333 --> 00:19:29,966
+Those interpolated points that have been processed
+
+477
+00:19:30,000 --> 00:19:31,000
+You are the whole picture
+
+478
+00:19:31,000 --> 00:19:33,366
+This result image memory must be written back
+
+479
+00:19:34,000 --> 00:19:35,466
+Then you can also use him
+
+480
+00:19:35,466 --> 00:19:36,766
+To make a temporary storage function
+
+481
+00:19:36,766 --> 00:19:38,400
+If you want to save resources
+
+482
+00:19:38,400 --> 00:19:40,500
+Don’t open so many registers
+
+483
+00:19:40,533 --> 00:19:43,966
+You can now read out the values ​​of these gray scales
+
+484
+00:19:44,000 --> 00:19:46,333
+You can just use this to make a temporary save first.
+
+485
+00:19:46,333 --> 00:19:48,466
+This way, otherwise you can only read it once
+
+486
+00:19:48,466 --> 00:19:51,366
+If you save everything using that register
+
+487
+00:19:51,366 --> 00:19:53,100
+The area will be larger
+
+488
+00:19:54,333 --> 00:19:55,800
+Okay, let me show you the position of the feet.
+
+489
+00:19:55,800 --> 00:19:58,566
+Just like us, this time it’s a positive edge synchronization circuit
+
+490
+00:19:58,666 --> 00:20:02,366
+Then the asychronous reset of Active high
+
+491
+00:20:02,600 --> 00:20:04,700
+The require signal is used
+
+492
+00:20:04,733 --> 00:20:08,200
+It’s worth using the Grayscale memory.
+
+493
+00:20:08,366 --> 00:20:10,666
+Then I will explain his timing later.
+
+494
+00:20:10,933 --> 00:20:11,733
+then in data
+
+495
+00:20:11,733 --> 00:20:14,000
+Just from Grayscale memory
+
+496
+00:20:14,133 --> 00:20:17,866
+The value of the image data read out
+
+497
+00:20:18,766 --> 00:20:21,733
+Then there is the control signal of Result image memory
+
+498
+00:20:21,733 --> 00:20:22,833
+There is
+
+499
+00:20:23,000 --> 00:20:26,166
+Just use it to tell him whether you want to read or write.
+
+500
+00:20:26,533 --> 00:20:28,200
+Then when wen is 0
+
+501
+00:20:28,200 --> 00:20:31,000
+It means you want to read the Result memory
+
+502
+00:20:31,133 --> 00:20:34,466
+Then if wen is 1, it means that we only need to write to him.
+
+503
+00:20:34,933 --> 00:20:35,866
+That addr
+
+504
+00:20:35,866 --> 00:20:38,366
+That's the one you want to operate
+
+505
+00:20:38,366 --> 00:20:40,600
+Location of result image memory
+
+506
+00:20:41,600 --> 00:20:42,766
+That data_wr
+
+507
+00:20:42,766 --> 00:20:46,066
+It is the value you want to write into the result image memory.
+
+508
+00:20:46,300 --> 00:20:49,600
+data_rd is read from result image memory
+
+509
+00:20:49,966 --> 00:20:52,733
+The image value has a done signal at the end
+
+510
+00:20:52,733 --> 00:20:53,666
+Just when you
+
+511
+00:20:53,666 --> 00:20:54,166
+already
+
+512
+00:20:54,166 --> 00:20:56,466
+Make sure you write all correct answers to result image memory
+
+513
+00:20:56,466 --> 00:20:58,500
+when you do
+
+514
+00:20:58,700 --> 00:21:01,833
+Once it reaches high TB, verification will begin.
+
+515
+00:21:04,200 --> 00:21:07,900
+Okay, then let’s talk about this and that edge-based
+
+516
+00:21:08,300 --> 00:21:11,300
+The algorithm for line interpolation
+
+517
+00:21:11,466 --> 00:21:14,533
+First, we will test your qualifications and give them to you.
+
+518
+00:21:14,533 --> 00:21:17,200
+It is a 32*16 picture
+
+519
+00:21:17,466 --> 00:21:19,700
+Then he only has an odd number of rows
+
+520
+00:21:19,933 --> 00:21:21,166
+Then we are
+
+521
+00:21:21,166 --> 00:21:22,700
+Want to make this 32*16
+
+522
+00:21:22,700 --> 00:21:24,700
+The even rows of the graph are interpolated
+
+523
+00:21:24,733 --> 00:21:26,800
+After the interpolation is completed, it will become 3.
+
+524
+00:21:26,800 --> 00:21:29,933
+A result of 32*31
+
+525
+00:21:29,933 --> 00:21:31,066
+Then let’s take this result
+
+526
+00:21:31,066 --> 00:21:33,000
+Write to our result image memory
+
+527
+00:21:33,166 --> 00:21:35,466
+You can complete this question
+
+528
+00:21:37,366 --> 00:21:38,400
+That
+
+529
+00:21:38,400 --> 00:21:41,800
+Suppose what we want to interpolate today is this black point
+
+530
+00:21:42,500 --> 00:21:45,966
+Then we will have the two rows above it
+
+531
+00:21:46,200 --> 00:21:48,700
+Is the reading from the original test data worth it?
+
+532
+00:21:48,700 --> 00:21:52,500
+That is, our odd-numbered rows have values.
+
+533
+00:21:52,500 --> 00:21:55,000
+The blue line has no value
+
+534
+00:21:55,000 --> 00:21:56,266
+You have to interpolate yourself
+
+535
+00:21:56,400 --> 00:21:58,100
+So if we interpolate these black spots
+
+536
+00:21:58,100 --> 00:22:01,466
+We will all use the ABCs in the row above him
+
+537
+00:22:01,733 --> 00:22:04,066
+and the following column de f
+
+538
+00:22:04,333 --> 00:22:06,366
+These points make conditional judgments
+
+539
+00:22:06,366 --> 00:22:08,200
+to decide how I want to do the interpolation
+
+540
+00:22:08,900 --> 00:22:11,466
+The way to judge is that I will look first
+
+541
+00:22:11,733 --> 00:22:14,500
+Interpolation in all directions
+
+542
+00:22:14,666 --> 00:22:18,466
+It is the absolute value of the oblique angle a and f
+
+543
+00:22:18,566 --> 00:22:22,300
+Interpolation between b and e and interpolation between c and d
+
+544
+00:22:22,500 --> 00:22:24,933
+Then use this interpolation to determine whether he has
+
+545
+00:22:24,933 --> 00:22:26,366
+edge cases occur
+
+546
+00:22:26,366 --> 00:22:27,666
+to do something different
+
+547
+00:22:27,766 --> 00:22:28,700
+interpolation
+
+548
+00:22:28,966 --> 00:22:32,400
+So after I get the values ​​​​of these three directions
+
+549
+00:22:32,400 --> 00:22:34,900
+We have to find its minimum value
+
+550
+00:22:35,133 --> 00:22:37,500
+The minimum value means that he has the least edge.
+
+551
+00:22:37,500 --> 00:22:38,300
+Then we use
+
+552
+00:22:38,366 --> 00:22:40,633
+It is the most difficult to interpolate his values.
+
+553
+00:22:40,733 --> 00:22:43,066
+causing some damage
+
+554
+00:22:43,800 --> 00:22:45,200
+So I finished d1
+
+555
+00:22:45,200 --> 00:22:45,900
+After d2,d3
+
+556
+00:22:45,900 --> 00:22:47,666
+I just know their minimum value
+
+557
+00:22:47,700 --> 00:22:49,366
+Then if d1 is the smallest
+
+558
+00:22:49,366 --> 00:22:50,266
+I just use
+
+559
+00:22:50,366 --> 00:22:54,666
+a plus f divided by 2 is used as the value of that point when I interpolate
+
+560
+00:22:54,933 --> 00:22:58,766
+If d2 is the minimum, then add b plus 1 and divide by 2
+
+561
+00:22:58,766 --> 00:23:01,966
+If D3 is the smallest, add c plus d divided by 2
+
+562
+00:23:03,566 --> 00:23:06,066
+Okay, but there is one thing we should pay special attention to.
+
+563
+00:23:06,066 --> 00:23:07,600
+If we are at the interpolation point
+
+564
+00:23:07,600 --> 00:23:11,433
+If this black spot is on the left or right border
+
+565
+00:23:11,500 --> 00:23:13,666
+Then he may not have a or d
+
+566
+00:23:13,666 --> 00:23:15,500
+Or there is no c or f
+
+567
+00:23:15,566 --> 00:23:18,100
+Like this picture, he uses the left border as an example
+
+568
+00:23:18,100 --> 00:23:21,066
+So he only has points b c e f for reference.
+
+569
+00:23:21,200 --> 00:23:22,966
+So at this time we are all
+
+570
+00:23:23,133 --> 00:23:25,066
+If you are on the left or right border
+
+571
+00:23:25,066 --> 00:23:26,966
+We always use (b+e)/2
+
+572
+00:23:26,966 --> 00:23:29,100
+As the interpolation value of this black point
+
+573
+00:23:29,166 --> 00:23:31,066
+There is no need to make judgments anymore
+
+574
+00:23:32,466 --> 00:23:35,033
+Then this is how we sing
+
+575
+00:23:35,533 --> 00:23:36,566
+Let’s talk about it next
+
+576
+00:23:36,566 --> 00:23:39,566
+The timing part of data input
+
+577
+00:23:40,066 --> 00:23:43,500
+The first is the reading of the grayscale image memory
+
+578
+00:23:43,600 --> 00:23:46,200
+You can see that at t1
+
+579
+00:23:46,500 --> 00:23:49,633
+Here we pull the require signal to high
+
+580
+00:23:50,533 --> 00:23:54,466
+Then TB will be released at t2 at this time
+
+581
+00:23:54,766 --> 00:23:56,666
+Start giving you a row value
+
+582
+00:23:56,666 --> 00:23:58,566
+That is, you only need to raise require once
+
+583
+00:23:58,566 --> 00:24:00,233
+He will give you one row at a time
+
+584
+00:24:00,366 --> 00:24:01,466
+So you just have to
+
+585
+00:24:01,500 --> 00:24:03,966
+Be prepared for you to process the data of this row.
+
+586
+00:24:03,966 --> 00:24:06,700
+Whether it is stored in register or stored in
+
+587
+00:24:06,800 --> 00:24:09,300
+memory or do calculations directly
+
+588
+00:24:09,300 --> 00:24:11,600
+He will only give it to you this once
+
+589
+00:24:11,600 --> 00:24:13,433
+So after you finish reading, you should be right
+
+590
+00:24:13,466 --> 00:24:15,733
+This row does the processing you need
+
+591
+00:24:15,733 --> 00:24:18,366
+Otherwise, if you can’t read the value later, you won’t be able to read it again.
+
+592
+00:24:18,366 --> 00:24:20,566
+Do the operation
+
+593
+00:24:20,600 --> 00:24:23,066
+But the other thing is the first few assignments
+
+594
+00:24:23,066 --> 00:24:24,733
+There may be some students who don’t quite understand.
+
+595
+00:24:24,733 --> 00:24:25,600
+that is
+
+596
+00:24:25,733 --> 00:24:29,100
+Are the values ​​​​of our TB given by negative karma?
+
+597
+00:24:29,100 --> 00:24:31,400
+Like here, I have negative fate for pixel0
+
+598
+00:24:31,400 --> 00:24:33,000
+The next negative edge is for pixel1
+
+599
+00:24:33,400 --> 00:24:34,466
+Then why do we all talk about it?
+
+600
+00:24:34,466 --> 00:24:35,766
+Our circuit needs to be
+
+601
+00:24:35,766 --> 00:24:37,933
+Zhengyuan does synchronization operations
+
+602
+00:24:37,933 --> 00:24:39,666
+It's because I have bad luck
+
+603
+00:24:39,666 --> 00:24:40,966
+Although I have negative fate to give value
+
+604
+00:24:40,966 --> 00:24:41,733
+but
+
+605
+00:24:41,733 --> 00:24:43,800
+At this time we can see near the red line
+
+606
+00:24:43,800 --> 00:24:45,633
+His value is changing
+
+607
+00:24:45,866 --> 00:24:47,266
+Then pixel0 and pixel1
+
+608
+00:24:47,266 --> 00:24:50,266
+The values ​​in the middle are still changing.
+
+609
+00:24:50,266 --> 00:24:52,566
+So its value is relatively unstable at this time.
+
+610
+00:24:52,666 --> 00:24:54,300
+Then if you do the operation here
+
+611
+00:24:54,300 --> 00:24:56,266
+Some errors are more likely to occur
+
+612
+00:24:56,333 --> 00:24:58,100
+So TB gives value on the negative edge
+
+613
+00:24:58,100 --> 00:25:01,166
+Then we are really suitable to access his data
+
+614
+00:25:01,166 --> 00:25:02,433
+In fact, in Zhengyuan
+
+615
+00:25:02,700 --> 00:25:05,333
+You can see that the dotted line on the right edge is facing down.
+
+616
+00:25:05,333 --> 00:25:07,600
+Its value is very stable pixel0
+
+617
+00:25:07,766 --> 00:25:09,300
+So at this time I will take his value
+
+618
+00:25:09,300 --> 00:25:10,666
+is relatively safe
+
+619
+00:25:10,900 --> 00:25:12,066
+Then the next chance
+
+620
+00:25:12,066 --> 00:25:14,400
+Can I align this dotted line?
+
+621
+00:25:14,500 --> 00:25:17,166
+If both the left and right sides are pixel1, it will be very stable.
+
+622
+00:25:17,166 --> 00:25:19,600
+So although we have TB in negative circumstances,
+
+623
+00:25:19,600 --> 00:25:21,000
+But please ask all classmates
+
+624
+00:25:21,000 --> 00:25:23,433
+They are all processing this information in Zhengyuan
+
+625
+00:25:24,500 --> 00:25:25,633
+Okay, wait till then
+
+626
+00:25:25,766 --> 00:25:28,466
+After all the data of a row has been entered,
+
+627
+00:25:28,466 --> 00:25:30,300
+Then pixel31 is entered
+
+628
+00:25:30,566 --> 00:25:31,866
+Go to t3 again
+
+629
+00:25:31,866 --> 00:25:34,166
+Then you can raise the require
+
+630
+00:25:34,333 --> 00:25:37,366
+TB will continue to give you the next row.
+
+631
+00:25:37,366 --> 00:25:38,400
+Pixel
+
+632
+00:25:38,933 --> 00:25:40,266
+The other thing is
+
+633
+00:25:40,366 --> 00:25:43,866
+If you have not finished typing
+
+634
+00:25:44,066 --> 00:25:46,066
+Just before in_data has finished inputting a row
+
+635
+00:25:46,066 --> 00:25:48,066
+You raise the require
+
+636
+00:25:48,066 --> 00:25:51,300
+He will never give you a second row directly.
+
+637
+00:25:51,533 --> 00:25:52,700
+It's just that he won't remember to say
+
+638
+00:25:52,700 --> 00:25:54,000
+How many cycles can you pull up here?
+
+639
+00:25:54,000 --> 00:25:55,000
+I’ll give you a few rows
+
+640
+00:25:55,000 --> 00:25:55,800
+Rather
+
+641
+00:25:55,800 --> 00:25:59,066
+When he enters now, you can require after he finishes typing.
+
+642
+00:25:59,266 --> 00:26:01,466
+Only then will he give you a second row
+
+643
+00:26:01,533 --> 00:26:03,666
+So students, please pay attention here.
+
+644
+00:26:05,100 --> 00:26:05,300
+good
+
+645
+00:26:05,300 --> 00:26:09,333
+Then the next step is the result image memory part
+
+646
+00:26:09,333 --> 00:26:10,866
+Then we are all here
+
+647
+00:26:10,966 --> 00:26:13,900
+A pixel will correspond to a position
+
+648
+00:26:13,900 --> 00:26:17,166
+Then we have a total of 992 pixels to save in
+
+649
+00:26:17,666 --> 00:26:19,266
+There are 992 in total
+
+650
+00:26:20,533 --> 00:26:21,800
+Then um
+
+651
+00:26:21,800 --> 00:26:24,400
+First, let’s take a look at the read mode part
+
+652
+00:26:24,766 --> 00:26:26,933
+If you want to do reed, you need to put
+
+653
+00:26:26,933 --> 00:26:28,166
+set to low
+
+654
+00:26:28,766 --> 00:26:30,866
+Then Addr is given
+
+655
+00:26:31,000 --> 00:26:33,100
+The position you want
+
+656
+00:26:33,100 --> 00:26:34,666
+The position you want to read
+
+657
+00:26:34,766 --> 00:26:35,566
+then in the next
+
+658
+00:26:35,566 --> 00:26:37,900
+If you have a good relationship, you can get his data
+
+659
+00:26:38,166 --> 00:26:40,300
+Then pay attention here too, that's how you are
+
+660
+00:26:40,766 --> 00:26:43,766
+We give addr and wen this opportunity
+
+661
+00:26:44,200 --> 00:26:47,300
+Later, when there may be negative luck, the data will come out.
+
+662
+00:26:47,300 --> 00:26:49,133
+But at this time, he is still relatively unstable.
+
+663
+00:26:49,133 --> 00:26:50,100
+So please
+
+664
+00:26:50,133 --> 00:26:52,366
+Next chance to read this data
+
+665
+00:26:53,866 --> 00:26:56,233
+Then here is the reading part
+
+666
+00:26:56,600 --> 00:26:58,066
+Then if it is written
+
+667
+00:26:58,066 --> 00:27:01,300
+It's you who raised Wen in Zhengyuan
+
+668
+00:27:01,300 --> 00:27:03,533
+Then give you the location where you want to write at the same time
+
+669
+00:27:03,533 --> 00:27:05,033
+Then the data you want to write
+
+670
+00:27:05,200 --> 00:27:07,300
+Then its value will be written to our
+
+671
+00:27:07,300 --> 00:27:08,833
+result image memory了
+
+672
+00:27:10,100 --> 00:27:12,066
+Then this assignment is probably like this
+
+673
+00:27:12,066 --> 00:27:14,000
+Do any students have questions?
+
+674
+00:27:16,733 --> 00:27:19,566
+Oh no, then let me tell you again about our time
+
+675
+00:27:19,766 --> 00:27:22,566
+More specifically, there is a software verification part.
+
+676
+00:27:22,566 --> 00:27:23,866
+But I want everyone to write
+
+677
+00:27:23,866 --> 00:27:26,033
+Software code to verify your circuit
+
+678
+00:27:27,133 --> 00:27:30,800
+Then the syntax we specify is c or C++ or Python
+
+679
+00:27:31,000 --> 00:27:34,600
+Then there are a few points that I would like to talk about.
+
+680
+00:27:34,800 --> 00:27:37,033
+The first thing is that we have to meet
+
+681
+00:27:37,166 --> 00:27:39,800
+When the time comes, the certified assistant will use the software code to
+
+682
+00:27:39,933 --> 00:27:43,166
+Generate the test data for verification
+
+683
+00:27:43,333 --> 00:27:45,566
+So it's yours
+
+684
+00:27:45,966 --> 00:27:48,500
+The path to the input image is fixed to this
+
+685
+00:27:48,533 --> 00:27:50,666
+./image.jpg
+
+686
+00:27:51,133 --> 00:27:52,566
+we will read
+
+687
+00:27:52,600 --> 00:27:55,600
+This picture comes in for verification.
+
+688
+00:27:57,200 --> 00:28:00,300
+Then the next thing is that your first step is
+
+689
+00:28:00,300 --> 00:28:03,266
+After you read this image.jpg in,
+
+690
+00:28:03,266 --> 00:28:05,800
+Convert it to grayscale
+
+691
+00:28:06,700 --> 00:28:08,366
+After converting to grayscale
+
+692
+00:28:08,400 --> 00:28:11,466
+Our image data is 32*31
+
+693
+00:28:11,500 --> 00:28:13,633
+So we need to resize it first.
+
+694
+00:28:14,100 --> 00:28:17,100
+Width is 32 and high is 31
+
+695
+00:28:17,333 --> 00:28:19,033
+Then because of us
+
+696
+00:28:19,366 --> 00:28:21,233
+We share that
+
+697
+00:28:21,766 --> 00:28:24,700
+The original grayscale data is only
+
+698
+00:28:24,900 --> 00:28:27,166
+odd rows
+
+699
+00:28:27,333 --> 00:28:29,666
+So you need to remove the even rows
+
+700
+00:28:29,666 --> 00:28:31,966
+Let him become 32*16
+
+701
+00:28:32,100 --> 00:28:33,566
+That's how we get it
+
+702
+00:28:33,566 --> 00:28:35,333
+That fits our circuit
+
+703
+00:28:35,333 --> 00:28:36,566
+input
+
+704
+00:28:37,533 --> 00:28:39,366
+Then the next step is to invite everyone to use it
+
+705
+00:28:39,366 --> 00:28:42,033
+software to create the one we just talked about
+
+706
+00:28:42,333 --> 00:28:46,266
+The algorithm of edge baseline average interpolation
+
+707
+00:28:46,266 --> 00:28:49,766
+Take the 32*16 image you generated yourself
+
+708
+00:28:49,966 --> 00:28:52,900
+Interpolate to 32*31
+
+709
+00:28:54,866 --> 00:28:57,333
+Then we will have one of your own
+
+710
+00:28:57,333 --> 00:28:58,700
+to the input graph
+
+711
+00:28:58,966 --> 00:29:02,466
+Processed 32*16 data
+
+712
+00:29:02,466 --> 00:29:03,700
+Then you use software algorithms
+
+713
+00:29:03,700 --> 00:29:06,766
+Interpolated 32*31 image data
+
+714
+00:29:07,133 --> 00:29:08,466
+Then these two are one
+
+715
+00:29:08,466 --> 00:29:10,433
+will be the input to our circuit
+
+716
+00:29:10,866 --> 00:29:13,366
+This 32*16 is the input of our circuit
+
+717
+00:29:13,366 --> 00:29:16,000
+So everyone should save it as image.dat
+
+718
+00:29:16,566 --> 00:29:19,700
+The interpolated 32*31 picture
+
+719
+00:29:19,733 --> 00:29:21,800
+It's made with our software
+
+720
+00:29:21,800 --> 00:29:23,266
+Theoretically less error-prone
+
+721
+00:29:23,266 --> 00:29:25,066
+So we just take that data
+
+722
+00:29:25,066 --> 00:29:25,900
+as ours
+
+723
+00:29:25,933 --> 00:29:27,400
+golden.dat
+
+724
+00:29:28,066 --> 00:29:29,700
+Then these are both
+
+725
+00:29:30,100 --> 00:29:32,900
+One can let TB be used as input data
+
+726
+00:29:32,933 --> 00:29:34,000
+then next
+
+727
+00:29:34,000 --> 00:29:34,366
+golden
+
+728
+00:29:34,366 --> 00:29:37,100
+It will be compared with the output of your circuit.
+
+729
+00:29:37,133 --> 00:29:38,766
+Then we can get a soft
+
+730
+00:29:38,766 --> 00:29:40,200
+Body verification generated data
+
+731
+00:29:40,200 --> 00:29:41,833
+to test our circuit
+
+732
+00:29:43,100 --> 00:29:45,166
+The other one is image.dat
+
+733
+00:29:45,166 --> 00:29:47,066
+There is also the format of golden.dat
+
+734
+00:29:47,066 --> 00:29:49,600
+I just ask everyone to refer to what the assistant teacher gave me.
+
+735
+00:29:49,600 --> 00:29:52,366
+Our TB will originally attach a set of image.dat
+
+736
+00:29:52,366 --> 00:29:53,700
+golden.dat
+
+737
+00:29:54,066 --> 00:29:56,866
+Then please follow that format.
+
+738
+00:29:56,866 --> 00:29:58,466
+File format to write
+
+739
+00:29:59,600 --> 00:30:02,566
+Then if you name it, it will be the main function.
+
+740
+00:30:02,566 --> 00:30:03,966
+Please name it main.c
+
+741
+00:30:03,966 --> 00:30:07,033
+Or main.cpp or main.py
+
+742
+00:30:07,800 --> 00:30:09,366
+If your code
+
+743
+00:30:09,600 --> 00:30:10,600
+For example, say python
+
+744
+00:30:10,600 --> 00:30:12,666
+We need to call some special libraries.
+
+745
+00:30:12,866 --> 00:30:15,700
+That means please write it clearly in readme.txt
+
+746
+00:30:15,700 --> 00:30:17,800
+Then when the time comes, it will be together with the homework
+
+747
+00:30:17,800 --> 00:30:18,733
+pay
+
+748
+00:30:18,733 --> 00:30:20,600
+Only a teaching assistant knows how to run your code
+
+749
+00:30:20,933 --> 00:30:22,666
+Or you have some special execution method
+
+750
+00:30:22,666 --> 00:30:24,300
+Just sometimes write it in the readme
+
+751
+00:30:24,800 --> 00:30:28,500
+I won't have to deal with it specially if I can't run when the time comes.
+
+752
+00:30:28,500 --> 00:30:29,300
+so
+
+753
+00:30:30,533 --> 00:30:33,166
+Okay, let’s talk about the distribution part.
+
+754
+00:30:33,300 --> 00:30:35,733
+First, our functional simulation
+
+755
+00:30:35,733 --> 00:30:38,033
+This time it’s 40%
+
+756
+00:30:38,200 --> 00:30:39,766
+Then we have some points to give
+
+757
+00:30:39,766 --> 00:30:43,033
+That is if your odd rows are right
+
+758
+00:30:43,500 --> 00:30:44,700
+That's 10 points.
+
+759
+00:30:44,700 --> 00:30:45,700
+Then this should be simple
+
+760
+00:30:45,700 --> 00:30:47,300
+That means you read in odd-numbered lines
+
+761
+00:30:47,300 --> 00:30:50,333
+Just write it to the correct location of the result image memory
+
+762
+00:30:50,333 --> 00:30:51,700
+You got 10 points.
+
+763
+00:30:51,966 --> 00:30:54,466
+Then comes the boundary part
+
+764
+00:30:54,466 --> 00:30:56,466
+Is the left or right border
+
+765
+00:30:57,066 --> 00:31:00,200
+If you have the correct interpolation, you can get another 10 points.
+
+766
+00:31:00,866 --> 00:31:01,866
+In the end it was
+
+767
+00:31:01,866 --> 00:31:04,833
+Not the ones in the middle of the left border and right border
+
+768
+00:31:04,933 --> 00:31:06,700
+interpolation value of even row
+
+769
+00:31:06,700 --> 00:31:09,633
+If you write it correctly, use 20 points for a total of 40
+
+770
+00:31:11,066 --> 00:31:12,800
+What about data level simulation?
+
+771
+00:31:12,800 --> 00:31:15,066
+We only give points if we are all right.
+
+772
+00:31:15,500 --> 00:31:18,466
+So if you synthesize it
+
+773
+00:31:18,500 --> 00:31:20,133
+If the circuit passes all tests
+
+774
+00:31:20,133 --> 00:31:22,033
+It's like 20 points
+
+775
+00:31:22,766 --> 00:31:26,300
+As for performance, we still get 20 points.
+
+776
+00:31:26,333 --> 00:31:28,133
+Then our performance
+
+777
+00:31:28,133 --> 00:31:29,700
+The standard is yours
+
+778
+00:31:29,900 --> 00:31:33,266
+The cost of the circuit is related to the simulation time
+
+779
+00:31:33,400 --> 00:31:34,700
+Just according to this formula
+
+780
+00:31:34,700 --> 00:31:38,233
+Here is also the number of your synthetic resources.
+
+781
+00:31:38,300 --> 00:31:42,166
+then multiply that by your longest simulation time
+
+782
+00:31:42,166 --> 00:31:43,366
+So when you simulate it, please
+
+783
+00:31:43,366 --> 00:31:45,100
+Don't use that fast
+
+784
+00:31:45,100 --> 00:31:48,433
+Because we are looking at the longest simulation time
+
+785
+00:31:49,333 --> 00:31:52,400
+Then the value multiplied by this is your scoring
+
+786
+00:31:52,533 --> 00:31:55,700
+The smaller the score, the higher it will be sorted.
+
+787
+00:31:55,700 --> 00:31:57,966
+Then we will tell you to pay it when the time comes.
+
+788
+00:31:57,966 --> 00:31:59,366
+And he has gate level
+
+789
+00:31:59,900 --> 00:32:03,600
+Completed homework is sorted and divided as follows:
+
+790
+00:32:03,600 --> 00:32:05,100
+Then this part is 20
+
+791
+00:32:05,400 --> 00:32:06,800
+Then finally when we verify the software
+
+792
+00:32:06,800 --> 00:32:08,200
+The same is 20 points
+
+793
+00:32:08,400 --> 00:32:10,933
+Then the method we test here is
+
+794
+00:32:10,933 --> 00:32:11,400
+By then
+
+795
+00:32:11,400 --> 00:32:14,566
+We will use our own hidden test pictures
+
+796
+00:32:14,733 --> 00:32:18,433
+Go and enter your software testing program
+
+797
+00:32:18,533 --> 00:32:20,766
+do processing to turn it into
+
+798
+00:32:20,766 --> 00:32:22,866
+image.dat and golden.dat
+
+799
+00:32:22,933 --> 00:32:24,300
+Then use these two strokes
+
+800
+00:32:24,966 --> 00:32:27,833
+The image.dat generated by the teaching assistant’s picture also has
+
+801
+00:32:27,933 --> 00:32:30,166
+golden.dat to verify your circuit
+
+802
+00:32:30,166 --> 00:32:31,766
+Then if you can pass
+
+803
+00:32:31,766 --> 00:32:34,633
+You can get these 20 points
+
+804
+00:32:35,466 --> 00:32:38,833
+So, please make sure your circuit is
+
+805
+00:32:39,133 --> 00:32:42,566
+Don’t write about a specific picture, just don’t
+
+806
+00:32:42,800 --> 00:32:44,333
+Because we originally had group 1 attached
+
+807
+00:32:44,333 --> 00:32:45,300
+image.dat and golden.dat
+
+808
+00:32:46,000 --> 00:32:49,166
+That means please don’t take it personally
+
+809
+00:32:49,400 --> 00:32:51,500
+A set of data to design your circuit
+
+810
+00:32:51,500 --> 00:32:53,266
+Otherwise, I might change it when the time comes.
+
+811
+00:32:53,333 --> 00:32:54,633
+different pictures
+
+812
+00:32:54,700 --> 00:32:55,666
+You can't pass it
+
+813
+00:32:55,666 --> 00:32:56,900
+So here's the score
+
+814
+00:32:56,900 --> 00:32:58,666
+You can't get it
+
+815
+00:32:58,933 --> 00:33:01,333
+And then there’s the other thing to do, please yourself
+
+816
+00:33:01,333 --> 00:33:04,266
+After writing the software code, several more sets of data are generated.
+
+817
+00:33:04,333 --> 00:33:06,833
+Go test it and see if your circuit can pass.
+
+818
+00:33:06,866 --> 00:33:07,700
+If you can't pass
+
+819
+00:33:07,700 --> 00:33:10,600
+You can think about whether there is anything in the circuit
+
+820
+00:33:10,700 --> 00:33:12,933
+Bugs may occur under certain data conditions
+
+821
+00:33:12,933 --> 00:33:14,900
+Like this and then there is
+
+822
+00:33:14,900 --> 00:33:16,966
+Because we all have the same name
+
+823
+00:33:16,966 --> 00:33:18,966
+Name it image.dat, golden.dat
+
+824
+00:33:19,333 --> 00:33:21,666
+That is all to ask students to be careful not to
+
+825
+00:33:21,766 --> 00:33:24,466
+The portion originally provided overshadowed
+
+826
+00:33:24,466 --> 00:33:26,333
+Because in addition to software verification, we
+
+827
+00:33:26,333 --> 00:33:27,766
+The previous score is mainly
+
+828
+00:33:27,766 --> 00:33:29,266
+Or based on what we provided at the beginning
+
+829
+00:33:29,266 --> 00:33:31,900
+The one that verified him
+
+830
+00:33:33,200 --> 00:33:35,666
+The final part paid is the same
+
+831
+00:33:35,666 --> 00:33:38,700
+Please give me your information
+
+832
+00:33:39,133 --> 00:33:41,200
+.v put a folder
+
+833
+00:33:41,366 --> 00:33:43,733
+.v, .sdo put a folder
+
+834
+00:33:43,733 --> 00:33:45,500
+And then there is our report
+
+835
+00:33:45,500 --> 00:33:46,766
+put a folder
+
+836
+00:33:46,900 --> 00:33:48,966
+Then there is the software code
+
+837
+00:33:49,300 --> 00:33:52,866
+That is .c/.cpp
+
+838
+00:33:52,866 --> 00:33:54,066
+Then.py
+
+839
+00:33:54,200 --> 00:33:56,533
+Those and if you have a readme
+
+840
+00:33:56,533 --> 00:33:58,500
+Just put it all in one folder
+
+841
+00:33:58,600 --> 00:34:00,566
+The last four folders are compressed together
+
+842
+00:34:00,566 --> 00:34:04,166
+Then name it HW4_ID_name.zip
+
+843
+00:34:04,533 --> 00:34:06,600
+Please follow the format
+
+844
+00:34:06,600 --> 00:34:09,700
+Just use zip compression
+
+845
+00:34:09,766 --> 00:34:11,600
+Then please follow the regulations when naming it.
+
+846
+00:34:11,600 --> 00:34:13,566
+Otherwise, 5 points will be deducted.
+
+847
+00:34:14,566 --> 00:34:16,800
+Then there is something else to remind you
+
+848
+00:34:16,800 --> 00:34:19,066
+Just ask everyone to do that
+
+849
+00:34:19,166 --> 00:34:23,166
+After you compress and upload it, please download it.
+
+850
+00:34:23,266 --> 00:34:24,366
+Verify again
+
+851
+00:34:24,366 --> 00:34:25,933
+It’s just that many classmates said
+
+852
+00:34:25,933 --> 00:34:28,066
+What was not saved to the last version?
+
+853
+00:34:28,066 --> 00:34:31,400
+It's not like he accidentally sent the wrong message when he passed it up.
+
+854
+00:34:31,400 --> 00:34:33,266
+Then wait until our revision work
+
+855
+00:34:33,266 --> 00:34:35,666
+Only when he saw the score did he realize why and what he thought
+
+856
+00:34:35,666 --> 00:34:36,600
+no the same
+
+857
+00:34:36,666 --> 00:34:38,500
+It's actually quite difficult for us to deal with this.
+
+858
+00:34:38,500 --> 00:34:41,300
+So please upload it to
+
+859
+00:34:41,700 --> 00:34:43,600
+Verify before downloading
+
+860
+00:34:43,600 --> 00:34:46,133
+Make sure the copy you pass is the one you want to pass on
+
+861
+00:34:46,133 --> 00:34:47,366
+correct answer
+
+862
+00:34:49,066 --> 00:34:50,866
+Oh and then in the report file part
+
+863
+00:34:50,866 --> 00:34:52,466
+I just invite everyone to write in Spec
+
+864
+00:34:52,466 --> 00:34:54,566
+Just write your functional
+
+865
+00:34:54,566 --> 00:34:56,900
+Then the gate level is pass or fail
+
+866
+00:34:56,966 --> 00:34:58,833
+Then fill in the one you use
+
+867
+00:34:58,866 --> 00:35:00,800
+What are these logic ELEMENTS?
+
+868
+00:35:00,900 --> 00:35:03,666
+photo memory bits然後9 beat element
+
+869
+00:35:03,866 --> 00:35:06,633
+And the simulation time of your circuit?
+
+870
+00:35:06,800 --> 00:35:09,866
+You should also post your flow summerary.
+
+871
+00:35:09,866 --> 00:35:11,866
+Then everyone will take a look at that
+
+872
+00:35:11,900 --> 00:35:12,966
+report spec
+
+873
+00:35:12,966 --> 00:35:14,900
+Just follow what you write and you'll be fine
+
+874
+00:35:15,066 --> 00:35:17,066
+That is to invite everyone
+
+875
+00:35:17,066 --> 00:35:19,300
+Fill in all the required information
+
+876
+00:35:21,166 --> 00:35:23,800
+Then the last thing to note is
+
+877
+00:35:23,866 --> 00:35:27,133
+Because our circuit score this time will be the same as
+
+878
+00:35:27,133 --> 00:35:29,666
+It will be related to your simulation time
+
+879
+00:35:29,700 --> 00:35:32,566
+So this time we open it, you can adjust it
+
+880
+00:35:32,566 --> 00:35:35,300
+TB cycle and end cycle
+
+881
+00:35:35,933 --> 00:35:39,200
+That cycle refers to yours
+
+882
+00:35:39,300 --> 00:35:40,966
+Enter the period of clock
+
+883
+00:35:41,500 --> 00:35:42,500
+The smaller the cycle
+
+884
+00:35:42,500 --> 00:35:44,466
+The shorter your clock period is
+
+885
+00:35:44,500 --> 00:35:47,766
+Then your circuit will run faster.
+
+886
+00:35:47,766 --> 00:35:48,933
+那end cycle
+
+887
+00:35:48,933 --> 00:35:51,833
+It means that your circuit simulation can cost up to
+
+888
+00:35:51,866 --> 00:35:53,166
+several cycles
+
+889
+00:35:53,400 --> 00:35:54,800
+Then this is you
+
+890
+00:35:54,800 --> 00:35:56,333
+If your circuit needs to run for a long time
+
+891
+00:35:56,333 --> 00:35:57,100
+You can adjust it
+
+892
+00:35:57,100 --> 00:35:58,033
+Bigger
+
+893
+00:35:59,200 --> 00:35:59,933
+That
+
+894
+00:35:59,933 --> 00:36:02,266
+The impact of cycle on your simulation time is
+
+895
+00:36:02,266 --> 00:36:03,300
+Suppose you are now
+
+896
+00:36:03,400 --> 00:36:05,466
+Your circuit needs to run 1,000 cycles
+
+897
+00:36:05,466 --> 00:36:07,800
+Then I cycled and it was originally 10
+
+898
+00:36:07,800 --> 00:36:09,666
+That's 10 ns
+
+899
+00:36:09,666 --> 00:36:11,966
+Then I end up spending 10 times 1,000
+
+900
+00:36:11,966 --> 00:36:13,600
+is 10000 ns
+
+901
+00:36:14,133 --> 00:36:16,400
+So if I set my cycle today to 5
+
+902
+00:36:16,400 --> 00:36:18,066
+5ns
+
+903
+00:36:18,366 --> 00:36:20,266
+Then I will also run 1,000 cycles
+
+904
+00:36:20,266 --> 00:36:21,466
+So I'm 5 times 1,000.
+
+905
+00:36:21,466 --> 00:36:23,200
+I only need 5,000ns
+
+906
+00:36:23,200 --> 00:36:24,400
+You can finish running
+
+907
+00:36:24,466 --> 00:36:27,200
+Then my simulation time will be half of the original time.
+
+908
+00:36:27,200 --> 00:36:29,566
+So cycle means that everyone can try to watch you
+
+909
+00:36:29,566 --> 00:36:31,633
+How fast can you run after synthesis?
+
+910
+00:36:32,000 --> 00:36:34,600
+Then our simulations mainly use synthesized codes.
+
+911
+00:36:34,600 --> 00:36:36,866
+To verify that performance
+
+912
+00:36:37,466 --> 00:36:38,333
+then our
+
+913
+00:36:38,333 --> 00:36:41,200
+The homework limit is May 27
+
+914
+00:36:41,333 --> 00:36:44,366
+4:59 PM Then invite classmates
+
+915
+00:36:44,366 --> 00:36:46,066
+Don’t wait until the last minute to upload
+
+916
+00:36:46,066 --> 00:36:49,900
+Then it said that the network was stuck and no transmission was received.
+
+917
+00:36:49,900 --> 00:36:51,900
+Just try to upload it as early as possible
+
+918
+00:36:51,900 --> 00:36:52,566
+so
+
+919
+00:36:52,566 --> 00:36:55,800
+If he has any questions, he can send them to this teaching assistant's mailbox.
+
+920
+00:36:55,866 --> 00:36:59,066
+If you want to come to the lab to ask questions, you can send an email first.
+
+921
+00:36:59,300 --> 00:37:01,066
+Make an appointment with this assistant
+
+922
+00:37:01,066 --> 00:37:02,966
+See if he has time to do this
+
+923
+00:37:03,400 --> 00:37:05,166
+Then if there are no problems, get out of class can be over.
+
+924
+00:37:05,166 --> 00:37:06,166
+thank you all
+

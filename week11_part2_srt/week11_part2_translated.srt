@@ -1,0 +1,4676 @@
+1
+00:00:00,300 --> 00:00:02,200
+Then let's go next
+
+2
+00:00:02,966 --> 00:00:03,833
+Next
+
+3
+00:00:05,466 --> 00:00:07,000
+Continue here
+
+4
+00:00:07,000 --> 00:00:08,900
+This is back to the one just now
+
+5
+00:00:10,266 --> 00:00:15,100
+The r1, r2, r3 I just talked about
+
+6
+00:00:16,466 --> 00:00:18,600
+3 scratchpads
+
+7
+00:00:18,600 --> 00:00:20,700
+After we just talked about register sharing
+
+8
+00:00:20,700 --> 00:00:23,100
+Only 3 scratchpads are used
+
+9
+00:00:23,100 --> 00:00:24,266
+Then you pay attention
+
+10
+00:00:24,266 --> 00:00:27,266
+I still have a lot of computing units here
+
+11
+00:00:27,700 --> 00:00:30,333
+So the functional unit sharing we just talked about
+
+12
+00:00:30,333 --> 00:00:32,733
+that is
+
+13
+00:00:32,733 --> 00:00:34,100
+Someone asked you to say
+
+14
+00:00:34,200 --> 00:00:37,766
+Those computing units are shared by them
+
+15
+00:00:37,800 --> 00:00:38,866
+you have a way to
+
+16
+00:00:38,866 --> 00:00:41,866
+Are the computing units below shared?
+
+17
+00:00:41,866 --> 00:00:42,966
+that is
+
+18
+00:00:43,166 --> 00:00:46,766
+I can do it together
+
+19
+00:00:46,766 --> 00:00:48,166
+You have to think like this
+
+20
+00:00:48,533 --> 00:00:50,666
+I'm going to make this today
+
+21
+00:00:50,666 --> 00:00:52,166
+No, this is the absolute value
+
+22
+00:00:53,000 --> 00:00:55,100
+Minimum value I assume that I want to make a hardware
+
+23
+00:00:55,366 --> 00:00:57,966
+You can do both absolute value and minimum value at the same time.
+
+24
+00:00:57,966 --> 00:01:01,066
+His cost will definitely not be the same as this one
+
+25
+00:01:01,066 --> 00:01:03,166
+For example, suppose the cost is one
+
+26
+00:01:03,466 --> 00:01:04,700
+This cost is another
+
+27
+00:01:04,700 --> 00:01:07,566
+Originally, you wanted to make two, so two pairs were required, right?
+
+28
+00:01:07,666 --> 00:01:09,366
+Then we have to do it together
+
+29
+00:01:09,866 --> 00:01:11,566
+Maybe 1.3
+
+30
+00:01:12,133 --> 00:01:15,466
+The cost of 1.3 So this so-called
+
+31
+00:01:16,466 --> 00:01:19,800
+The concept of functional unit sharing is also the same.
+
+32
+00:01:19,800 --> 00:01:22,400
+Can you make this, this, and this together?
+
+33
+00:01:22,400 --> 00:01:24,000
+Originally it was 1,1,1
+
+34
+00:01:24,000 --> 00:01:26,800
+Then if you do it together now, it may be 1.6
+
+35
+00:01:26,966 --> 00:01:29,566
+Then 1.6 is smaller than 3
+
+36
+00:01:29,566 --> 00:01:32,133
+This is called functional unit sharing
+
+37
+00:01:32,133 --> 00:01:36,400
+Can I save a little less in the temporary register just now?
+
+38
+00:01:36,400 --> 00:01:38,200
+Because my life span is different
+
+39
+00:01:38,200 --> 00:01:40,533
+So what are you doing today?
+
+40
+00:01:40,533 --> 00:01:41,400
+You can see
+
+41
+00:01:41,800 --> 00:01:43,433
+This just came out
+
+42
+00:01:43,800 --> 00:01:46,166
+It's quite complicated for you guys.
+
+43
+00:01:46,333 --> 00:01:49,700
+Can these functional units be shared?
+
+44
+00:01:49,700 --> 00:01:51,100
+but still the same
+
+45
+00:01:51,500 --> 00:01:53,366
+When can functional unit be shared?
+
+46
+00:01:53,366 --> 00:01:54,800
+Same as scratchpad
+
+47
+00:01:55,333 --> 00:01:56,700
+Unless you do this calculation
+
+48
+00:01:56,933 --> 00:01:59,233
+I do this operation at different times
+
+49
+00:01:59,366 --> 00:02:00,666
+I won't do it when you do it.
+
+50
+00:02:00,666 --> 00:02:01,766
+You won't do it when I do it.
+
+51
+00:02:01,766 --> 00:02:02,700
+Then I can do these two
+
+52
+00:02:02,700 --> 00:02:05,933
+Sharing can be designed to do two things at the same time
+
+53
+00:02:05,933 --> 00:02:08,400
+Of course, it's the same if you want to share it with this one.
+
+54
+00:02:08,466 --> 00:02:09,933
+I can't do it when you do it
+
+55
+00:02:09,933 --> 00:02:11,200
+You can't do it while I'm doing it
+
+56
+00:02:11,200 --> 00:02:14,866
+This way my hardware can be shared, okay so
+
+57
+00:02:16,166 --> 00:02:19,200
+functional unit sharing here
+
+58
+00:02:19,200 --> 00:02:20,766
+He will go down
+
+59
+00:02:20,933 --> 00:02:23,566
+Can I do it?
+
+60
+00:02:23,900 --> 00:02:25,900
+Use a subtractor and then
+
+61
+00:02:26,300 --> 00:02:27,466
+Make the minimum
+
+62
+00:02:27,466 --> 00:02:29,066
+I use a subtractor to do the maximum
+
+63
+00:02:29,066 --> 00:02:30,400
+can i make one
+
+64
+00:02:30,500 --> 00:02:33,733
+Can be used as minimum or maximum
+
+65
+00:02:33,733 --> 00:02:35,666
+Then I can even make one
+
+66
+00:02:36,000 --> 00:02:39,266
+The hardware performs absolute minimum, maximum and absolute values ​​at the same time.
+
+67
+00:02:39,400 --> 00:02:39,733
+good
+
+68
+00:02:39,733 --> 00:02:43,366
+Then I use a piece of hardware to do addition, absolute value, and subtraction at the same time.
+
+69
+00:02:43,366 --> 00:02:44,700
+of course
+
+70
+00:02:44,900 --> 00:02:48,300
+But the premise
+
+71
+00:02:48,300 --> 00:02:51,466
+You want to put these operations on the same hardware
+
+72
+00:02:51,466 --> 00:02:54,666
+cannot be done at the same time
+
+73
+00:02:54,666 --> 00:02:56,600
+So how to design this circuit?
+
+74
+00:02:56,600 --> 00:02:58,466
+In fact, it’s the same as just now
+
+75
+00:02:58,533 --> 00:03:00,700
+Register sharing is very similar to
+
+76
+00:03:00,700 --> 00:03:02,066
+So let's take a look
+
+77
+00:03:02,266 --> 00:03:05,333
+Let's pull out this formula first.
+
+78
+00:03:05,333 --> 00:03:08,200
+This is the state we distribute
+
+79
+00:03:08,600 --> 00:03:10,400
+From S0 to S7
+
+80
+00:03:10,400 --> 00:03:11,566
+Okay, let me say it again
+
+81
+00:03:11,566 --> 00:03:14,133
+You can also divide it into 9 states. You can also divide it into 20 states.
+
+82
+00:03:14,133 --> 00:03:15,666
+Your status is different
+
+83
+00:03:15,700 --> 00:03:17,666
+Your entire design will be different.
+
+84
+00:03:17,666 --> 00:03:20,200
+Okay, then we are now divided into 8 states.
+
+85
+00:03:20,200 --> 00:03:21,000
+This is how you divide
+
+86
+00:03:21,000 --> 00:03:23,766
+So you can see what you did in s1
+
+87
+00:03:24,100 --> 00:03:26,000
+s1 made two absolute values
+
+88
+00:03:26,000 --> 00:03:29,166
+So your absolute value of two is marked like this
+
+89
+00:03:29,166 --> 00:03:32,200
+What about s2? s2 is the maximum and minimum value
+
+90
+00:03:32,200 --> 00:03:35,033
+So one maximum value and one minimum value, right?
+
+91
+00:03:35,200 --> 00:03:37,366
+And what about S3
+
+92
+00:03:37,366 --> 00:03:40,300
+In this state of S3, you have done two shifts
+
+93
+00:03:40,766 --> 00:03:42,700
+S4 you made a subtraction
+
+94
+00:03:43,100 --> 00:03:45,133
+S5 you made a plus
+
+95
+00:03:45,133 --> 00:03:47,533
+If so, just mark it
+
+96
+00:03:47,533 --> 00:03:49,266
+So what did you do with S6?
+
+97
+00:03:49,266 --> 00:03:51,166
+You should mark it well
+
+98
+00:03:51,333 --> 00:03:54,800
+Okay, it’s the same thing. It’s the same thing if you want to share it.
+
+99
+00:03:55,900 --> 00:03:58,866
+What are the only situations where you can share?
+
+100
+00:03:58,866 --> 00:04:02,533
+Those actions cannot be performed in the same state
+
+101
+00:04:02,533 --> 00:04:04,500
+So what should we do?
+
+102
+00:04:04,500 --> 00:04:06,866
+In fact, he has a look like this
+
+103
+00:04:07,066 --> 00:04:08,066
+like information engineering department
+
+104
+00:04:08,066 --> 00:04:10,333
+The kind of graph theory method that I am more familiar with
+
+105
+00:04:10,333 --> 00:04:12,800
+In fact, what is the graph theory method?
+
+106
+00:04:12,800 --> 00:04:13,333
+I am like this
+
+107
+00:04:13,333 --> 00:04:15,700
+Do I have two absolutes to do now?
+
+108
+00:04:15,700 --> 00:04:17,566
+Then I drew a dotted line
+
+109
+00:04:17,600 --> 00:04:19,466
+Why draw a dotted line?
+
+110
+00:04:19,566 --> 00:04:23,066
+The representative said they were in the same state
+
+111
+00:04:23,133 --> 00:04:25,666
+Then I have minimum and maximum to do.
+
+112
+00:04:25,666 --> 00:04:27,433
+Because he is in the same state
+
+113
+00:04:27,500 --> 00:04:28,300
+so
+
+114
+00:04:28,800 --> 00:04:32,600
+I also drew a dotted line for minimum and maximum
+
+115
+00:04:32,933 --> 00:04:34,133
+Okay then what
+
+116
+00:04:34,133 --> 00:04:35,766
+I have another shift
+
+117
+00:04:35,766 --> 00:04:37,733
+Since there is no cost, it doesn't matter much.
+
+118
+00:04:37,733 --> 00:04:39,933
+I have a subtraction and an addition
+
+119
+00:04:39,933 --> 00:04:41,966
+That subtraction and addition are in different states
+
+120
+00:04:41,966 --> 00:04:43,333
+So he has no dotted line
+
+121
+00:04:43,333 --> 00:04:44,500
+I have additions and subtractions
+
+122
+00:04:45,100 --> 00:04:46,800
+Okay, let me ask everyone
+
+123
+00:04:46,900 --> 00:04:49,400
+Look at the operations required for each state.
+
+124
+00:04:49,400 --> 00:04:50,733
+Each state requires operations
+
+125
+00:04:50,733 --> 00:04:52,133
+Operations required for each state
+
+126
+00:04:52,133 --> 00:04:54,066
+If you use this table to figure it out
+
+127
+00:04:54,066 --> 00:04:55,766
+I ask everyone that every status
+
+128
+00:04:57,000 --> 00:04:58,900
+At least a few operations are required
+
+129
+00:04:58,900 --> 00:05:01,133
+There are only two operations at most.
+
+130
+00:05:01,133 --> 00:05:03,633
+Each state has at most two operations
+
+131
+00:05:03,966 --> 00:05:06,366
+Right? So you can imagine
+
+132
+00:05:06,366 --> 00:05:08,300
+In fact, I only need two computing units
+
+133
+00:05:08,300 --> 00:05:10,266
+Just two operations can complete
+
+134
+00:05:10,800 --> 00:05:13,000
+Because in every state of my life
+
+135
+00:05:13,000 --> 00:05:17,300
+There will only be at most two operations to be done
+
+136
+00:05:17,300 --> 00:05:18,200
+This is how he sees it
+
+137
+00:05:18,200 --> 00:05:20,533
+Because you have so many calculations to do
+
+138
+00:05:20,533 --> 00:05:22,066
+But in different states there will be
+
+139
+00:05:22,066 --> 00:05:23,133
+different operations to be done
+
+140
+00:05:23,133 --> 00:05:23,933
+but
+
+141
+00:05:24,900 --> 00:05:27,733
+If you look at it this way
+
+142
+00:05:27,733 --> 00:05:29,200
+every state of your
+
+143
+00:05:29,200 --> 00:05:31,566
+There are only two operations to be done at the same time
+
+144
+00:05:31,566 --> 00:05:34,200
+So I can actually do it with just two pieces of hardware.
+
+145
+00:05:34,200 --> 00:05:36,066
+You watch it again and come back here
+
+146
+00:05:36,200 --> 00:05:37,566
+what does this mean
+
+147
+00:05:39,666 --> 00:05:40,533
+From your side
+
+148
+00:05:40,533 --> 00:05:44,700
+Here 12345678 did you use 8 hardware?
+
+149
+00:05:44,700 --> 00:05:46,266
+Then we will tell you now
+
+150
+00:05:46,466 --> 00:05:49,600
+Each state only has at most two pieces of hardware to do.
+
+151
+00:05:49,600 --> 00:05:51,866
+So actually I only have two hardware bodies here
+
+152
+00:05:51,866 --> 00:05:53,233
+I can handle it.
+
+153
+00:05:53,666 --> 00:05:56,100
+I only have two pieces of hardware and I can do it.
+
+154
+00:05:56,100 --> 00:05:59,000
+I only have two pieces of hardware and I can do it.
+
+155
+00:05:59,000 --> 00:06:02,366
+So I can do it with two pieces of hardware.
+
+156
+00:06:02,366 --> 00:06:03,800
+This is the conclusion reached here
+
+157
+00:06:03,800 --> 00:06:05,266
+I need at least two
+
+158
+00:06:05,266 --> 00:06:08,000
+Two operations and two hardware
+
+159
+00:06:08,000 --> 00:06:09,966
+Then I came to the dotted line today
+
+160
+00:06:09,966 --> 00:06:12,333
+Okay, so what's next?
+
+161
+00:06:12,333 --> 00:06:15,366
+What he actually uses is good stuff like graph theory.
+
+162
+00:06:15,366 --> 00:06:17,033
+Do I only need two pieces of hardware?
+
+163
+00:06:17,100 --> 00:06:19,900
+Okay, then I'll circle it. I'll circle it like this.
+
+164
+00:06:19,966 --> 00:06:21,700
+Can I be like this?
+
+165
+00:06:21,700 --> 00:06:23,133
+These two are circled together
+
+166
+00:06:23,133 --> 00:06:26,266
+These four are circled together. This is a kind of circle.
+
+167
+00:06:26,800 --> 00:06:27,566
+Look
+
+168
+00:06:27,566 --> 00:06:30,133
+Then it’s okay to circle like this
+
+169
+00:06:30,133 --> 00:06:32,133
+Well, then, then, you pay attention, pay attention, pay attention
+
+170
+00:06:32,133 --> 00:06:33,900
+No matter you circle it like this or this way
+
+171
+00:06:33,900 --> 00:06:36,066
+Let me ask you, how many red circles have you circled?
+
+172
+00:06:36,166 --> 00:06:37,366
+Two groups?
+
+173
+00:06:37,366 --> 00:06:39,466
+Because you only need two hardware bodies
+
+174
+00:06:39,466 --> 00:06:41,633
+Right? Then why are you
+
+175
+00:06:41,766 --> 00:06:45,766
+Those with dotted lines cannot be enclosed in the same hardware body.
+
+176
+00:06:45,966 --> 00:06:48,400
+There is a dotted line because it means he has to do it at the same time
+
+177
+00:06:48,400 --> 00:06:50,800
+Then he needs to be assigned different hardware
+
+178
+00:06:50,800 --> 00:06:52,600
+The dotted line means he has to do it at the same time
+
+179
+00:06:52,600 --> 00:06:54,266
+He needs to be assigned different hardware
+
+180
+00:06:54,266 --> 00:06:55,766
+So I can circle
+
+181
+00:06:55,766 --> 00:06:58,033
+This is a circle method. These two groups are
+
+182
+00:06:58,166 --> 00:06:59,500
+These four groups
+
+183
+00:07:00,400 --> 00:07:02,366
+You can also do this in groups of 3
+
+184
+00:07:02,366 --> 00:07:05,366
+Of course, these three can be exchanged.
+
+185
+00:07:05,366 --> 00:07:06,000
+no problem
+
+186
+00:07:06,000 --> 00:07:08,466
+Then the result will be different
+
+187
+00:07:08,466 --> 00:07:10,033
+So you can see
+
+188
+00:07:10,100 --> 00:07:11,400
+you can
+
+189
+00:07:11,400 --> 00:07:12,700
+You do the math like this
+
+190
+00:07:12,700 --> 00:07:13,600
+you will know
+
+191
+00:07:13,600 --> 00:07:15,266
+In fact, you only need two sets of hardware
+
+192
+00:07:15,266 --> 00:07:16,000
+So in other words
+
+193
+00:07:16,000 --> 00:07:18,600
+What this means is that I have a hardware that can also
+
+194
+00:07:18,666 --> 00:07:20,600
+My hardware can do absolute values
+
+195
+00:07:20,600 --> 00:07:22,233
+You can also do the minimum value
+
+196
+00:07:22,300 --> 00:07:23,933
+I have another hardware
+
+197
+00:07:23,933 --> 00:07:25,400
+Can do absolute value
+
+198
+00:07:25,400 --> 00:07:26,700
+Can be the minimum value
+
+199
+00:07:26,700 --> 00:07:29,466
+Can do subtraction. Can do addition. Good.
+
+200
+00:07:29,466 --> 00:07:30,866
+Then if you use it like this, say I have it
+
+201
+00:07:30,866 --> 00:07:34,000
+A piece of hardware that can do absolute minima and addition
+
+202
+00:07:34,000 --> 00:07:35,166
+My other hardware
+
+203
+00:07:35,166 --> 00:07:37,800
+You can do absolute maximum value and subtraction
+
+204
+00:07:38,366 --> 00:07:42,900
+Okay, then, do we want this or this?
+
+205
+00:07:42,900 --> 00:07:45,700
+Then we can do the math
+
+206
+00:07:45,700 --> 00:07:46,700
+What if
+
+207
+00:07:46,700 --> 00:07:49,766
+I have a hardware with absolute value and minimum
+
+208
+00:07:49,766 --> 00:07:51,800
+Then I probably need a few logic gates
+
+209
+00:07:52,366 --> 00:07:55,133
+Several adders, several logic gates
+
+210
+00:07:55,133 --> 00:07:57,100
+Then if these four are in a group
+
+211
+00:07:57,100 --> 00:07:58,666
+Then I probably need this
+
+212
+00:07:58,966 --> 00:08:03,000
+Okay, then my total sum is two, one, one, two, two
+
+213
+00:08:03,100 --> 00:08:06,000
+Okay, what if I divide it like this?
+
+214
+00:08:06,766 --> 00:08:09,066
+Am I in a group?
+
+215
+00:08:09,066 --> 00:08:12,133
+Absolute value, minimum value, plus a group of these three
+
+216
+00:08:12,133 --> 00:08:13,900
+Then I want 1,1,1,2
+
+217
+00:08:13,900 --> 00:08:16,366
+Then these three groups
+
+218
+00:08:16,366 --> 00:08:19,200
+Absolute value, maximum value, minus one, one, one, two
+
+219
+00:08:19,200 --> 00:08:21,766
+That adds up to two, one, one, two, two
+
+220
+00:08:21,766 --> 00:08:22,766
+you will find
+
+221
+00:08:22,766 --> 00:08:25,100
+In fact, you use the above division method
+
+222
+00:08:25,100 --> 00:08:26,966
+Or the following division
+
+223
+00:08:26,966 --> 00:08:29,233
+Your total cost is the same
+
+224
+00:08:29,666 --> 00:08:32,700
+So the representative said that actually both divisions are acceptable.
+
+225
+00:08:32,700 --> 00:08:34,966
+But you must divide into two groups
+
+226
+00:08:35,566 --> 00:08:38,066
+Okay, so what about your circuit after you divide it?
+
+227
+00:08:38,066 --> 00:08:40,966
+The circuit will be much cleaner like this
+
+228
+00:08:41,333 --> 00:08:44,500
+Have you ever looked at what it was like?
+
+229
+00:08:45,133 --> 00:08:46,966
+It turned out to be like
+
+230
+00:08:49,733 --> 00:08:53,200
+It turns out it’s like this, right?
+
+231
+00:08:53,200 --> 00:08:55,133
+Look at the three temporary registers
+
+232
+00:08:55,133 --> 00:08:57,833
+But there are so many functional units at the back
+
+233
+00:08:57,933 --> 00:09:00,166
+Now after you divide it into two groups
+
+234
+00:09:00,166 --> 00:09:02,000
+After being divided into two groups, it looks like this
+
+235
+00:09:03,000 --> 00:09:05,966
+You still have three temporary registers, right?
+
+236
+00:09:05,966 --> 00:09:09,100
+You have two sets of hardware and this is one way
+
+237
+00:09:09,566 --> 00:09:10,900
+absolute value,minimum
+
+238
+00:09:10,933 --> 00:09:12,866
+Absolute value, maximum, addition, subtraction
+
+239
+00:09:12,866 --> 00:09:16,500
+It’s the above division method
+
+240
+00:09:16,500 --> 00:09:18,366
+Then if you look at your line, it will become
+
+241
+00:09:18,366 --> 00:09:19,700
+A bit simpler
+
+242
+00:09:19,766 --> 00:09:21,966
+Then why can these two be grouped together?
+
+243
+00:09:21,966 --> 00:09:23,566
+It’s because it’s absolutely worth doing it
+
+244
+00:09:23,566 --> 00:09:24,900
+I will never do the minimum
+
+245
+00:09:24,966 --> 00:09:27,600
+When doing minimum, you will not do absolute value.
+
+246
+00:09:27,733 --> 00:09:29,566
+So you can group it together
+
+247
+00:09:29,700 --> 00:09:31,400
+Then these four can be grouped together
+
+248
+00:09:31,400 --> 00:09:33,766
+It’s because you can’t do it when doing absolute values.
+
+249
+00:09:33,766 --> 00:09:35,566
+maximum, and I can’t do any additions.
+
+250
+00:09:35,566 --> 00:09:36,866
+I won’t do any reduction either.
+
+251
+00:09:36,866 --> 00:09:38,400
+because you see
+
+252
+00:09:38,400 --> 00:09:39,966
+When you do absolute value
+
+253
+00:09:39,966 --> 00:09:42,233
+In fact, nothing else was done.
+
+254
+00:09:42,666 --> 00:09:44,766
+So this is how you divide it
+
+255
+00:09:44,766 --> 00:09:47,466
+These operations can be grouped into the same group
+
+256
+00:09:47,533 --> 00:09:50,600
+It's because their time is different
+
+257
+00:09:50,600 --> 00:09:52,700
+If the time is the same, you have already used a dotted line.
+
+258
+00:09:52,700 --> 00:09:54,433
+So you just put it
+
+259
+00:09:54,566 --> 00:09:57,466
+When they gather together, they are divided into different categories
+
+260
+00:09:57,466 --> 00:09:59,900
+Then there's no problem
+
+261
+00:09:59,900 --> 00:10:01,333
+So this is a way?
+
+262
+00:10:01,333 --> 00:10:03,100
+One of unit sharing
+
+263
+00:10:03,100 --> 00:10:06,266
+This is probably what you would do manually today.
+
+264
+00:10:06,266 --> 00:10:08,366
+Then if you look at your line, it will become
+
+265
+00:10:08,666 --> 00:10:10,000
+A bit simpler
+
+266
+00:10:10,166 --> 00:10:10,966
+good
+
+267
+00:10:10,966 --> 00:10:13,366
+If you are in another way today
+
+268
+00:10:13,366 --> 00:10:14,766
+That is to say, these three
+
+269
+00:10:14,766 --> 00:10:16,266
+Then his circuit will be different
+
+270
+00:10:16,266 --> 00:10:18,166
+You see this is
+
+271
+00:10:18,166 --> 00:10:19,733
+Two or four
+
+272
+00:10:19,733 --> 00:10:21,966
+Then this one is three by three
+
+273
+00:10:21,966 --> 00:10:23,966
+Then his lines will look different.
+
+274
+00:10:24,166 --> 00:10:26,100
+But the cost is the same
+
+275
+00:10:26,100 --> 00:10:27,966
+Because we just calculated it here
+
+276
+00:10:27,966 --> 00:10:30,200
+Basically his cost is the same
+
+277
+00:10:30,200 --> 00:10:32,900
+So it should be said that both methods are possible
+
+278
+00:10:32,900 --> 00:10:34,166
+It will be all right
+
+279
+00:10:34,166 --> 00:10:35,366
+Because the cost is the same
+
+280
+00:10:35,366 --> 00:10:37,700
+You just need to divide into two groups.
+
+281
+00:10:37,700 --> 00:10:40,300
+Then why is this shifter not regulated here?
+
+282
+00:10:40,300 --> 00:10:42,700
+Because the shifter is basically free of cost
+
+283
+00:10:42,700 --> 00:10:45,266
+So we don’t consider the shifter here.
+
+284
+00:10:45,266 --> 00:10:47,600
+Just consider these more complicated ones
+
+285
+00:10:47,766 --> 00:10:49,066
+Okay, of course
+
+286
+00:10:49,100 --> 00:10:50,233
+say it again
+
+287
+00:10:51,666 --> 00:10:52,933
+You have to think like this
+
+288
+00:10:52,933 --> 00:10:54,966
+The absolute referring cost is assumed to be one
+
+289
+00:10:54,966 --> 00:10:56,233
+minimum is one
+
+290
+00:10:56,300 --> 00:10:57,733
+Then you were originally 1+1
+
+291
+00:10:57,733 --> 00:11:01,266
+It originally cost 2, but now you put it together and it might cost 1.5
+
+292
+00:11:01,266 --> 00:11:03,866
+But 1.5 is still smaller than 2
+
+293
+00:11:03,866 --> 00:11:07,333
+Then you originally wanted one, two, three, four or four.
+
+294
+00:11:07,333 --> 00:11:10,166
+You're probably sitting together at 1.8 right now
+
+295
+00:11:10,166 --> 00:11:13,100
+But 1.8 is still much smaller than 4, which is good
+
+296
+00:11:13,100 --> 00:11:14,566
+You have to think about it this way
+
+297
+00:11:14,566 --> 00:11:15,866
+That makes sense
+
+298
+00:11:15,866 --> 00:11:18,900
+This is called functional unit sharing
+
+299
+00:11:18,900 --> 00:11:21,333
+As long as we do this operation
+
+300
+00:11:21,333 --> 00:11:23,100
+are to be done at different times
+
+301
+00:11:23,100 --> 00:11:26,033
+I can share this functional unit
+
+302
+00:11:26,600 --> 00:11:27,633
+Okay then
+
+303
+00:11:28,133 --> 00:11:30,066
+Here we have to mention a little bit
+
+304
+00:11:30,066 --> 00:11:31,933
+We talked about two sharing
+
+305
+00:11:31,933 --> 00:11:34,566
+We talked about two shared
+
+306
+00:11:34,566 --> 00:11:36,300
+We talked about two shared
+
+307
+00:11:36,300 --> 00:11:37,666
+that is
+
+308
+00:11:37,666 --> 00:11:40,400
+storage sharing and functional unit sharing
+
+309
+00:11:40,400 --> 00:11:42,900
+A classmate just came and asked a very good question.
+
+310
+00:11:42,900 --> 00:11:45,900
+He said: Teacher, when we are taking the exam
+
+311
+00:11:45,900 --> 00:11:47,200
+our homework
+
+312
+00:11:47,200 --> 00:11:50,100
+We need to optimize the area
+
+313
+00:11:50,100 --> 00:11:51,633
+I want to reduce costs
+
+314
+00:11:52,000 --> 00:11:54,266
+Do I want to use this?
+
+315
+00:11:54,766 --> 00:11:56,566
+Basically you won't use it
+
+316
+00:11:57,500 --> 00:11:58,700
+Why
+
+317
+00:11:58,866 --> 00:12:00,400
+We just listened
+
+318
+00:12:00,500 --> 00:12:02,366
+You won't get down to this level anymore
+
+319
+00:12:02,366 --> 00:12:05,400
+In fact, our homework or exam
+
+320
+00:12:05,400 --> 00:12:07,700
+You just need to put your Verilog
+
+321
+00:12:07,733 --> 00:12:10,066
+Just write behavior tVerilog
+
+322
+00:12:10,066 --> 00:12:11,700
+We didn't get this
+
+323
+00:12:11,933 --> 00:12:13,366
+because you want
+
+324
+00:12:13,700 --> 00:12:16,066
+How scary it is to take exams like this
+
+325
+00:12:16,066 --> 00:12:18,700
+You see, your circuit is very small.
+
+326
+00:12:18,700 --> 00:12:20,066
+Your circuit is very small
+
+327
+00:12:20,066 --> 00:12:22,166
+So you can calculate 3 temporary registers
+
+328
+00:12:22,166 --> 00:12:24,600
+Then you can also manually enter this line
+
+329
+00:12:24,900 --> 00:12:28,433
+You have to think that if your temporary register is 20
+
+330
+00:12:29,166 --> 00:12:32,100
+20 pieces should not be picked up manually.
+
+331
+00:12:32,100 --> 00:12:34,266
+Because you have to finish drawing this page before you can write about him.
+
+332
+00:12:34,266 --> 00:12:35,366
+Verilog
+
+333
+00:12:35,466 --> 00:12:38,766
+Because every connection you make has meaning
+
+334
+00:12:38,933 --> 00:12:39,266
+so
+
+335
+00:12:39,266 --> 00:12:42,066
+After you drew this picture manually,
+
+336
+00:12:42,066 --> 00:12:43,333
+Shine again
+
+337
+00:12:43,333 --> 00:12:44,866
+Print this Verilog
+
+338
+00:12:44,866 --> 00:12:47,466
+That’s why I said you are writing at gate level.
+
+339
+00:12:48,066 --> 00:12:51,300
+So you need to optimize this storage
+
+340
+00:12:51,300 --> 00:12:53,300
+Basically the questions on our exam
+
+341
+00:12:53,300 --> 00:12:54,866
+No such requirement
+
+342
+00:12:54,866 --> 00:12:56,866
+Homework is not too scary because of this.
+
+343
+00:12:56,866 --> 00:12:58,600
+Because our topic is relatively big
+
+344
+00:12:58,600 --> 00:13:00,200
+We are just giving this example
+
+345
+00:13:00,366 --> 00:13:02,766
+As a small question, you can do this
+
+346
+00:13:03,066 --> 00:13:06,266
+If you really have to do it manually for a big problem
+
+347
+00:13:06,500 --> 00:13:09,366
+That's unlikely
+
+348
+00:13:11,366 --> 00:13:14,700
+Almost almost impossible
+
+349
+00:13:14,700 --> 00:13:16,900
+But I say it makes sense academically
+
+350
+00:13:17,000 --> 00:13:19,300
+Because when you were doing your thesis
+
+351
+00:13:19,300 --> 00:13:21,800
+Because your thesis might be about writing an adder
+
+352
+00:13:21,900 --> 00:13:24,566
+You may be making a simple circuit
+
+353
+00:13:24,966 --> 00:13:27,733
+Then there are 3 less temporary registers at this time
+
+354
+00:13:27,733 --> 00:13:29,066
+5 less registers
+
+355
+00:13:29,066 --> 00:13:31,600
+Or functional unit sharing
+
+356
+00:13:31,600 --> 00:13:33,366
+This all contributes
+
+357
+00:13:33,366 --> 00:13:35,400
+These are all academic contributions
+
+358
+00:13:35,700 --> 00:13:36,700
+But you're writing Verilog
+
+359
+00:13:36,700 --> 00:13:38,900
+Go down to this level and write
+
+360
+00:13:38,900 --> 00:13:41,733
+Let me tell you, you can’t finish this homework
+
+361
+00:13:41,733 --> 00:13:44,566
+You can’t finish your homework and you can’t finish your exams either.
+
+362
+00:13:44,566 --> 00:13:47,366
+So we didn't ask for this
+
+363
+00:13:47,366 --> 00:13:49,866
+You just need to put verilog us
+
+364
+00:13:49,966 --> 00:13:53,400
+I remind you in class that you should write well, just write it well
+
+365
+00:13:53,500 --> 00:13:55,366
+What if
+
+366
+00:13:55,600 --> 00:13:58,533
+That's a matter of the level of your algorithm.
+
+367
+00:13:59,766 --> 00:14:01,866
+I definitely didn’t ask you to go down to this level.
+
+368
+00:14:01,900 --> 00:14:02,900
+Absolutely not
+
+369
+00:14:03,700 --> 00:14:06,566
+那functional unit sharing
+
+370
+00:14:06,766 --> 00:14:08,966
+I can't guarantee it
+
+371
+00:14:08,966 --> 00:14:09,900
+There must be no storage sharing
+
+372
+00:14:10,133 --> 00:14:12,433
+functional unit sharing
+
+373
+00:14:14,333 --> 00:14:17,300
+If your topic is big
+
+374
+00:14:17,300 --> 00:14:19,133
+Because you want me to be functional
+
+375
+00:14:19,133 --> 00:14:21,066
+Our current function is very small
+
+376
+00:14:21,066 --> 00:14:22,766
+What is our function?
+
+377
+00:14:23,133 --> 00:14:24,166
+Adjustment
+
+378
+00:14:25,166 --> 00:14:27,300
+It's just an absolute value operation, right?
+
+379
+00:14:27,300 --> 00:14:29,466
+Okay, then you need to enlarge it.
+
+380
+00:14:29,466 --> 00:14:31,600
+This is the only function you have
+
+381
+00:14:32,466 --> 00:14:34,400
+When will you do functional unit sharing?
+
+382
+00:14:34,400 --> 00:14:35,300
+You have to imagine
+
+383
+00:14:35,300 --> 00:14:36,700
+If I say today
+
+384
+00:14:36,933 --> 00:14:40,700
+For example, let's say I am a compressed circuit
+
+385
+00:14:41,500 --> 00:14:45,300
+This function is compressed into this area
+
+386
+00:14:46,333 --> 00:14:50,166
+Then your other actions today are very big
+
+387
+00:14:50,166 --> 00:14:52,400
+Then press this area into a small area
+
+388
+00:14:52,400 --> 00:14:54,800
+If this can be shared
+
+389
+00:14:54,800 --> 00:14:57,500
+Then this may cost a lot.
+
+390
+00:14:57,500 --> 00:14:58,400
+If you don’t share
+
+391
+00:14:58,400 --> 00:15:01,066
+For example, when student A is in the crimping area
+
+392
+00:15:01,066 --> 00:15:02,133
+Classmate B is pressing
+
+393
+00:15:02,133 --> 00:15:03,766
+Student B is pressing at the same time
+
+394
+00:15:04,066 --> 00:15:06,200
+You will need 3 copies of this
+
+395
+00:15:07,366 --> 00:15:10,100
+So I can’t even guarantee you functional unit sharing.
+
+396
+00:15:10,100 --> 00:15:13,166
+But every time you make a share
+
+397
+00:15:13,166 --> 00:15:14,800
+You know that. You don’t want to share it so much.
+
+398
+00:15:14,800 --> 00:15:16,766
+That should be said
+
+399
+00:15:16,766 --> 00:15:19,566
+If there were only these additions, subtractions, multiplications and divisions
+
+400
+00:15:19,566 --> 00:15:21,333
+You don't have to share a functional unit.
+
+401
+00:15:21,333 --> 00:15:23,666
+You don't have to, you don't have to, absolutely you don't have to
+
+402
+00:15:24,266 --> 00:15:25,800
+Absolutely not
+
+403
+00:15:25,800 --> 00:15:26,400
+Absolutely not
+
+404
+00:15:26,400 --> 00:15:28,166
+If a small circuit like ours
+
+405
+00:15:28,166 --> 00:15:30,133
+You don't need
+
+406
+00:15:30,133 --> 00:15:32,500
+Then what I'm talking about is that if you want it, you need to enlarge it.
+
+407
+00:15:32,500 --> 00:15:33,300
+Your functional unit sharing
+
+408
+00:15:33,300 --> 00:15:37,100
+If you are making a very complicated circuit
+
+409
+00:15:37,466 --> 00:15:40,466
+Think of it as a big circuit
+
+410
+00:15:40,666 --> 00:15:43,100
+You will need three for this circuit
+
+411
+00:15:43,300 --> 00:15:44,600
+Three such large circuits
+
+412
+00:15:44,600 --> 00:15:46,133
+Then your costs may become very high
+
+413
+00:15:46,133 --> 00:15:48,133
+But if your time is up
+
+414
+00:15:48,133 --> 00:15:50,266
+B will not do it when a does it
+
+415
+00:15:50,266 --> 00:15:50,900
+Then you yourself
+
+416
+00:15:50,900 --> 00:15:54,600
+In fact, we need to use the same hardware to plan
+
+417
+00:15:54,600 --> 00:15:56,800
+But if addition, subtraction, multiplication and division are like this
+
+418
+00:15:58,266 --> 00:15:59,366
+It doesn't matter
+
+419
+00:15:59,366 --> 00:16:01,566
+The impact is not that big
+
+420
+00:16:01,766 --> 00:16:03,700
+Okay, this won't let you
+
+421
+00:16:03,700 --> 00:16:05,766
+If you really want to go down to that
+
+422
+00:16:06,500 --> 00:16:07,866
+It's troublesome
+
+423
+00:16:07,866 --> 00:16:10,366
+So, and you can see
+
+424
+00:16:10,366 --> 00:16:11,800
+Actually you did this
+
+425
+00:16:11,800 --> 00:16:14,466
+It is possible that it will go down to the gate level.
+
+426
+00:16:14,466 --> 00:16:17,366
+But if your module is fixed
+
+427
+00:16:17,366 --> 00:16:20,200
+Your module is very large. In fact, there may be one more state.
+
+428
+00:16:20,200 --> 00:16:23,666
+Just redraw your state diagram.
+
+429
+00:16:23,666 --> 00:16:25,800
+So it should be said like this
+
+430
+00:16:25,800 --> 00:16:28,100
+So although we gave this example
+
+431
+00:16:28,100 --> 00:16:29,200
+Don't think about it
+
+432
+00:16:29,200 --> 00:16:31,566
+When we take the exam
+
+433
+00:16:31,666 --> 00:16:33,700
+What register sharing
+
+434
+00:16:33,700 --> 00:16:36,133
+Come and put it to good use
+
+435
+00:16:36,133 --> 00:16:37,700
+Then you won’t be able to finish writing like this
+
+436
+00:16:37,700 --> 00:16:39,600
+I can only tell you this
+
+437
+00:16:39,600 --> 00:16:41,433
+Then this is meaningless
+
+438
+00:16:41,533 --> 00:16:43,033
+well
+
+439
+00:16:43,800 --> 00:16:45,366
+Then wait a minute
+
+440
+00:16:45,366 --> 00:16:46,833
+The third lesson
+
+441
+00:16:47,133 --> 00:16:49,566
+The teaching assistant will send that
+
+442
+00:16:49,866 --> 00:16:52,000
+The fourth assignment
+
+443
+00:16:52,000 --> 00:16:53,666
+We're going to give out the fourth assignment
+
+444
+00:16:53,666 --> 00:16:57,633
+At the same time, he will review
+
+445
+00:16:58,066 --> 00:17:01,300
+The one who took the midterm exam will give you an example
+
+446
+00:17:01,300 --> 00:17:03,500
+That is, he will take the midterm exam
+
+447
+00:17:03,733 --> 00:17:06,666
+How to write it? I sorted it out in detail.
+
+448
+00:17:06,766 --> 00:17:08,700
+Then I'm still the same here
+
+449
+00:17:08,700 --> 00:17:10,366
+I want to tell you something
+
+450
+00:17:11,366 --> 00:17:13,966
+You must do well if you don't do well in the midterm exam
+
+451
+00:17:13,966 --> 00:17:15,733
+If you do well in the exam, there's no problem
+
+452
+00:17:15,733 --> 00:17:18,566
+Because I have confessed
+
+453
+00:17:18,766 --> 00:17:21,200
+I've already discussed that with the teaching assistant.
+
+454
+00:17:21,200 --> 00:17:23,366
+In addition to following our final exam
+
+455
+00:17:24,066 --> 00:17:26,400
+The midterm exam is somewhat similar
+
+456
+00:17:26,733 --> 00:17:31,000
+So you must fully understand the midterm exam
+
+457
+00:17:31,000 --> 00:17:33,333
+If you go back and rewrite yourself
+
+458
+00:17:33,333 --> 00:17:34,800
+Can write very well
+
+459
+00:17:34,800 --> 00:17:36,600
+Of course the teaching assistant will talk today
+
+460
+00:17:36,600 --> 00:17:38,233
+I will take the midterm exam
+
+461
+00:17:38,333 --> 00:17:40,333
+Then I think the best way is
+
+462
+00:17:40,333 --> 00:17:41,533
+He has a code for you to see
+
+463
+00:17:41,533 --> 00:17:43,966
+You can give it a rough look and then go back and rewrite it yourself.
+
+464
+00:17:43,966 --> 00:17:46,000
+Then do it again then
+
+465
+00:17:46,000 --> 00:17:48,100
+You will know that your code is different from others
+
+466
+00:17:48,100 --> 00:17:49,533
+Where
+
+467
+00:17:49,533 --> 00:17:52,133
+Then you must do well in your midterm exam.
+
+468
+00:17:52,133 --> 00:17:53,766
+Then you do this for your final exam
+
+469
+00:17:54,000 --> 00:17:55,900
+If you don't do well on the midterm exam
+
+470
+00:17:55,900 --> 00:17:58,200
+It will be easier for you to make up for your final exam.
+
+471
+00:17:58,200 --> 00:17:59,400
+because we will
+
+472
+00:17:59,600 --> 00:18:03,466
+Try to be an extension of the midterm exam
+
+473
+00:18:03,466 --> 00:18:06,700
+I have discussed it with the teaching assistant
+
+474
+00:18:06,700 --> 00:18:09,300
+The simplest way
+
+475
+00:18:09,300 --> 00:18:11,133
+I hope everyone can pass
+
+476
+00:18:11,133 --> 00:18:12,466
+Because really
+
+477
+00:18:12,466 --> 00:18:14,766
+I don’t want to be you either
+
+478
+00:18:14,966 --> 00:18:15,766
+That
+
+479
+00:18:17,933 --> 00:18:19,766
+Then this and this
+
+480
+00:18:19,766 --> 00:18:21,200
+Let's stop here for a moment
+
+481
+00:18:21,200 --> 00:18:23,033
+Let's take a look at this
+
+482
+00:18:23,466 --> 00:18:25,200
+To encourage everyone
+
+483
+00:18:25,200 --> 00:18:27,466
+Everyone worked very hard to write the program.
+
+484
+00:18:27,600 --> 00:18:29,800
+We want to encourage everyone
+
+485
+00:18:31,066 --> 00:18:33,000
+Look at last year
+
+486
+00:18:33,566 --> 00:18:37,033
+I think everyone should have seen that
+
+487
+00:18:37,933 --> 00:18:39,066
+some news
+
+488
+00:18:39,066 --> 00:18:41,700
+How much did MediaTek spend last year?
+
+489
+00:18:41,700 --> 00:18:44,133
+Then how much did Novatek spend last year?
+
+490
+00:18:44,133 --> 00:18:45,500
+So why is this happening?
+
+491
+00:18:45,500 --> 00:18:47,066
+In fact, you can tell at a glance
+
+492
+00:18:47,500 --> 00:18:51,600
+MediaTek’s revenue the year before last was 320 billion
+
+493
+00:18:52,566 --> 00:18:55,900
+Last year it surged to 490 billion
+
+494
+00:18:56,133 --> 00:18:58,600
+So last year’s turnover was that of the year before
+
+495
+00:18:58,600 --> 00:19:00,500
+170 billion more
+
+496
+00:19:00,733 --> 00:19:03,866
+There is also the one from the past
+
+497
+00:19:04,466 --> 00:19:07,100
+There is also that next one
+
+498
+00:19:07,400 --> 00:19:09,266
+I will give a lecture at the Department of Engineering next week
+
+499
+00:19:09,266 --> 00:19:10,266
+It should be next week
+
+500
+00:19:10,266 --> 00:19:12,866
+I invited them to give a speech at the Department of Engineering
+
+501
+00:19:12,900 --> 00:19:15,900
+Novatek's turnover is only 80 billion
+
+502
+00:19:16,666 --> 00:19:19,566
+Last year, 135 billion
+
+503
+00:19:20,166 --> 00:19:25,033
+Just imagine him, he changes from 80 billion to 135 billion
+
+504
+00:19:25,466 --> 00:19:28,766
+Moreover, look at this IC factory
+
+505
+00:19:28,766 --> 00:19:31,133
+The profit is 30%
+
+506
+00:19:31,133 --> 00:19:33,800
+It’s just that he is not 3% or 5%
+
+507
+00:19:34,133 --> 00:19:36,000
+his his that
+
+508
+00:19:36,966 --> 00:19:40,333
+The profit is 30%
+
+509
+00:19:40,333 --> 00:19:44,366
+And if you look at United Wing, he said 1,350
+
+510
+00:19:44,366 --> 00:19:48,233
+130 billion 130 billion Novatek has less than 3,000 people
+
+511
+00:19:48,666 --> 00:19:51,100
+Then look at the output value of each person
+
+512
+00:19:51,266 --> 00:19:52,733
+Less than 3,000 employees
+
+513
+00:19:52,733 --> 00:19:55,333
+Almost all of them are engineers
+
+514
+00:19:55,333 --> 00:19:58,100
+Less than 3,000 employees, he can’t reach 1,300
+
+515
+00:19:58,766 --> 00:20:01,833
+What about Realtek? It was originally the same one.
+
+516
+00:20:04,966 --> 00:20:08,800
+He should have been close to 77 billion originally.
+
+517
+00:20:08,966 --> 00:20:11,766
+It also reached 100 billion last year
+
+518
+00:20:11,766 --> 00:20:13,666
+That Qijing Optoelectronics turned out to be
+
+519
+00:20:13,766 --> 00:20:16,200
+More than 20 billion. Last year, it reached more than 40 billion.
+
+520
+00:20:16,200 --> 00:20:19,233
+Qijing Optoelectronics is the one that built the third motor hall now.
+
+521
+00:20:19,266 --> 00:20:21,733
+You can see that this is
+
+522
+00:20:21,733 --> 00:20:24,166
+That's also because you can see
+
+523
+00:20:24,200 --> 00:20:25,833
+The year before last
+
+524
+00:20:25,900 --> 00:20:27,433
+So Taiwan
+
+525
+00:20:27,900 --> 00:20:31,766
+IC design enters top ten in the world in 2020
+
+526
+00:20:31,766 --> 00:20:35,000
+In fact, only the first three are in the top ten.
+
+527
+00:20:35,133 --> 00:20:37,100
+Last year even the wonders came in
+
+528
+00:20:37,100 --> 00:20:41,766
+So last year, there were actually 4 companies in the top ten.
+
+529
+00:20:41,766 --> 00:20:44,900
+Of course, this is actually more than just that.
+
+530
+00:20:44,900 --> 00:20:46,833
+For example, Phison
+
+531
+00:20:47,066 --> 00:20:49,800
+Look at Phison, it only made over 10 billion last year
+
+532
+00:20:49,800 --> 00:20:51,966
+No, because if he connects the module
+
+533
+00:20:51,966 --> 00:20:54,500
+His turnover last year was about 60 billion
+
+534
+00:20:54,500 --> 00:20:56,566
+Because he doesn't just sell chips
+
+535
+00:20:56,566 --> 00:20:58,800
+Weilong is written here
+
+536
+00:20:58,900 --> 00:21:01,266
+He's not just selling chips when it comes to group acting.
+
+537
+00:21:01,266 --> 00:21:03,733
+He also sells modules
+
+538
+00:21:03,733 --> 00:21:04,200
+so
+
+539
+00:21:04,200 --> 00:21:06,800
+But you see, his module didn’t include it.
+
+540
+00:21:06,800 --> 00:21:09,933
+Otherwise, Phison actually didn’t even make modules last year.
+
+541
+00:21:09,933 --> 00:21:11,933
+It’s not just about making more than 10 billion
+
+542
+00:21:11,933 --> 00:21:14,233
+It’s 60 billion
+
+543
+00:21:14,366 --> 00:21:17,666
+So this is actually the whole
+
+544
+00:21:18,200 --> 00:21:22,433
+Why is the salary high and then that?
+
+545
+00:21:22,866 --> 00:21:25,600
+It's probably because of this or this.
+
+546
+00:21:25,600 --> 00:21:27,100
+So you can see
+
+547
+00:21:27,133 --> 00:21:30,800
+Last year it was all over, so this year maybe
+
+548
+00:21:31,533 --> 00:21:33,300
+I think it might not be as bad as last year
+
+549
+00:21:33,300 --> 00:21:36,200
+Not that good. Sorry.
+
+550
+00:21:36,266 --> 00:21:37,333
+It's not as good as last year
+
+551
+00:21:37,333 --> 00:21:39,666
+But you just have to be in the middle
+
+552
+00:21:39,666 --> 00:21:44,033
+That should be the entire turnover
+
+553
+00:21:44,866 --> 00:21:45,666
+That
+
+554
+00:21:46,300 --> 00:21:48,633
+What are you going to do if you
+
+555
+00:21:49,666 --> 00:21:52,566
+I didn't do well on the midterm exam.
+
+556
+00:21:52,733 --> 00:21:54,133
+Then you still have to work hard
+
+557
+00:21:54,133 --> 00:21:55,300
+I can only say this
+
+558
+00:21:55,300 --> 00:21:58,333
+Because actually I don’t know how to help you
+
+559
+00:21:58,333 --> 00:22:00,666
+But you are good
+
+560
+00:22:01,066 --> 00:22:05,300
+Write well. You write well and then
+
+561
+00:22:05,733 --> 00:22:10,000
+You can ask the teaching assistant and then you can put
+
+562
+00:22:10,000 --> 00:22:10,766
+Today because
+
+563
+00:22:10,766 --> 00:22:12,366
+Because I specially confessed today
+
+564
+00:22:12,366 --> 00:22:14,766
+The teaching assistant must explain that
+
+565
+00:22:15,100 --> 00:22:17,433
+That midterm exam
+
+566
+00:22:17,466 --> 00:22:20,166
+If you don't do well in the midterm exam,
+
+567
+00:22:20,166 --> 00:22:21,466
+a chance for my classmates
+
+568
+00:22:21,466 --> 00:22:23,266
+You should at least trace code
+
+569
+00:22:24,133 --> 00:22:26,266
+Then what should I tell you?
+
+570
+00:22:26,266 --> 00:22:27,633
+this matter
+
+571
+00:22:28,566 --> 00:22:30,533
+It just depends on whether you want to spend time
+
+572
+00:22:30,533 --> 00:22:33,700
+You can do it as long as you take the time
+
+573
+00:22:33,700 --> 00:22:36,066
+You can definitely do it if you take the time
+
+574
+00:22:36,700 --> 00:22:39,366
+Then I last time
+
+575
+00:22:39,933 --> 00:22:41,766
+I should have given you an example.
+
+576
+00:22:41,800 --> 00:22:43,266
+I
+
+577
+00:22:43,266 --> 00:22:44,666
+Before I went to Chengdu University to teach
+
+578
+00:22:44,666 --> 00:22:46,666
+I still teach at Nantai University
+
+579
+00:22:46,866 --> 00:22:50,133
+My first graduate student
+
+580
+00:22:50,133 --> 00:22:52,166
+That is, the graduate student who founded the mountain
+
+581
+00:22:52,166 --> 00:22:53,500
+It was collected at Nan Tai University.
+
+582
+00:22:53,500 --> 00:22:56,766
+I am the first graduate student in Southern Taiwan
+
+583
+00:22:57,066 --> 00:22:59,366
+He turned out to be an elevator worker
+
+584
+00:22:59,933 --> 00:23:01,266
+That
+
+585
+00:23:01,800 --> 00:23:04,166
+How do you calculate that your level should be better than his?
+
+586
+00:23:04,166 --> 00:23:06,300
+The so-called elevator worker means
+
+587
+00:23:06,533 --> 00:23:09,766
+He actually turned out to be a student from a fifth college
+
+588
+00:23:10,166 --> 00:23:10,666
+That
+
+589
+00:23:10,666 --> 00:23:14,000
+Did you know that the fifth college is where you go after graduating from junior high school?
+
+590
+00:23:14,066 --> 00:23:16,866
+That’s because he has been practicing in five specialties for five years
+
+591
+00:23:17,400 --> 00:23:21,700
+Those fifth majors were because he was "too good"
+
+592
+00:23:21,800 --> 00:23:23,766
+So I didn’t graduate from the fifth secondary school in five years.
+
+593
+00:23:25,766 --> 00:23:28,133
+Didn't he go to the army after graduation?
+
+594
+00:23:28,133 --> 00:23:29,933
+After serving in the army, he went to work as an elevator worker
+
+595
+00:23:29,933 --> 00:23:30,966
+Then the elevator worker
+
+596
+00:23:30,966 --> 00:23:33,166
+In fact, he only earns more than 10,000 yuan a month
+
+597
+00:23:34,266 --> 00:23:36,300
+that 24 hours then
+
+598
+00:23:36,300 --> 00:23:38,500
+And because the elevator only needs to be replaced once
+
+599
+00:23:38,500 --> 00:23:39,766
+He wants it. He wants it.
+
+600
+00:23:39,766 --> 00:23:41,800
+Were you called to repair the elevator?
+
+601
+00:23:41,800 --> 00:23:44,966
+Later, he wanted to think that it would be impossible to live like this for the rest of his life.
+
+602
+00:23:44,966 --> 00:23:45,833
+He
+
+603
+00:23:46,700 --> 00:23:48,833
+Come to Nantai University to study evening department
+
+604
+00:23:48,933 --> 00:23:50,400
+Is the night department because of the fifth major?
+
+605
+00:23:50,400 --> 00:23:51,400
+After graduating from fifth college
+
+606
+00:23:51,400 --> 00:23:52,933
+Then I will study in my junior and senior years.
+
+607
+00:23:52,933 --> 00:23:54,533
+Just get that
+
+608
+00:23:54,533 --> 00:23:56,866
+Bachelor's certificate
+
+609
+00:23:56,866 --> 00:24:00,266
+Because their fifth junior college is actually counted as three years of high school.
+
+610
+00:24:00,266 --> 00:24:01,566
+Then I will be a freshman or sophomore
+
+611
+00:24:02,166 --> 00:24:03,766
+You may not know this well
+
+612
+00:24:03,766 --> 00:24:06,300
+Then he only needs to practice for two more years
+
+613
+00:24:06,400 --> 00:24:08,100
+It’s like a junior or senior year
+
+614
+00:24:08,100 --> 00:24:10,066
+He can get a college diploma
+
+615
+00:24:10,400 --> 00:24:12,466
+But his
+
+616
+00:24:13,133 --> 00:24:15,366
+At that time in Nantai
+
+617
+00:24:15,866 --> 00:24:18,200
+The night department has not graduated yet
+
+618
+00:24:18,300 --> 00:24:19,600
+I passed the exam
+
+619
+00:24:20,733 --> 00:24:23,000
+The graduate school of the department where I teach
+
+620
+00:24:23,000 --> 00:24:24,433
+Because it was the first
+
+621
+00:24:24,666 --> 00:24:26,766
+The first batch of graduate students
+
+622
+00:24:26,766 --> 00:24:27,500
+It's a good test.
+
+623
+00:24:27,500 --> 00:24:30,700
+That is, you only need to teach for 1,500 or 2,500 that you signed up for.
+
+624
+00:24:30,700 --> 00:24:31,866
+I'll definitely get there
+
+625
+00:24:31,900 --> 00:24:34,466
+Because no one wants to take the exam
+
+626
+00:24:34,466 --> 00:24:36,166
+That
+
+627
+00:24:36,933 --> 00:24:38,600
+Because it's hard for him to imagine
+
+628
+00:24:38,600 --> 00:24:42,366
+Some I I I give you an example you know
+
+629
+00:24:42,366 --> 00:24:44,866
+Are private school graduate schools good or not?
+
+630
+00:24:44,866 --> 00:24:46,866
+Imagine that situation
+
+631
+00:24:47,600 --> 00:24:49,400
+Questions from our institute
+
+632
+00:24:49,400 --> 00:24:52,500
+There are no multiple-choice questions or fill-in questions.
+
+633
+00:24:52,866 --> 00:24:56,366
+Why do you ask fill-in questions and multiple-choice questions?
+
+634
+00:24:56,900 --> 00:24:59,700
+Because there is a standard answer, he will get 0 points
+
+635
+00:24:59,733 --> 00:25:02,000
+A student with a score of 0 cannot be admitted.
+
+636
+00:25:02,866 --> 00:25:04,933
+So because there are too few people taking the exam
+
+637
+00:25:04,933 --> 00:25:06,733
+I admitted 30 people today
+
+638
+00:25:06,733 --> 00:25:08,766
+Maybe only 20 people come to take the exam
+
+639
+00:25:08,966 --> 00:25:12,066
+In order to make money, the school must admit everyone
+
+640
+00:25:12,200 --> 00:25:13,200
+What should I do?
+
+641
+00:25:13,200 --> 00:25:14,866
+All require quizzes
+
+642
+00:25:15,066 --> 00:25:17,966
+Q&A: All he needs to do is sign and write "Teacher, you are so great"
+
+643
+00:25:17,966 --> 00:25:19,400
+I can give him 3 points
+
+644
+00:25:19,400 --> 00:25:21,766
+He won't be 0 points
+
+645
+00:25:21,766 --> 00:25:23,333
+A score of 0 cannot be admitted.
+
+646
+00:25:23,333 --> 00:25:25,833
+The Ministry of Education has strict regulations
+
+647
+00:25:26,500 --> 00:25:28,466
+So you know why you can't do multiple choice questions and
+
+648
+00:25:28,466 --> 00:25:30,000
+Filler question?
+
+649
+00:25:30,200 --> 00:25:32,566
+Because fill-in questions and multiple-choice questions have standard answers.
+
+650
+00:25:32,566 --> 00:25:34,133
+If he writes every question wrong
+
+651
+00:25:34,133 --> 00:25:35,100
+That's 0 points
+
+652
+00:25:35,100 --> 00:25:36,933
+If you score 0 points, you will not be admitted.
+
+653
+00:25:36,933 --> 00:25:38,766
+So you must ask questions
+
+654
+00:25:38,766 --> 00:25:40,466
+He just wrote two words
+
+655
+00:25:40,866 --> 00:25:43,033
+The teacher is very handsome
+
+656
+00:25:43,133 --> 00:25:46,300
+Give him another 10 points and he will be admitted.
+
+657
+00:25:46,300 --> 00:25:50,033
+Well, after he comes in
+
+658
+00:25:50,966 --> 00:25:54,566
+I said I wanted to talk about the first batch of graduate students
+
+659
+00:25:54,566 --> 00:25:57,233
+He doesn't know anything when he comes in
+
+660
+00:25:57,366 --> 00:25:59,566
+Never learned C code
+
+661
+00:25:59,600 --> 00:26:02,100
+Stop talking about Verilog
+
+662
+00:26:02,266 --> 00:26:04,900
+I asked him to read a paper
+
+663
+00:26:04,900 --> 00:26:06,966
+He looked it up from the first word to the last
+
+664
+00:26:06,966 --> 00:26:08,266
+I don't know how to see it either
+
+665
+00:26:08,666 --> 00:26:11,766
+Not from beginning to end
+
+666
+00:26:11,933 --> 00:26:14,066
+Then I want to say that this is not possible
+
+667
+00:26:14,066 --> 00:26:17,100
+Because he has to practice English well
+
+668
+00:26:17,100 --> 00:26:18,733
+He won't graduate in two years
+
+669
+00:26:18,733 --> 00:26:20,000
+Just practice English
+
+670
+00:26:20,000 --> 00:26:20,800
+because
+
+671
+00:26:21,266 --> 00:26:22,833
+you know that english
+
+672
+00:26:23,166 --> 00:26:26,033
+How strong is English? Let me give you an example.
+
+673
+00:26:26,933 --> 00:26:29,433
+Is S-E-T set correct?
+
+674
+00:26:29,700 --> 00:26:32,366
+If you see a set of
+
+675
+00:26:32,900 --> 00:26:33,666
+you will think
+
+676
+00:26:33,666 --> 00:26:36,000
+It should be about something in a group
+
+677
+00:26:37,666 --> 00:26:39,766
+But you know the word for this set
+
+678
+00:26:39,766 --> 00:26:41,333
+sucks
+
+679
+00:26:41,333 --> 00:26:43,000
+set may be a setting
+
+680
+00:26:43,066 --> 00:26:44,766
+It may be a collection
+
+681
+00:26:44,766 --> 00:26:48,100
+There are many possible meanings.
+
+682
+00:26:48,466 --> 00:26:50,366
+Then he has never read the original document.
+
+683
+00:26:50,366 --> 00:26:50,900
+do you know
+
+684
+00:26:50,900 --> 00:26:52,200
+He saw a set of
+
+685
+00:26:52,200 --> 00:26:55,333
+He just randomly picked one from 20 possibilities.
+
+686
+00:26:55,333 --> 00:26:56,500
+translate him
+
+687
+00:26:56,500 --> 00:26:57,500
+Then I will say
+
+688
+00:26:57,500 --> 00:26:59,566
+How can you understand this paper?
+
+689
+00:26:59,566 --> 00:27:00,566
+Impossible
+
+690
+00:27:00,566 --> 00:27:02,166
+Because he looked up every word
+
+691
+00:27:02,166 --> 00:27:03,600
+Then it goes around and around like this
+
+692
+00:27:03,600 --> 00:27:04,766
+Just like this
+
+693
+00:27:04,766 --> 00:27:06,400
+Because he has never read the original document
+
+694
+00:27:07,133 --> 00:27:08,566
+so
+
+695
+00:27:09,400 --> 00:27:12,066
+There is no such thing as that
+
+696
+00:27:12,200 --> 00:27:13,200
+Then I don't know what to do
+
+697
+00:27:13,200 --> 00:27:14,666
+I said there are only two things
+
+698
+00:27:14,666 --> 00:27:16,900
+You just need to do two things
+
+699
+00:27:16,966 --> 00:27:19,366
+In fact, he still has classmates who graduated in two years
+
+700
+00:27:19,366 --> 00:27:20,800
+I said you only need to do two things
+
+701
+00:27:20,800 --> 00:27:22,066
+The first one is to learn c code well
+
+702
+00:27:25,600 --> 00:27:26,800
+Just simple c
+
+703
+00:27:26,800 --> 00:27:28,600
+Then he won't
+
+704
+00:27:28,600 --> 00:27:30,633
+Okay, trace the program that teacher wrote before
+
+705
+00:27:30,766 --> 00:27:32,766
+If you don't know how, I'll teach you
+
+706
+00:27:33,166 --> 00:27:35,300
+Ok then Verilog looks like this
+
+707
+00:27:35,366 --> 00:27:37,733
+Just took my course
+
+708
+00:27:37,733 --> 00:27:39,500
+I started writing this after finishing it
+
+709
+00:27:39,766 --> 00:27:41,966
+That is to write well
+
+710
+00:27:43,800 --> 00:27:45,133
+What about after you finish writing?
+
+711
+00:27:45,133 --> 00:27:46,133
+He graduated in two years
+
+712
+00:27:46,133 --> 00:27:48,566
+Then when I went out to work, I was actually very pitiful.
+
+713
+00:27:48,566 --> 00:27:50,266
+Because his English is bad
+
+714
+00:27:50,266 --> 00:27:52,400
+In fact, until he went to work, he
+
+715
+00:27:52,400 --> 00:27:54,600
+He feels that he is very pitiful
+
+716
+00:27:54,600 --> 00:27:57,066
+So colleagues write e-mails in English
+
+717
+00:27:57,066 --> 00:28:00,166
+He didn't dare to go back. He said he was coming to find me.
+
+718
+00:28:02,700 --> 00:28:04,400
+So that's English is so bad
+
+719
+00:28:04,700 --> 00:28:05,933
+What will happen then?
+
+720
+00:28:05,933 --> 00:28:07,900
+In fact, in my laboratory, that is learning
+
+721
+00:28:07,900 --> 00:28:09,800
+I said your English is so bad
+
+722
+00:28:09,800 --> 00:28:11,900
+It is impossible to write an English e-mail
+
+723
+00:28:11,966 --> 00:28:13,600
+You just need to do one thing.
+
+724
+00:28:13,600 --> 00:28:15,066
+Understand the error message
+
+725
+00:28:15,500 --> 00:28:17,666
+Do you want to check your error message?
+
+726
+00:28:17,733 --> 00:28:20,500
+When you debug today, throw in the Verilog code.
+
+727
+00:28:20,500 --> 00:28:22,066
+He will give error message
+
+728
+00:28:22,066 --> 00:28:24,133
+Now you should read the error message often
+
+729
+00:28:24,133 --> 00:28:25,566
+Then you have to understand
+
+730
+00:28:25,600 --> 00:28:28,766
+At least he can understand the error message and debug it.
+
+731
+00:28:29,933 --> 00:28:32,900
+With one move, he entered the world of martial arts.
+
+732
+00:28:32,900 --> 00:28:34,566
+Then I will say that time
+
+733
+00:28:34,566 --> 00:28:36,133
+In fact, about twenty years ago
+
+734
+00:28:36,133 --> 00:28:38,200
+Then I told him to go
+
+735
+00:28:38,466 --> 00:28:40,466
+Hsinchu Science Park because we need to do IC design
+
+736
+00:28:40,466 --> 00:28:41,333
+Only go to Hsinchu Science Park
+
+737
+00:28:41,333 --> 00:28:42,533
+There are more job opportunities
+
+738
+00:28:42,533 --> 00:28:43,833
+He only went in once
+
+739
+00:28:44,533 --> 00:28:46,300
+When he entered VIA
+
+740
+00:28:46,466 --> 00:28:47,333
+Because he will come back
+
+741
+00:28:47,333 --> 00:28:49,266
+He often comes back to me and says: Teacher
+
+742
+00:28:49,500 --> 00:28:50,366
+beside
+
+743
+00:28:50,366 --> 00:28:52,300
+What national university is it from?
+
+744
+00:28:52,300 --> 00:28:53,500
+A lot of pressure
+
+745
+00:28:53,500 --> 00:28:55,700
+I said it doesn't matter, just do it well
+
+746
+00:28:55,700 --> 00:28:57,666
+Just do whatever people tell you to do
+
+747
+00:28:57,966 --> 00:28:59,300
+So he is in VIA
+
+748
+00:28:59,300 --> 00:29:02,300
+At that time, actually before VIA
+
+749
+00:29:02,300 --> 00:29:04,666
+Thirty years ago, VIA was now MediaTek.
+
+750
+00:29:04,666 --> 00:29:06,666
+You may not know
+
+751
+00:29:06,766 --> 00:29:09,300
+VIA used to make that computer chip
+
+752
+00:29:13,566 --> 00:29:15,533
+Now MediaTek
+
+753
+00:29:15,533 --> 00:29:16,800
+more than thirty years ago
+
+754
+00:29:16,800 --> 00:29:18,500
+But 20 years ago when my students went
+
+755
+00:29:18,500 --> 00:29:19,700
+This is already the case
+
+756
+00:29:19,700 --> 00:29:20,666
+His Vision
+
+757
+00:29:21,166 --> 00:29:25,566
+It’s already very bad. The annual salary is about 100.
+
+758
+00:29:25,733 --> 00:29:28,300
+Probably close to 100 or so
+
+759
+00:29:28,300 --> 00:29:31,900
+Then why does he even accept private schools?
+
+760
+00:29:32,200 --> 00:29:34,333
+It was over there before
+
+761
+00:29:34,333 --> 00:29:35,333
+Finally survived
+
+762
+00:29:35,333 --> 00:29:38,366
+But actually he has a principle
+
+763
+00:29:38,366 --> 00:29:40,666
+Then it's possible that he turned out to be an elevator worker
+
+764
+00:29:40,666 --> 00:29:41,466
+Have you worked hard
+
+765
+00:29:41,466 --> 00:29:42,600
+He will feel that
+
+766
+00:29:42,800 --> 00:29:45,066
+Be serious
+
+767
+00:29:45,066 --> 00:29:47,366
+He gets off work at 10 o'clock, otherwise he gets off work at 11 o'clock
+
+768
+00:29:47,366 --> 00:29:49,233
+I think so
+
+769
+00:29:49,366 --> 00:29:51,366
+More tolerant
+
+770
+00:29:51,366 --> 00:29:53,566
+That means you concentrate on it
+
+771
+00:29:54,266 --> 00:29:59,866
+Later he went to VIA
+
+772
+00:30:00,200 --> 00:30:01,900
+VIA has been doing this for five or six years
+
+773
+00:30:01,900 --> 00:30:05,300
+Then his boss happened to jump in
+
+774
+00:30:05,300 --> 00:30:06,233
+Other companies
+
+775
+00:30:06,666 --> 00:30:09,800
+Then there happened to be a shortage in the past few years.
+
+776
+00:30:09,800 --> 00:30:11,233
+Then asked him if he wanted to go
+
+777
+00:30:11,266 --> 00:30:13,100
+He went to the new company
+
+778
+00:30:14,133 --> 00:30:17,333
+That company was the second largest in Taiwan at that time.
+
+779
+00:30:17,333 --> 00:30:19,166
+At that time, MediaTek was the largest
+
+780
+00:30:19,166 --> 00:30:21,900
+The second largest is the morning glow
+
+781
+00:30:21,900 --> 00:30:24,800
+In fact, when he jumped, I guess
+
+782
+00:30:24,800 --> 00:30:27,766
+Because he is a student, we can't ask too detailed questions.
+
+783
+00:30:27,766 --> 00:30:28,400
+I guess
+
+784
+00:30:28,400 --> 00:30:31,033
+At that time, his signing bonus should have been 3 million.
+
+785
+00:30:31,866 --> 00:30:33,866
+But he really used to be an elevator worker
+
+786
+00:30:33,866 --> 00:30:36,100
+This is what he told me himself
+
+787
+00:30:36,100 --> 00:30:37,366
+24 hours on call
+
+788
+00:30:37,566 --> 00:30:40,000
+At that time, the signing bonus was 3 million
+
+789
+00:30:40,000 --> 00:30:43,600
+Then drive one
+
+790
+00:30:44,700 --> 00:30:46,766
+volvo RV
+
+791
+00:30:46,900 --> 00:30:48,100
+Come back to me
+
+792
+00:30:48,400 --> 00:30:50,333
+Okay, let's go to Chenxi.
+
+793
+00:30:50,333 --> 00:30:52,266
+Later, Mo Chenxi was acquired by MediaTek
+
+794
+00:30:52,266 --> 00:30:53,633
+Later he was at MediaTek
+
+795
+00:30:55,600 --> 00:30:58,000
+So actually this matter
+
+796
+00:30:58,000 --> 00:30:58,766
+Just want
+
+797
+00:30:58,766 --> 00:31:02,366
+I like to use this example to encourage everyone
+
+798
+00:31:02,366 --> 00:31:06,100
+Then as long as you are willing to take the time
+
+799
+00:31:06,100 --> 00:31:08,066
+Then go get this done
+
+800
+00:31:08,166 --> 00:31:09,166
+because of this
+
+801
+00:31:09,166 --> 00:31:11,300
+There is actually quite a shortage of people in this field.
+
+802
+00:31:11,300 --> 00:31:12,966
+The field of IC design
+
+803
+00:31:13,333 --> 00:31:17,066
+What he's afraid of is that you don't want to spend that time
+
+804
+00:31:17,066 --> 00:31:19,666
+As long as you are willing to take the time to learn it well
+
+805
+00:31:19,800 --> 00:31:22,333
+In fact, your future
+
+806
+00:31:22,333 --> 00:31:24,000
+Actually, to put it more plainly, this kind of thing
+
+807
+00:31:24,200 --> 00:31:26,966
+This kind of salary can't be worse than that of a doctor
+
+808
+00:31:26,966 --> 00:31:28,633
+because of you
+
+809
+00:31:28,666 --> 00:31:30,233
+Because there used to be many
+
+810
+00:31:30,266 --> 00:31:33,366
+Parents or students will want to study as a doctor
+
+811
+00:31:33,566 --> 00:31:35,300
+That doctor actually works very hard.
+
+812
+00:31:35,300 --> 00:31:37,300
+Have to be on duty at night or something?
+
+813
+00:31:37,300 --> 00:31:38,900
+Often have to stay awake
+
+814
+00:31:38,900 --> 00:31:39,566
+What what
+
+815
+00:31:39,566 --> 00:31:42,366
+What are you doing without sleeping for 36 hours straight?
+
+816
+00:31:43,166 --> 00:31:45,366
+And what about covid-19 now?
+
+817
+00:31:45,366 --> 00:31:46,900
+What SARS
+
+818
+00:31:47,066 --> 00:31:50,733
+It's easy to get hurt easily. It's easy to get shot.
+
+819
+00:31:50,733 --> 00:31:53,566
+Right? But I think engineers are
+
+820
+00:31:53,600 --> 00:31:56,833
+As long as you do it well, it will be relatively safe.
+
+821
+00:31:56,900 --> 00:31:59,400
+So I still have to encourage you
+
+822
+00:31:59,400 --> 00:32:01,533
+So wait a moment and let’s talk about it like this
+
+823
+00:32:01,533 --> 00:32:03,866
+During the midterm exam, do you really want to
+
+824
+00:32:04,366 --> 00:32:05,966
+Listen very carefully
+
+825
+00:32:05,966 --> 00:32:09,066
+Because if you don’t do well in the midterm exam
+
+826
+00:32:09,066 --> 00:32:11,200
+If you have any questions, please ask the teaching assistant.
+
+827
+00:32:11,200 --> 00:32:13,766
+Then when you go back, write it yourself
+
+828
+00:32:13,900 --> 00:32:16,666
+Good because we have adjusted the time
+
+829
+00:32:16,666 --> 00:32:19,266
+So you can imagine after we finish today
+
+830
+00:32:19,266 --> 00:32:20,533
+Today is April 20th
+
+831
+00:32:20,533 --> 00:32:22,900
+We will have final exams at the end of May
+
+832
+00:32:23,500 --> 00:32:25,200
+Okay so you have a month left
+
+833
+00:32:25,200 --> 00:32:27,300
+Can strengthen your Verilog
+
+834
+00:32:27,300 --> 00:32:28,666
+If you Verilog
+
+835
+00:32:28,800 --> 00:32:30,733
+I didn’t write my previous homework seriously
+
+836
+00:32:30,733 --> 00:32:33,200
+You have one month left to strengthen
+
+837
+00:32:33,200 --> 00:32:35,200
+Then you should work hard this month
+
+838
+00:32:35,200 --> 00:32:36,000
+Then you
+
+839
+00:32:36,000 --> 00:32:38,833
+We have finished the final exam and have final homework
+
+840
+00:32:39,000 --> 00:32:42,333
+That still encourages everyone
+
+841
+00:32:42,333 --> 00:32:43,500
+as long as you take the time
+
+842
+00:32:43,500 --> 00:32:46,366
+You should gain something in the end
+
+843
+00:32:46,566 --> 00:32:49,900
+What I'm afraid of is that you don't take the time
+
+844
+00:32:50,866 --> 00:32:54,800
+Then let's go down, so
+
+845
+00:32:56,200 --> 00:32:59,300
+resource optimization
+
+846
+00:32:59,300 --> 00:33:03,000
+resource optimization you except these two
+
+847
+00:33:03,400 --> 00:33:06,400
+In addition to storage space and functional sharing
+
+848
+00:33:06,400 --> 00:33:09,433
+Another thing you can do is bus sharing.
+
+849
+00:33:09,500 --> 00:33:11,966
+What is bus sharing?
+
+850
+00:33:11,966 --> 00:33:13,266
+That is
+
+851
+00:33:13,800 --> 00:33:15,066
+Bus Sharing
+
+852
+00:33:15,066 --> 00:33:17,133
+Then why do we need to share the bus?
+
+853
+00:33:17,133 --> 00:33:18,433
+because you can see
+
+854
+00:33:18,800 --> 00:33:20,000
+Look there's a lot of wiring here
+
+855
+00:33:20,000 --> 00:33:21,600
+We have just arrived at this
+
+856
+00:33:21,600 --> 00:33:24,000
+Are the three temporary registers correct?
+
+857
+00:33:24,000 --> 00:33:26,800
+We just need 3 temporary registers and then what?
+
+858
+00:33:26,933 --> 00:33:29,566
+Are the two arithmetic units right? OK
+
+859
+00:33:29,566 --> 00:33:31,800
+We've streamlined it to this
+
+860
+00:33:31,800 --> 00:33:34,033
+Or it can be both
+
+861
+00:33:34,100 --> 00:33:37,033
+Three scratchpads and then two arithmetic units
+
+862
+00:33:39,766 --> 00:33:42,600
+We've streamlined it down to this, okay
+
+863
+00:33:42,600 --> 00:33:44,566
+So what else can be streamlined now?
+
+864
+00:33:44,566 --> 00:33:46,300
+These wiring problems
+
+865
+00:33:50,100 --> 00:33:52,500
+These lines are actually quite messy.
+
+866
+00:33:52,500 --> 00:33:55,200
+Then if each register is 32bit
+
+867
+00:33:55,200 --> 00:33:56,066
+did you know
+
+868
+00:33:56,066 --> 00:33:58,700
+This is connected to 32bit, 32bit
+
+869
+00:33:58,700 --> 00:34:00,266
+This is because this is just drawing a line
+
+870
+00:34:00,266 --> 00:34:00,700
+But
+
+871
+00:34:00,700 --> 00:34:03,566
+If it is 32bit, he will have 32 at the same time
+
+872
+00:34:03,566 --> 00:34:05,366
+Then this one too
+
+873
+00:34:05,366 --> 00:34:06,100
+so what
+
+874
+00:34:06,100 --> 00:34:10,300
+Is there any way we can use a concept like a bus
+
+875
+00:34:10,300 --> 00:34:12,600
+Because our next step is bus sharing
+
+876
+00:34:12,600 --> 00:34:16,866
+It's like a bus, shared by everyone
+
+877
+00:34:16,866 --> 00:34:18,966
+bus concept
+
+878
+00:34:19,333 --> 00:34:22,166
+What about line sharing?
+
+879
+00:34:22,400 --> 00:34:23,566
+a bit like saying
+
+880
+00:34:23,566 --> 00:34:26,300
+It will be cleaner if you tidy up that line.
+
+881
+00:34:26,300 --> 00:34:28,166
+This is the concept of the whole line
+
+882
+00:34:28,566 --> 00:34:31,000
+I hope I can tidy up my line
+
+883
+00:34:31,000 --> 00:34:32,966
+Then he will be cleaner
+
+884
+00:34:32,966 --> 00:34:36,066
+Then this is called bus sharing
+
+885
+00:34:36,066 --> 00:34:37,800
+Then you want to reorganize the line?
+
+886
+00:34:37,800 --> 00:34:40,100
+Still the same came
+
+887
+00:34:40,600 --> 00:34:43,000
+This is the purpose of bus
+
+888
+00:34:43,000 --> 00:34:44,933
+For example, busbar. We know busbar
+
+889
+00:34:44,933 --> 00:34:46,066
+that is
+
+890
+00:34:46,933 --> 00:34:49,600
+You need to transfer the data from here to here
+
+891
+00:34:49,600 --> 00:34:52,666
+Then I can connect this bus
+
+892
+00:34:52,666 --> 00:34:54,266
+Everyone shares this cable
+
+893
+00:34:54,266 --> 00:34:56,400
+Then you can pick it up too
+
+894
+00:34:56,400 --> 00:34:58,300
+Then he can pick it up too
+
+895
+00:34:58,300 --> 00:35:00,500
+Everyone can connect to this bus
+
+896
+00:35:00,500 --> 00:35:02,466
+It's good without a problem
+
+897
+00:35:02,466 --> 00:35:03,966
+But here comes the problem
+
+898
+00:35:04,066 --> 00:35:07,500
+If student a is saving information,
+
+899
+00:35:07,800 --> 00:35:09,400
+I will upload it again
+
+900
+00:35:09,400 --> 00:35:12,033
+Then classmate C uploaded the message. No.
+
+901
+00:35:12,333 --> 00:35:14,400
+because of a bus
+
+902
+00:35:14,400 --> 00:35:15,700
+add a line
+
+903
+00:35:15,700 --> 00:35:17,666
+Someone above passed it on
+
+904
+00:35:18,133 --> 00:35:20,366
+When that person passes it, no one else can pass it.
+
+905
+00:35:20,666 --> 00:35:22,566
+Right? So the concept of busbar
+
+906
+00:35:22,566 --> 00:35:23,933
+It is shared by everyone
+
+907
+00:35:23,933 --> 00:35:27,633
+Just like the concept of bus bus means
+
+908
+00:35:28,700 --> 00:35:32,466
+For example, I drove from Tainan High Speed ​​Rail Station to
+
+909
+00:35:32,866 --> 00:35:34,700
+Tainan City National Cheng Kung University
+
+910
+00:35:34,700 --> 00:35:38,000
+Then the concept of my bus is to share the fare with everyone.
+
+911
+00:35:39,466 --> 00:35:40,466
+right?
+
+912
+00:35:41,366 --> 00:35:45,800
+It costs me NT$3,000 to drive from Tainan High Speed ​​Rail to National Cheng Kung University
+
+913
+00:35:45,800 --> 00:35:48,500
+Everyone who comes up shares it.
+
+914
+00:35:48,500 --> 00:35:49,666
+Pay this money together
+
+915
+00:35:49,666 --> 00:35:52,566
+Then everyone will pay less
+
+916
+00:35:52,566 --> 00:35:54,000
+The concept of bus sharing is this
+
+917
+00:35:54,000 --> 00:35:56,066
+If everyone shares this bus
+
+918
+00:35:56,066 --> 00:35:58,600
+Now the cost is lower
+
+919
+00:35:58,600 --> 00:35:59,900
+But it is shared
+
+920
+00:36:00,066 --> 00:36:02,100
+But there is a problem with sharing
+
+921
+00:36:02,266 --> 00:36:04,933
+When classmate a threw the information up,
+
+922
+00:36:04,933 --> 00:36:07,300
+Classmate b cannot throw it away. Classmate c cannot throw it away.
+
+923
+00:36:07,300 --> 00:36:10,966
+Because only one person can drop one line at a time
+
+924
+00:36:10,966 --> 00:36:13,200
+That is, there can only be one per line
+
+925
+00:36:13,200 --> 00:36:14,466
+In other words, look
+
+926
+00:36:14,466 --> 00:36:15,800
+That means this
+
+927
+00:36:16,333 --> 00:36:18,333
+If we all share a line
+
+928
+00:36:18,333 --> 00:36:21,900
+This person loses 101
+
+929
+00:36:21,900 --> 00:36:22,900
+Then I can't lose it
+
+930
+00:36:22,900 --> 00:36:26,366
+Because otherwise if he loses 101, then I lose 010
+
+931
+00:36:26,366 --> 00:36:29,000
+Then on this line you lose 0 and I lose 1
+
+932
+00:36:29,000 --> 00:36:32,100
+So is this line 0 or 1?
+
+933
+00:36:32,166 --> 00:36:33,700
+I have no idea
+
+934
+00:36:33,700 --> 00:36:36,300
+So the bus concept means
+
+935
+00:36:36,566 --> 00:36:37,733
+I don’t use it when you use it.
+
+936
+00:36:37,733 --> 00:36:39,733
+You don’t have to be nice when I use it
+
+937
+00:36:39,733 --> 00:36:40,600
+Then you see
+
+938
+00:36:40,600 --> 00:36:41,766
+Ours
+
+939
+00:36:42,266 --> 00:36:44,400
+I can straighten out the title
+
+940
+00:36:44,400 --> 00:36:47,366
+Using the bus concept I can wire it into
+
+941
+00:36:47,666 --> 00:36:48,666
+like this
+
+942
+00:36:49,400 --> 00:36:51,700
+Look, it will be very clean here.
+
+943
+00:36:51,700 --> 00:36:54,200
+It's not like this just now. It was a mess here just now.
+
+944
+00:36:54,400 --> 00:36:57,133
+Now I'll line it up like this, okay
+
+945
+00:36:57,133 --> 00:36:58,566
+But when it's like this
+
+946
+00:36:58,566 --> 00:37:00,300
+What should we pay attention to
+
+947
+00:37:03,466 --> 00:37:05,233
+For example bus1
+
+948
+00:37:05,900 --> 00:37:08,100
+R1 is connected to bus1
+
+949
+00:37:08,266 --> 00:37:10,666
+What does it mean when r3 is connected to bus1?
+
+950
+00:37:11,500 --> 00:37:15,833
+r3 cannot be used when r1 is using bus1
+
+951
+00:37:16,666 --> 00:37:18,300
+When using r3
+
+952
+00:37:19,000 --> 00:37:19,900
+r1 cannot be used
+
+953
+00:37:19,900 --> 00:37:21,466
+Because only one person can use it
+
+954
+00:37:21,466 --> 00:37:23,966
+Because the concept of this bus is like this
+
+955
+00:37:23,966 --> 00:37:25,866
+I don’t use it when you use it.
+
+956
+00:37:25,866 --> 00:37:27,833
+I don’t use it when others use it.
+
+957
+00:37:29,400 --> 00:37:31,533
+Well that's it
+
+958
+00:37:31,533 --> 00:37:36,000
+Then you have bus1, bus2, bus2 connected to r2
+
+959
+00:37:36,100 --> 00:37:40,566
+Then down below, you still have bus3, and the same goes for bus4.
+
+960
+00:37:42,800 --> 00:37:45,600
+You see there are two people in bus3
+
+961
+00:37:45,600 --> 00:37:46,900
+you can throw
+
+962
+00:37:46,933 --> 00:37:48,000
+I can also throw it away
+
+963
+00:37:48,066 --> 00:37:50,266
+Then I won’t throw it away when you throw it away.
+
+964
+00:37:50,366 --> 00:37:52,166
+When I throw it, you don’t throw it away.
+
+965
+00:37:52,866 --> 00:37:54,566
+Well, this is the concept of bus
+
+966
+00:37:54,566 --> 00:37:56,866
+So the bus is basically a bit like this
+
+967
+00:37:56,866 --> 00:38:01,000
+Actually, this is a bus connection
+
+968
+00:38:01,000 --> 00:38:03,200
+He just uses one
+
+969
+00:38:03,333 --> 00:38:05,766
+tri-state gate
+
+970
+00:38:05,766 --> 00:38:09,233
+What can a tri-state gate do? You see, it is actually
+
+971
+00:38:09,600 --> 00:38:13,200
+Your value is connected to mine.
+
+972
+00:38:13,200 --> 00:38:14,966
+Everyone has received this line
+
+973
+00:38:15,100 --> 00:38:17,866
+But I have a control
+
+974
+00:38:17,866 --> 00:38:20,300
+I used a tri-state gate here
+
+975
+00:38:21,866 --> 00:38:24,766
+I can control when I say you are okay and I am not okay
+
+976
+00:38:25,066 --> 00:38:27,200
+When I can get through, you can’t.
+
+977
+00:38:27,200 --> 00:38:28,400
+That's because he is
+
+978
+00:38:28,400 --> 00:38:30,866
+If enable comes, it will pass
+
+979
+00:38:30,933 --> 00:38:34,500
+enable did not come, I regarded it as high impedance
+
+980
+00:38:34,500 --> 00:38:36,766
+That high impedance is a bit like an open circuit
+
+981
+00:38:36,766 --> 00:38:37,933
+That is to say, I enable
+
+982
+00:38:37,933 --> 00:38:39,800
+He always knows when he comes
+
+983
+00:38:39,866 --> 00:38:42,100
+You can throw the data into this bus
+
+984
+00:38:42,300 --> 00:38:44,600
+If enable is not turned on, it will become high impedance.
+
+985
+00:38:44,600 --> 00:38:45,366
+High impedance
+
+986
+00:38:45,366 --> 00:38:46,733
+It's like a broken circuit
+
+987
+00:38:46,733 --> 00:38:48,900
+It means our line is broken
+
+988
+00:38:48,900 --> 00:38:50,100
+What does this mean?
+
+989
+00:38:50,100 --> 00:38:52,600
+The two of us need to use this bus
+
+990
+00:38:52,866 --> 00:38:54,266
+Then I will control it here.
+
+991
+00:38:54,266 --> 00:38:55,600
+Either you or I can understand
+
+992
+00:38:55,600 --> 00:38:57,933
+So when you pass
+
+993
+00:38:57,933 --> 00:38:59,600
+Your value can come over
+
+994
+00:38:59,766 --> 00:39:01,800
+Then my side will be disconnected.
+
+995
+00:39:01,800 --> 00:39:03,500
+High impedance is a bit like an open circuit
+
+996
+00:39:03,500 --> 00:39:05,266
+So my value won’t come over
+
+997
+00:39:05,466 --> 00:39:08,700
+Just wait until I get through. It will be through me.
+
+998
+00:39:08,700 --> 00:39:10,533
+Then your side will have high impedance
+
+999
+00:39:10,533 --> 00:39:12,666
+like you are a disconnect
+
+1000
+00:39:12,666 --> 00:39:14,600
+Then use this to ensure that
+
+1001
+00:39:14,600 --> 00:39:16,466
+We only have one person
+
+1002
+00:39:17,000 --> 00:39:18,266
+good
+
+1003
+00:39:18,266 --> 00:39:21,200
+So if we take the topic we just asked
+
+1004
+00:39:21,200 --> 00:39:22,733
+How do we do this?
+
+1005
+00:39:22,733 --> 00:39:24,200
+Okay, let's take a look
+
+1006
+00:39:24,266 --> 00:39:25,866
+You just did this
+
+1007
+00:39:27,000 --> 00:39:29,300
+Okay, then I'm going to start reorganizing the line now.
+
+1008
+00:39:29,366 --> 00:39:32,133
+I want to use the bus concept
+
+1009
+00:39:32,133 --> 00:39:34,400
+Then what if I use the bus concept?
+
+1010
+00:39:34,400 --> 00:39:35,466
+well
+
+1011
+00:39:35,466 --> 00:39:36,800
+Then let's assume
+
+1012
+00:39:36,800 --> 00:39:38,600
+We assume this is the case
+
+1013
+00:39:38,600 --> 00:39:42,566
+Your r1 is A, t1, x, t7
+
+1014
+00:39:42,566 --> 00:39:48,300
+r2 is B, t2, y, t3, t5, t6
+
+1015
+00:39:48,700 --> 00:39:50,500
+R3 is equipped with T4
+
+1016
+00:39:50,500 --> 00:39:52,333
+Just based on these variable assumptions
+
+1017
+00:39:52,333 --> 00:39:53,733
+This is what we put
+
+1018
+00:39:53,733 --> 00:39:55,266
+This is our premise
+
+1019
+00:39:55,400 --> 00:39:57,766
+And then you now have these two pieces of hardware
+
+1020
+00:39:57,766 --> 00:40:00,366
+Okay, now I'm going to start reorganizing the line.
+
+1021
+00:40:00,666 --> 00:40:01,466
+well
+
+1022
+00:40:01,466 --> 00:40:03,666
+I'm going to start reorganizing the line, okay?
+
+1023
+00:40:03,666 --> 00:40:05,400
+Then let me ask everyone
+
+1024
+00:40:05,400 --> 00:40:07,833
+Now I assume there is a bus
+
+1025
+00:40:07,966 --> 00:40:09,700
+Can I
+
+1026
+00:40:09,800 --> 00:40:11,900
+Take r1 and r2 and connect them to this bus.
+
+1027
+00:40:13,366 --> 00:40:15,566
+No, no
+
+1028
+00:40:15,566 --> 00:40:18,500
+No, because r1 stores a
+
+1029
+00:40:19,533 --> 00:40:20,800
+r2 stores b
+
+1030
+00:40:21,166 --> 00:40:22,700
+I'm in this state
+
+1031
+00:40:23,666 --> 00:40:26,866
+I will read out a at the same time
+
+1032
+00:40:26,933 --> 00:40:28,400
+At the same time, read out b
+
+1033
+00:40:28,400 --> 00:40:30,066
+Because I want to calculate his absolute value
+
+1034
+00:40:30,966 --> 00:40:34,200
+Right? So I'm in r1
+
+1035
+00:40:34,200 --> 00:40:36,766
+When I'm in this state
+
+1036
+00:40:37,000 --> 00:40:39,633
+I want to read a and b at the same time
+
+1037
+00:40:41,300 --> 00:40:46,233
+One is placed in r1 and the other is placed in r2.
+
+1038
+00:40:46,500 --> 00:40:49,066
+So you must use two different buses
+
+1039
+00:40:49,066 --> 00:40:51,400
+This way I can read a and b at the same time
+
+1040
+00:40:51,733 --> 00:40:53,200
+Okay, so you watch out.
+
+1041
+00:40:53,200 --> 00:40:56,266
+The bus you come out of is r1 and use bus1.
+
+1042
+00:40:56,666 --> 00:40:59,266
+R2 is better with bus2
+
+1043
+00:40:59,300 --> 00:41:01,400
+Then our doubt now is
+
+1044
+00:41:01,400 --> 00:41:02,600
+then why do you
+
+1045
+00:41:02,600 --> 00:41:06,600
+r3 and r1 will use the same bus
+
+1046
+00:41:07,300 --> 00:41:11,466
+r3 and r1 will use the same bus
+
+1047
+00:41:11,733 --> 00:41:13,400
+it's because you see
+
+1048
+00:41:13,500 --> 00:41:16,200
+Is your r3 equipped with T4?
+
+1049
+00:41:16,533 --> 00:41:19,566
+When your T4 is blocked
+
+1050
+00:41:19,566 --> 00:41:21,300
+You need to block the other one
+
+1051
+00:41:21,300 --> 00:41:23,133
+When t4 is taken out for calculation
+
+1052
+00:41:23,133 --> 00:41:25,066
+This way
+
+1053
+00:41:25,266 --> 00:41:26,700
+There is t4 here
+
+1054
+00:41:27,700 --> 00:41:30,300
+Then the other thing to do is T5
+
+1055
+00:41:30,300 --> 00:41:31,666
+Where is T5 placed?
+
+1056
+00:41:32,366 --> 00:41:32,733
+r2
+
+1057
+00:41:32,733 --> 00:41:36,366
+So you see these two moving like this at the same time
+
+1058
+00:41:36,366 --> 00:41:37,500
+Then you r3
+
+1059
+00:41:37,500 --> 00:41:39,400
+when moving
+
+1060
+00:41:39,533 --> 00:41:42,300
+When r3 moves, your r1 will not actually move.
+
+1061
+00:41:42,300 --> 00:41:43,766
+When your t4 moves
+
+1062
+00:41:43,900 --> 00:41:46,200
+All r1 can move
+
+1063
+00:41:46,500 --> 00:41:50,600
+So you can use two buses smoothly
+
+1064
+00:41:50,600 --> 00:41:52,566
+Then why can these two be merged?
+
+1065
+00:41:52,900 --> 00:41:56,100
+Why aren't r1 and r2 on the same bus?
+
+1066
+00:41:56,366 --> 00:41:58,400
+It's because they are at the same time
+
+1067
+00:41:58,466 --> 00:42:00,633
+Then r1 and r3 can
+
+1068
+00:42:00,933 --> 00:42:02,533
+It's because
+
+1069
+00:42:02,533 --> 00:42:05,566
+When I was studying T4
+
+1070
+00:42:05,566 --> 00:42:06,600
+r1 will not move
+
+1071
+00:42:06,600 --> 00:42:08,566
+Then when my r1 is moving
+
+1072
+00:42:08,966 --> 00:42:11,400
+r3 will not move
+
+1073
+00:42:11,400 --> 00:42:13,466
+So his line will
+
+1074
+00:42:13,466 --> 00:42:15,033
+I can put it together
+
+1075
+00:42:15,200 --> 00:42:16,833
+That's the same reason
+
+1076
+00:42:16,933 --> 00:42:18,900
+Check here too
+
+1077
+00:42:18,900 --> 00:42:20,800
+Why this bus3
+
+1078
+00:42:20,800 --> 00:42:23,200
+This one will receive this
+
+1079
+00:42:24,000 --> 00:42:25,200
+It must be something
+
+1080
+00:42:25,200 --> 00:42:29,000
+It’s just that these three people will never move at the same time.
+
+1081
+00:42:29,000 --> 00:42:30,700
+There must be only one person moving
+
+1082
+00:42:30,700 --> 00:42:32,900
+Only one of these three people moved
+
+1083
+00:42:32,900 --> 00:42:34,900
+What about these three people?
+
+1084
+00:42:35,066 --> 00:42:36,300
+Why are they connected together?
+
+1085
+00:42:36,300 --> 00:42:38,900
+Because this person won't move when he moves.
+
+1086
+00:42:38,900 --> 00:42:40,866
+This guy won't move when he moves.
+
+1087
+00:42:41,166 --> 00:42:44,466
+Okay, but let's not move here at the same time.
+
+1088
+00:42:44,466 --> 00:42:45,833
+It can be so good
+
+1089
+00:42:45,866 --> 00:42:50,100
+So this bus sharing is actually the same concept.
+
+1090
+00:42:50,866 --> 00:42:53,366
+For the three sharings, you can think about why
+
+1091
+00:42:53,366 --> 00:42:54,566
+The concept is the same
+
+1092
+00:42:54,566 --> 00:42:55,366
+you
+
+1093
+00:42:55,366 --> 00:42:57,366
+When you use it, I can't use it, it must be like this
+
+1094
+00:42:57,366 --> 00:42:59,066
+Because that’s what sharing is
+
+1095
+00:42:59,800 --> 00:43:02,266
+Sharing
+
+1096
+00:43:02,300 --> 00:43:04,233
+Why are temporary registers shared?
+
+1097
+00:43:04,500 --> 00:43:06,400
+When you save, I won’t save.
+
+1098
+00:43:06,400 --> 00:43:08,366
+When I save, you don’t save.
+
+1099
+00:43:08,866 --> 00:43:11,766
+Right, so the life spans cannot overlap?
+
+1100
+00:43:11,766 --> 00:43:13,300
+Assume that it was all my fault
+
+1101
+00:43:13,300 --> 00:43:14,800
+Then wait until I don't need to go out
+
+1102
+00:43:14,800 --> 00:43:16,366
+I'll give you the space
+
+1103
+00:43:16,366 --> 00:43:18,566
+This is called storage sharing
+
+1104
+00:43:18,566 --> 00:43:20,966
+The same goes for functional unit sharing
+
+1105
+00:43:21,733 --> 00:43:24,733
+If you don't do these two operations at the same time,
+
+1106
+00:43:24,733 --> 00:43:26,266
+I don't do it when you do it
+
+1107
+00:43:26,600 --> 00:43:27,866
+You don't do it when I do it
+
+1108
+00:43:27,866 --> 00:43:29,800
+Then you can do it together
+
+1109
+00:43:29,800 --> 00:43:31,166
+Shared hardware
+
+1110
+00:43:31,366 --> 00:43:34,766
+to achieve the goal of cost reduction
+
+1111
+00:43:34,766 --> 00:43:36,666
+The same goes for bus sharing
+
+1112
+00:43:36,800 --> 00:43:38,500
+I won’t pass it on when you pass it on
+
+1113
+00:43:38,500 --> 00:43:40,500
+When I pass it on, you don’t pass it on
+
+1114
+00:43:40,500 --> 00:43:43,033
+Then the two of us can share a bus.
+
+1115
+00:43:43,466 --> 00:43:45,733
+Okay, if we both want to pass it on too
+
+1116
+00:43:45,733 --> 00:43:48,133
+Then I will use two buses.
+
+1117
+00:43:48,133 --> 00:43:49,766
+Just like this, okay
+
+1118
+00:43:51,600 --> 00:43:53,600
+When r1 passes, r2 also has to go.
+
+1119
+00:43:53,600 --> 00:43:55,666
+Then the two of us need to use different buses.
+
+1120
+00:43:55,766 --> 00:43:56,900
+but
+
+1121
+00:43:56,900 --> 00:43:59,066
+After the information of r1 is released, r3 will not be released.
+
+1122
+00:43:59,066 --> 00:44:00,566
+When r3 comes out, r1 will not come out.
+
+1123
+00:44:00,566 --> 00:44:03,566
+Then we can share a bus
+
+1124
+00:44:03,566 --> 00:44:06,500
+I can make my lines leaner
+
+1125
+00:44:06,500 --> 00:44:08,200
+And you can
+
+1126
+00:44:08,533 --> 00:44:09,700
+The planning is better
+
+1127
+00:44:09,700 --> 00:44:11,366
+but still the same
+
+1128
+00:44:11,666 --> 00:44:12,300
+I'll tell you
+
+1129
+00:44:12,300 --> 00:44:15,066
+Each of these is very troublesome to do.
+
+1130
+00:44:15,066 --> 00:44:17,133
+123 Good
+
+1131
+00:44:17,133 --> 00:44:19,766
+Even to the last Register
+
+1132
+00:44:19,766 --> 00:44:21,466
+Same thing
+
+1133
+00:44:21,466 --> 00:44:24,000
+The same is true for Register merging
+
+1134
+00:44:24,000 --> 00:44:26,733
+It will make your circuit very complicated
+
+1135
+00:44:26,733 --> 00:44:28,666
+So basically
+
+1136
+00:44:28,666 --> 00:44:29,700
+our
+
+1137
+00:44:30,333 --> 00:44:32,666
+Most probably won't use it
+
+1138
+00:44:32,666 --> 00:44:35,100
+That is, at least these two will definitely not
+
+1139
+00:44:35,100 --> 00:44:36,733
+Then I will tell you about this.
+
+1140
+00:44:36,733 --> 00:44:39,800
+Large-scale functional unit sharing is possible
+
+1141
+00:44:39,800 --> 00:44:42,166
+You just have to pay attention when you compete.
+
+1142
+00:44:42,166 --> 00:44:45,166
+If there is a large functional unit
+
+1143
+00:44:45,266 --> 00:44:47,200
+Or a relatively big topic
+
+1144
+00:44:47,200 --> 00:44:49,100
+Maybe you should pay attention to it
+
+1145
+00:44:49,100 --> 00:44:50,066
+Otherwise
+
+1146
+00:44:50,066 --> 00:44:52,000
+In fact, because after using it
+
+1147
+00:44:52,000 --> 00:44:53,966
+will make your circuit design become
+
+1148
+00:44:53,966 --> 00:44:57,366
+Very very complicated
+
+1149
+00:44:57,366 --> 00:45:00,433
+So in principle, today we will
+
+1150
+00:45:00,733 --> 00:45:05,466
+After talking about the previous resource sharing 123 3
+
+1151
+00:45:06,700 --> 00:45:08,700
+Sharing of constituent units
+
+1152
+00:45:08,700 --> 00:45:11,366
+Sharing of the third computing unit
+
+1153
+00:45:11,366 --> 00:45:13,333
+and bus sharing
+
+1154
+00:45:13,333 --> 00:45:15,000
+Then the remaining unit
+
+1155
+00:45:15,000 --> 00:45:17,466
+We’ll talk about this next week
+
+1156
+00:45:17,466 --> 00:45:20,233
+Then in the next class I will
+
+1157
+00:45:20,466 --> 00:45:21,733
+Give time to teaching assistants
+
+1158
+00:45:21,733 --> 00:45:24,966
+He will come and give the fourth assignment
+
+1159
+00:45:24,966 --> 00:45:26,766
+That's because I have to give him a whole class
+
+1160
+00:45:26,766 --> 00:45:29,700
+Because he still has to review the midterm exam
+
+1161
+00:45:29,700 --> 00:45:33,666
+So I left get out of class two minutes early
+
+1162
+00:45:33,866 --> 00:45:36,566
+If you forget the questions for the midterm exam
+
+1163
+00:45:36,566 --> 00:45:38,933
+Please review it quickly
+
+1164
+00:45:38,933 --> 00:45:41,466
+Then wait until the assistant teacher comes to explain.
+
+1165
+00:45:41,466 --> 00:45:43,000
+you will know better
+
+1166
+00:45:43,300 --> 00:45:46,400
+Is his answer available in Moodle?
+
+1167
+00:45:46,400 --> 00:45:48,700
+Then take a quick look at it, okay?
+
+1168
+00:45:48,700 --> 00:45:51,466
+Then he will explain it later, OK.
+
+1169
+00:45:51,466 --> 00:45:54,433
+Then let’s finish class 2 minutes early for this period.
+
